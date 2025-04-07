@@ -1,0 +1,56 @@
+---
+title: "Retrieving Bivalve Genomes"
+author: "Megan Ewing"
+date: "2025-04-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here I am retrieving the cds files from NCBI and saving them to my subdirectory `data/genomes_refseq` . As of Apr. 7, 2025, there are 17 genomes on NCBI so I will be using a loop.
+
+First, to do this, I need to load in some info about my genomes so I can have the accession ids readily available for out loop.
+
+### Saving Accessions as Variable for Loop
+
+```{r}
+# load in genome info (from NCBI table)
+
+genome_info <- read.delim("../data/genome_info-20250407.tsv")
+head(genome_info) 
+
+```
+
+```{r}
+# store accession ids as variable -- need it to be space separated to work in loop
+
+accessions <- paste(genome_info$Assembly.Accession, collapse = " ")
+accessions
+
+```
+
+now we try our loop
+
+### Loop to Download CDS files
+
+```{bash}
+
+# Path to datasets tool
+DATASETS_CMD="/home/shared/datasets"
+
+# Output directory
+OUTPUT_DIR="../data/genomes_refseq"
+
+# copied and pasted from output above
+accessions="GCF_002022765.2 GCF_026914265.1 GCF_963853765.1 GCF_041381155.1 GCF_963676685.1 GCF_902652985.1 GCF_025612915.1 GCF_947568905.1 GCF_021730395.1 GCF_020536995.1 GCF_036588685.1 GCF_026571515.1 GCF_002113885.1 GCF_021869535.1 GCF_033153115.1 GCF_032062105.1 GCF_031769215.1"
+
+# Loop over the list
+for accession in $accessions
+do
+  echo "Downloading CDS for $accession"
+  "$DATASETS_CMD" download genome accession "$accession" --include cds --filename "$OUTPUT_DIR/${accession}_cds.zip"
+done
+
+```
