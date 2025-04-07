@@ -54,3 +54,19 @@ do
 done
 
 ```
+
+unzip the files
+
+```{r}
+# Set your directory path
+zip_dir <- "../data/genomes_refseq"
+
+# List all .zip files in the directory
+zip_files <- list.files(zip_dir, pattern = "\\.zip$", full.names = TRUE)
+
+# Unzip each file
+for (zip_file in zip_files) {
+  unzip(zip_file, exdir = zip_dir)
+}
+
+```
