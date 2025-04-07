@@ -1,0 +1,90 @@
+---
+title: "BLAST on Bivalve CDS"
+author: "Megan Ewing"
+date: "2025-04-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Using Swiss-Prot Repro subset..
+
+Based on the following GO Term: [GO:0007276](https://www.ebi.ac.uk/QuickGO/term/GO:0007276)
+
+![](images/GO0007276_ancestorchart.png)
+
+## Make Blast DB (do once)
+
+getting GO
+
+```{bash}
+curl -H "Accept: text/plain" "https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28go%3A0007276%29%29+AND+%28reviewed%3Atrue%29" -o ../data/SwissProt-GO:0007276.fa
+```
+
+```{bash}
+head ../data/SwissProt-GO:0007276.fa
+echo "Number of Sequences"
+grep -c ">" ../data/SwissProt-GO:0007276.fa 
+```
+
+Finish creating DB -- just interested in genes that are under our GO umbrella
+
+```{bash}
+
+/home/shared/ncbi-blast-2.15.0+/bin/makeblastdb \
+-in ../data/SwissProt-GO:0007276.fa \
+-dbtype prot \
+-out ../blastdb/SwissProt-GO:0007276
+```
+
+## Set Querey
+
+```{bash}
+fasta="INSERT FASTA PATH HERE"
+
+head $fasta
+echo "Number of Sequences"
+grep ">" -c $fasta
+```
+
+## Blast\*\*\* 
+
+here I need to update the variables and convert to a loop. so the fasta file path is essentially `../data/genomes_refseq/$ACCESSION` but want it to be ACCESSION_cds.zip -- will need to check on how to do this. want output to follow similar style where its `../output/ACCESSION-blastout.tab`
+
+```{bash}
+fasta="INSERT FASTA PATH HERE"
+output="OUTPUT FILE HERE"
+
+/home/shared/ncbi-blast-2.15.0+/bin/blastp \
+-query $fasta \
+-db ../blastdb/SwissProt-GO:0007276 \
+-out $output \
+-evalue 1E-20 \
+-num_threads 48 \
+-max_target_seqs 1 \
+-max_hsps 1 \
+-outfmt 6
+```
+
+### post-blast checks 
+
+would like to do this as a loop as well where after each blast thing it prints the checks (maybe prints to file?)
+
+```{bash}
+head $output.tab
+```
+
+```{bash}
+wc -l $output.tab
+```
+
+```{bash}
+tr '|' '\t' < $output.tab \
+> $output_sep.tab
+
+head -1 $output_sep.tab
+```
+
+following steven's code [here](https://sr320.github.io/tumbling-oysters/posts/sr320-23-repro/)

@@ -58,7 +58,7 @@ done
 unzip the files
 
 ```{r}
-# Set your directory path
+# Set directory path
 zip_dir <- "../data/genomes_refseq"
 
 # List all .zip files in the directory
