@@ -36,14 +36,23 @@ Finish creating DB -- just interested in genes that are under our GO umbrella
 /home/shared/ncbi-blast-2.15.0+/bin/makeblastdb \
 -in ../data/SwissProt-GO:0007276.fa \
 -dbtype prot \
--out ../blastdb/SwissProt-GO:0007276
+-out ../blastdb/SwissProt-GO:0007276/SwissProt-GO:0007276/
+```
+
+making database where the species genome is the DB
+
+```{bash}
+
+/home/shared/ncbi-blast-2.15.0+/bin/makeblastdb \
+-in ../data/genomes_refseq/ncbi_dataset/data/GCF_963853765.1/cds_from_genomic.fna \
+-dbtype nucl \
+-out ../blastdb/GCF_963853765.1/GCF_963853765.1/
 ```
 
 ## Set Querey
 
 ```{bash}
-fasta="INSERT FASTA PATH HERE"
-
+fasta= "../data/genomes_refseq/ncbi_dataset/data/GCF_963853765.1/cds_from_genomic.fna"
 head $fasta
 echo "Number of Sequences"
 grep ">" -c $fasta
@@ -54,15 +63,15 @@ grep ">" -c $fasta
 here I need to update the variables and convert to a loop. so the fasta file path is essentially `../data/genomes_refseq/$ACCESSION` but want it to be ACCESSION_cds.zip -- will need to check on how to do this. want output to follow similar style where its `../output/ACCESSION-blastout.tab`
 
 ```{bash}
-fasta="INSERT FASTA PATH HERE"
-output="OUTPUT FILE HERE"
+# fasta= "../data/genomes_refseq/ncbi_dataset/data/GCF_963853765.1/cds_from_genomic.fna"
+# output="../output/blastout/GCF_963853765.1"
 
-/home/shared/ncbi-blast-2.15.0+/bin/blastp \
--query $fasta \
--db ../blastdb/SwissProt-GO:0007276 \
--out $output \
--evalue 1E-20 \
--num_threads 48 \
+/home/shared/ncbi-blast-2.15.0+/bin/tblastn \
+-query ../data/SwissProt-GO:0007276.fa \
+-db ../blastdb/GCF_963853765.1/GCF_963853765.1 \
+-out ../output/blastout/GCF_963853765.1.tab \
+-evalue 1E-10 \
+-num_threads 20 \
 -max_target_seqs 1 \
 -max_hsps 1 \
 -outfmt 6
