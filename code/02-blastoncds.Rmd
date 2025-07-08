@@ -64,7 +64,7 @@ here I need to update the variables and convert to a loop. so the fasta file pat
 
 ```{bash}
 # fasta= "../data/genomes_refseq/ncbi_dataset/data/GCF_963853765.1/cds_from_genomic.fna"
-# output="../output/blastout/GCF_963853765.1"
+# output="../output/blastout/GCF_963853765.1.tab"
 
 /home/shared/ncbi-blast-2.15.0+/bin/tblastn \
 -query ../data/SwissProt-GO:0007276.fa \
@@ -79,21 +79,49 @@ here I need to update the variables and convert to a loop. so the fasta file pat
 
 ### post-blast checks
 
-would like to do this as a loop as well where after each blast thing it prints the checks (maybe prints to file?)
-
 ```{bash}
-head $output.tab
+head ../output/blastout/GCF_963853765.1.tab
 ```
 
 ```{bash}
-wc -l $output.tab
+wc -l ../output/blastout/GCF_963853765.1.tab
+```
+
+add headers
+
+```{bash}
+
+echo -e "qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore" > ../output/blastout/GCF_963853765.1_with_headers.tab
+cat ../output/blastout/GCF_963853765.1.tab >> ../output/blastout/GCF_963853765.1_with_headers.tab
+
+head -2 ../output/blastout/GCF_963853765.1_with_headers.tab
+
 ```
 
 ```{bash}
-tr '|' '\t' < $output.tab \
-> $output_sep.tab
 
-head -1 $output_sep.tab
+tr '|' '\t' < ../output/blastout/GCF_963853765.1_with_headers.tab \
+> ../output/blastout/GCF_963853765.1_sep.tab
+
+head -2 ../output/blastout/GCF_963853765.1_sep.tab
 ```
 
 following steven's code [here](https://sr320.github.io/tumbling-oysters/posts/sr320-23-repro/)
+
+## preview output
+
+```{r}
+
+blastout <- read.delim("../output/blastout/GCF_963853765.1_with_headers.tab")
+head(blastout)
+```
+
+histogram of e values
+
+```{r}
+# transform data
+blastout$evalue <- -log10(blastout$evalue + 1e-300)
+
+# histogram
+hist(blastout$evalue)
+```
