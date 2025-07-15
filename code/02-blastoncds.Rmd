@@ -125,3 +125,24 @@ blastout$evalue <- -log10(blastout$evalue + 1e-300)
 # histogram
 hist(blastout$evalue)
 ```
+
+## prep for uniprot 
+
+isolate spid
+
+```{bash}
+#must do with the no headers version since it creates more columns than there are headers for
+
+tr '|' '\t' < ../output/blastout/GCF_963853765.1.tab \
+> ../output/blastout/GCF_963853765.1_with_headers_sep.tab
+
+head -3 ../output/blastout/GCF_963853765.1_with_headers_sep.tab
+```
+
+```{r}
+
+SPID <- read.csv("../output/blastout/GCF_963853765.1_with_headers_sep.tab", sep = "", header = F)
+head(SPID)
+
+write.csv(SPID$V2, "../output/GCF_963853765.1_SPID.txt", row.names = F, col.names = F, quote = F)
+```
