@@ -15,6 +15,8 @@ Based on the following GO Term: [GO:0007276](https://www.ebi.ac.uk/QuickGO/term/
 
 ![](images/GO0007276_ancestorchart.png)
 
+# BLAST
+
 ## Make Blast DB (do once)
 
 getting GO
@@ -108,7 +110,7 @@ head -2 ../output/blastout/GCF_963853765.1_sep.tab
 
 following steven's code [here](https://sr320.github.io/tumbling-oysters/posts/sr320-23-repro/)
 
-## preview output
+### preview output
 
 ```{r}
 
@@ -126,9 +128,9 @@ blastout$evalue <- -log10(blastout$evalue + 1e-300)
 hist(blastout$evalue)
 ```
 
-## prep for uniprot 
+# GO ANNOTATION
 
-isolate spid
+### isolate spid to prep for uniprot mapping
 
 ```{bash}
 #must do with the no headers version since it creates more columns than there are headers for
@@ -185,4 +187,36 @@ library(dplyr)
 
 annot_w_GO <- left_join(annot, uniprot, by = "SPID")
 head(annot_w_GO)
+
+write.csv(annot_w_GO, "../output/GCF_963853765.1_annotation.tab", sep = "")
+```
+
+# GENE LIST
+
+multiple results per seq. id. want to keep the one with the highest bitscore
+
+```{r}
+
+annot_w_GO_top <- annot_w_GO %>%
+  group_by(sseqid) %>%
+  slice_max(bitscore, with_ties = FALSE) %>%
+  ungroup()
+
+head(annot_w_GO_top)
+```
+
+### create gene list
+
+I want to save 2 files: the full annotation (annot_W\_go; this was done above) AND one with just key info (seq id, gene name for top hit, go info, e value, and bit score)
+
+```{r}
+
+gene_list <- data.frame(annot_w_GO_top$qseqid, annot_w_GO_top$sseqid, annot_w_GO_top$evalue, annot_w_GO_top$bitscore, annot_w_GO_top$SPID, annot_w_GO_top$Entry.Name, annot_w_GO_top$Protein.names, annot_w_GO_top$Gene.Names, annot_w_GO_top$Organism, annot_w_GO_top$Length, annot_w_GO_top$Gene.Ontology.IDs, annot_w_GO_top$Gene.Ontology..biological.process., annot_w_GO_top$Gene.Ontology..GO., annot_w_GO_top$Developmental.stage, annot_w_GO_top$Induction, annot_w_GO_top$Induction, annot_w_GO_top$Tissue.specificity)
+
+head(gene_list)
+```
+
+```{r}
+
+write.csv(gene_list, "../output/genelist_GCF_963853765.1.csv")
 ```
