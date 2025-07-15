@@ -134,15 +134,55 @@ isolate spid
 #must do with the no headers version since it creates more columns than there are headers for
 
 tr '|' '\t' < ../output/blastout/GCF_963853765.1.tab \
-> ../output/blastout/GCF_963853765.1_with_headers_sep.tab
+> ../output/blastout/GCF_963853765.1_sep.tab
 
-head -3 ../output/blastout/GCF_963853765.1_with_headers_sep.tab
+head -3 ../output/blastout/GCF_963853765.1_sep.tab
 ```
 
 ```{r}
 
-SPID <- read.csv("../output/blastout/GCF_963853765.1_with_headers_sep.tab", sep = "", header = F)
+SPID <- read.csv("../output/blastout/GCF_963853765.1_sep.tab", sep = "", header = F)
 head(SPID)
 
 write.csv(SPID$V2, "../output/GCF_963853765.1_SPID.txt", row.names = F, col.names = F, quote = F)
+```
+
+### GO terms were gathered from [uniport ID mapping](https://www.uniprot.org/id-mapping), with the text file generated above being used as the input. columns were customized to include biological proccess GO information. output was saved as a .tsv. 
+
+need to join together the BLAST output with the GO info to complete the annotation
+
+```{r}
+# going to create a dataframe for us to join the uniprot output to
+
+annot <- read.csv("../output/blastout/GCF_963853765.1_with_headers.tab", sep = "")
+head(annot)
+
+# add SPID as column so have a point to join by 
+
+annot$SPID <- SPID$V2
+head(annot)
+
+```
+
+```{r}
+# read in uniprot output
+
+uniprot <- read.delim("../output/GCF_963853765.1_uniprotout")
+head(uniprot)
+
+# create SPID column for joining (same as entry)
+
+uniprot$SPID <- uniprot$Entry
+head(uniprot)
+```
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+# now join
+
+annot_w_GO <- left_join(annot, uniprot, by = "SPID")
+head(annot_w_GO)
 ```
