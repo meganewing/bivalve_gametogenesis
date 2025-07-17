@@ -17,7 +17,7 @@ Based on the following GO Term: [GO:0007276](https://www.ebi.ac.uk/QuickGO/term/
 
 # BLAST
 
-## Make Blast DB (do once)
+## Get Query (GO term proteins)
 
 getting GO
 
@@ -25,21 +25,15 @@ getting GO
 curl -H "Accept: text/plain" "https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28%28go%3A0007276%29%29+AND+%28reviewed%3Atrue%29" -o ../data/SwissProt-GO:0007276.fa
 ```
 
+preview file and check \# of sequences
+
 ```{bash}
 head ../data/SwissProt-GO:0007276.fa
 echo "Number of Sequences"
 grep -c ">" ../data/SwissProt-GO:0007276.fa 
 ```
 
-Finish creating DB -- just interested in genes that are under our GO umbrella
-
-```{bash}
-
-/home/shared/ncbi-blast-2.15.0+/bin/makeblastdb \
--in ../data/SwissProt-GO:0007276.fa \
--dbtype prot \
--out ../blastdb/SwissProt-GO:0007276/SwissProt-GO:0007276/
-```
+## Make Blast DB (do once)
 
 making database where the species genome is the DB
 
@@ -51,13 +45,13 @@ making database where the species genome is the DB
 -out ../blastdb/GCF_963853765.1/GCF_963853765.1/
 ```
 
-## Set Querey
+preview file and check \# of sequences
 
 ```{bash}
-fasta= "../data/genomes_refseq/ncbi_dataset/data/GCF_963853765.1/cds_from_genomic.fna"
-head $fasta
+head ../data/genomes_refseq/ncbi_dataset/data/GCF_963853765.1/cds_from_genomic.fna
 echo "Number of Sequences"
-grep ">" -c $fasta
+grep ">" -c ../data/genomes_refseq/ncbi_dataset/data/GCF_963853765.1/cds_from_genomic.fna
+
 ```
 
 ## Blast\*\*\*
@@ -149,7 +143,7 @@ head(SPID)
 write.csv(SPID$V2, "../output/GCF_963853765.1_SPID.txt", row.names = F, col.names = F, quote = F)
 ```
 
-### GO terms were gathered from [uniport ID mapping](https://www.uniprot.org/id-mapping), with the text file generated above being used as the input. columns were customized to include biological proccess GO information. output was saved as a .tsv. 
+### GO terms were gathered from [uniport ID mapping](https://www.uniprot.org/id-mapping), with the text file generated above being used as the input. columns were customized to include biological proccess GO information. output was saved as a .tsv.
 
 need to join together the BLAST output with the GO info to complete the annotation
 
@@ -193,7 +187,7 @@ write.csv(annot_w_GO, "../output/GCF_963853765.1_annotation.tab", sep = "")
 
 # GENE LIST
 
-multiple results per seq. id. want to keep the one with the highest bitscore
+if multiple query sequences matching to the same db (genome) sequence, could filter for the one with the highest bitscore. Don't need to do this however.
 
 ```{r}
 
@@ -209,14 +203,24 @@ head(annot_w_GO_top)
 
 I want to save 2 files: the full annotation (annot_W\_go; this was done above) AND one with just key info (seq id, gene name for top hit, go info, e value, and bit score)
 
+unflitered:
+
 ```{r}
 
-gene_list <- data.frame(annot_w_GO_top$qseqid, annot_w_GO_top$sseqid, annot_w_GO_top$evalue, annot_w_GO_top$bitscore, annot_w_GO_top$SPID, annot_w_GO_top$Entry.Name, annot_w_GO_top$Protein.names, annot_w_GO_top$Gene.Names, annot_w_GO_top$Organism, annot_w_GO_top$Length, annot_w_GO_top$Gene.Ontology.IDs, annot_w_GO_top$Gene.Ontology..biological.process., annot_w_GO_top$Gene.Ontology..GO., annot_w_GO_top$Developmental.stage, annot_w_GO_top$Induction, annot_w_GO_top$Induction, annot_w_GO_top$Tissue.specificity)
+gene_list <- data.frame(annot_w_GO$qseqid, annot_w_GO$sseqid, annot_w_GO$pident, annot_w_GO$evalue, annot_w_GO$bitscore, annot_w_GO$SPID, annot_w_GO$Entry.Name, annot_w_GO$Protein.names, annot_w_GO$Gene.Names, annot_w_GO$Organism, annot_w_GO$Length, annot_w_GO$Gene.Ontology.IDs, annot_w_GO$Gene.Ontology..biological.process., annot_w_GO$Gene.Ontology..GO., annot_w_GO$Developmental.stage, annot_w_GO$Induction, annot_w_GO$Induction, annot_w_GO$Tissue.specificity)
 
 head(gene_list)
 ```
 
 ```{r}
-
 write.csv(gene_list, "../output/genelist_GCF_963853765.1.csv")
+```
+
+if doing filtered:
+
+```{r}
+
+gene_list_topbit <- data.frame(annot_w_GO_top$qseqid, annot_w_GO_top$sseqid, annot_w_GO_top$evalue, annot_w_GO_top$bitscore, annot_w_GO_top$SPID, annot_w_GO_top$Entry.Name, annot_w_GO_top$Protein.names, annot_w_GO_top$Gene.Names, annot_w_GO_top$Organism, annot_w_GO_top$Length, annot_w_GO_top$Gene.Ontology.IDs, annot_w_GO_top$Gene.Ontology..biological.process., annot_w_GO_top$Gene.Ontology..GO., annot_w_GO_top$Developmental.stage, annot_w_GO_top$Induction, annot_w_GO_top$Induction, annot_w_GO_top$Tissue.specificity)
+
+head(gene_list_topbit)
 ```
