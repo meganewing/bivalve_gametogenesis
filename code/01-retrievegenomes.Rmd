@@ -13,6 +13,10 @@ Here I am retrieving the cds files from NCBI and saving them to my subdirectory 
 
 First, to do this, I need to load in some info about my genomes so I can have the accession ids readily available for out loop.
 
+Using the RefSeq annotated genomes on NCBI for *Bivalvia*: <https://www.ncbi.nlm.nih.gov/datasets/genome/?taxon=6544&annotated_only=true&refseq_annotation=true>
+
+NCBI output table downloaded as .tsv
+
 ### Saving Accessions as Variable for Loop
 
 ```{r}
@@ -37,13 +41,13 @@ now we try our loop
 
 ```{bash}
 
-# Path to datasets tool
+# Path to datasets tool (which contains NCBI database)
 DATASETS_CMD="/home/shared/datasets"
 
 # Output directory
 OUTPUT_DIR="../data/genomes_refseq"
 
-# copied and pasted from output above
+# copied and pasted from output above ('accessions')
 accessions="GCF_002022765.2 GCF_026914265.1 GCF_963853765.1 GCF_041381155.1 GCF_963676685.1 GCF_902652985.1 GCF_025612915.1 GCF_947568905.1 GCF_021730395.1 GCF_020536995.1 GCF_036588685.1 GCF_026571515.1 GCF_002113885.1 GCF_021869535.1 GCF_033153115.1 GCF_032062105.1 GCF_031769215.1"
 
 # Loop over the list
