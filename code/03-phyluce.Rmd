@@ -1,0 +1,86 @@
+---
+title: "Harvesting UCEs from Genomes"
+author: "Megan Ewing"
+date: "2025-07-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is following [phyluce tutorial III: harvesting UCE loci from genomes](https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-3.html).
+
+Important folder paths:
+
+-   genomes: `../data/genomes_refseq/ncbi_dataset/data/`
+
+Necessary packages: [fatotwobit](https://anaconda.org/bioconda/ucsc-fatotwobit) , [twobitinfo](https://anaconda.org/bioconda/ucsc-twobitinfo), and [twobittofa](https://anaconda.org/bioconda/ucsc-twobittofa) (which i have in an enviornment 'twoBit' for):
+
+```{bash}
+
+### to open the twoBit environment where the packages live: 
+# 
+# conda activate twoBit
+# 
+### if conda activate gives an error like command not found, you'll need to run:
+# 
+# eval "$(/opt/anaconda/anaconda3/bin/conda shell.bash hook)"
+# 
+### and then 
+# 
+# conda activate twoBit
+#
+#
+### don't forget to `conda deactivate` at end of session!
+```
+
+Need to move the genomes to the phyluce data folder as 2bits -- do this as loop. also get info
+
+### TwoBit Genomes 
+
+```{bash}
+
+# Input and output base directories
+INPUT_BASE="../data/genomes_refseq/ncbi_dataset/data"
+OUTPUT_BASE="../data/phyluce"
+
+# Loop over each accession-named folder in the input directory
+for acc_dir in "$INPUT_BASE"/*; do
+  # Get the accession ID (folder name)
+  accession=$(basename "$acc_dir")
+
+  # Define input and output file paths
+  fna_file="$acc_dir/cds_from_genomic.fna"
+  out_dir="$OUTPUT_BASE/$accession"
+  two_bit_file="$out_dir/${accession}.2bit"
+  sizes_file="$out_dir/sizes.tab"
+
+  # Check if .fna file exists
+  if [[ ! -f "$fna_file" ]]; then
+    echo "No .fna file found for $accession, skipping."
+    continue
+  fi
+
+  # Create output directory if needed
+  mkdir -p "$out_dir"
+
+  # Convert .fna to .2bit
+  echo "Converting $accession -> .2bit"
+  /opt/anaconda/anaconda3/envs/twoBit/bin/faToTwoBit "$fna_file" "$two_bit_file"
+
+  # Get sizes info
+  /opt/anaconda/anaconda3/envs/twoBit/bin/twoBitInfo "$two_bit_file" "$sizes_file"
+
+  # Preview sizes file
+  echo "Preview of $sizes_file:"
+  head -n 5 "$sizes_file"
+  echo "-------------------------------------"
+done
+
+
+```
+
+### Bait Sequences for UCE
+
+Bait sequences were provided courtesy of Yi-Xuan Li, of Hong Kong Baptist University, from [Yi-Xuan et al. (2024)](https://academic.oup.com/sysbio/article-abstract/74/1/16/7758682).
