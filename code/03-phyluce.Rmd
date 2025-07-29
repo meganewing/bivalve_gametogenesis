@@ -116,6 +116,19 @@ phyluce installed mamba environment: `/home/shared/8TB_HDD_02/mewing0/miniforge3
 ```
 
 ```{bash}
+
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce/bin/phyluce_probe_run_multiple_lastzs_sqlite \
+        --db uce_frombaits_v1 \
+        --output v1-genome-lastz \
+        --scaffoldlist GCF_002113885.1 \
+        --genome-base-path ./ \
+        --probefile Baits_Bivalve_v1.fasta \
+        --cores 10
+```
+
+```{bash}
 # run search for v1 baits
 cd ../data/phyluce/
 
@@ -125,6 +138,6 @@ cd ../data/phyluce/
         --scaffoldlist GCF_002022765.2 GCF_002113885.1 GCF_020536995.1 GCF_021730395.1 GCF_021869535.1 GCF_025612915.1 GCF_026571515.1 GCF_026914265.1 GCF_031769215.1 GCF_032062105.1 GCF_033153115.1 GCF_036588685.1 GCF_041381155.1 GCF_902652985.1 GCF_947568905.1 GCF_963676685.1 GCF_963853765.1 \
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v1.fasta \
-        --cores 12
+        --cores 20
         
 ```
