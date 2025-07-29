@@ -37,7 +37,7 @@ Necessary packages: [fatotwobit](https://anaconda.org/bioconda/ucsc-fatotwobit) 
 
 Need to move the genomes to the phyluce data folder as 2bits -- do this as loop. also get info
 
-### TwoBit Genomes 
+### TwoBit Genomes
 
 ```{bash}
 
@@ -83,4 +83,31 @@ done
 
 ### Bait Sequences for UCE
 
-Bait sequences were provided courtesy of Yi-Xuan Li, of Hong Kong Baptist University, from [Yi-Xuan et al. (2024)](https://academic.oup.com/sysbio/article-abstract/74/1/16/7758682).
+Bait sequences were provided courtesy of Yi-Xuan Li, of Hong Kong Baptist University, from [Yi-Xuan et al. (2024)](https://academic.oup.com/sysbio/article-abstract/74/1/16/7758682)
+
+### Align the probes to the genomes
+
+"Now, we need to think of some name for the database to create (here \`tutorial3.sqlite\`), the name of an output in which to store the \`lastz\` search results, the path to the genome sequences, the name of the genome sequences, the path to the probe file, and a number of compute cores to use:" (from phyluce tutorial)
+
+```{bash}
+# navigate into directory that has the probe and twobit subfolders 
+
+cd ../data/phyluce/
+```
+
+```{bash}
+ls ../data/phyluce/
+```
+
+```{bash}
+# run search for v1 baits
+
+phyluce_probe_run_multiple_lastzs_sqlite \
+        --db uce_frombaits_v1 \
+        --output v1-genome-lastz \
+        --scaffoldlist GCF_002022765.2 GCF_002113885.1 GCF_020536995.1 GCF_021730395.1 GCF_021869535.1 GCF_025612915.1 GCF_026571515.1 GCF_026914265.1 GCF_031769215.1 GCF_032062105.1 GCF_033153115.1 GCF_036588685.1 GCF_041381155.1 GCF_902652985.1 GCF_947568905.1 GCF_963676685.1 GCF_963853765.1 \
+        --genome-base-path ./ \
+        --probefile Baits_Bivalve_v1.fasta \
+        --cores 12
+        
+```
