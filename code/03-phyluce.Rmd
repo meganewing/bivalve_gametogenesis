@@ -104,13 +104,17 @@ you'll need to ensure phyluce is installed for this
 phyluce installed mamba environment: `/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce/`
 
 ```{bash}
-## initialize mamba
+## initialize mamba / phyluce in terminal : 
+#
+# conda create -n phyluce-py3 python=3.8 phyluce -c bioconda -c conda-forge
+
+#
 # eval "$(/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda shell.bash hook)"
 # eval "$(mamba shell hook --shell bash)"
-
+#
 ## activates base 
 # mamba activate
-
+#
 ## activates environment i created
 # mamba activate phyluce 
 ```
@@ -119,13 +123,16 @@ phyluce installed mamba environment: `/home/shared/8TB_HDD_02/mewing0/miniforge3
 
 cd ../data/phyluce/
 
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce/bin/phyluce_probe_run_multiple_lastzs_sqlite \
         --db uce_frombaits_v1 \
         --output v1-genome-lastz \
-        --scaffoldlist GCF_002113885.1 \
+        --scaffoldlist GCF_002113885.1 GCF_002022765.2 \
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v1.fasta \
-        --cores 10
+        --cores 10 \
+        2> phyluce.log
+        
 ```
 
 ```{bash}
