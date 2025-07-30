@@ -89,25 +89,63 @@ Bait sequences were provided courtesy of Yi-Xuan Li, of Hong Kong Baptist Univer
 
 "Now, we need to think of some name for the database to create (here \`tutorial3.sqlite\`), the name of an output in which to store the \`lastz\` search results, the path to the genome sequences, the name of the genome sequences, the path to the probe file, and a number of compute cores to use:" (from phyluce tutorial)
 
-```{bash}
-# navigate into directory that has the probe and twobit subfolders 
+currently, the folders and files within are `GCF_#########.#`, but the `.#` will confuse phyluce, so let's get rid of those.
 
-cd ../data/phyluce/
+```{r}
+library(fs)
+library(stringr)
+
+base_dir <- "../data/phyluce"
+
+# rename directories
+dirs <- dir_ls(base_dir, type = "directory", recurse = FALSE, regexp = "^.*/GCF_.*\\.\\d+$")
+for (dir in dirs) {
+  dir_name <- path_file(dir)
+  new_dir_name <- str_replace(dir_name, "\\.\\d+$", "")
+  new_dir_path <- path(path_dir(dir), new_dir_name)
+  file_move(dir, new_dir_path)  # <- Corrected line
+  cat("Renamed dir:", dir, "->", new_dir_path, "\n")
+}
+
+
+# rename 2bit files
+# List all .2bit files under subdirectories (recursive = TRUE)
+bit_files <- list.files(path = base_dir, pattern = "^GCF_\\d+\\.\\d+\\.2bit$", 
+                        recursive = TRUE, full.names = TRUE)
+
+for (old_path in bit_files) {
+  # Extract current filename
+  filename <- basename(old_path)
+  
+  # Remove the dot-version (e.g., .1) from filename
+  new_filename <- sub("(GCF_\\d+)\\.\\d+\\.2bit", "\\1.2bit", filename)
+  
+  if (new_filename != filename) {
+    # Build new path in same directory
+    dir_path <- dirname(old_path)
+    new_path <- file.path(dir_path, new_filename)
+    
+    # Rename the file
+    file.rename(old_path, new_path)
+    cat("Renamed:", old_path, "->", new_path, "\n")
+  }
+}
 ```
 
 ```{bash}
-ls ../data/phyluce/
+# list directory contents to check
+# reason for the extra ls commands is to have it print in a way that can just be copied and pasted as the scaffold in the probe align chunk
+ls -m ../data/phyluce/ | tr -d ','
 ```
 
-you'll need to ensure phyluce is installed for this
+you'll need to ensure [phyluce](https://github.com/faircloth-lab/phyluce/releases/tag/v1.7.3) is installed for this
 
 phyluce installed mamba environment: `/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce/`
 
 ```{bash}
-## initialize mamba / phyluce in terminal : 
+## info to initialize mamba / phyluce in terminal : 
 #
 # conda create -n phyluce-py3 python=3.8 phyluce -c bioconda -c conda-forge
-
 #
 # eval "$(/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda shell.bash hook)"
 # eval "$(mamba shell hook --shell bash)"
@@ -120,14 +158,15 @@ phyluce installed mamba environment: `/home/shared/8TB_HDD_02/mewing0/miniforge3
 ```
 
 ```{bash}
+# for v1 baits
 
 cd ../data/phyluce/
 
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
-/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce/bin/phyluce_probe_run_multiple_lastzs_sqlite \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_probe_run_multiple_lastzs_sqlite \
         --db uce_frombaits_v1 \
         --output v1-genome-lastz \
-        --scaffoldlist GCF_002113885.1 GCF_002022765.2 \
+        --scaffoldlist GCF_002022765 GCF_002113885 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v1.fasta \
         --cores 10 \
@@ -136,15 +175,19 @@ cd ../data/phyluce/
 ```
 
 ```{bash}
-# run search for v1 baits
+
+# for v2 baits
+
 cd ../data/phyluce/
 
-/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce/bin/phyluce_probe_run_multiple_lastzs_sqlite \
-        --db uce_frombaits_v1 \
-        --output v1-genome-lastz \
-        --scaffoldlist GCF_002022765.2 GCF_002113885.1 GCF_020536995.1 GCF_021730395.1 GCF_021869535.1 GCF_025612915.1 GCF_026571515.1 GCF_026914265.1 GCF_031769215.1 GCF_032062105.1 GCF_033153115.1 GCF_036588685.1 GCF_041381155.1 GCF_902652985.1 GCF_947568905.1 GCF_963676685.1 GCF_963853765.1 \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_probe_run_multiple_lastzs_sqlite \
+        --db uce_frombaits_v2 \
+        --output v2-genome-lastz \
+        --scaffoldlist GCF_002022765 GCF_002113885 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
         --genome-base-path ./ \
-        --probefile Baits_Bivalve_v1.fasta \
-        --cores 20
-        
+        --probefile Baits_Bivalve_v2.fasta \
+        --cores 10 \
+        2> phyluce_v2.log
+
 ```
