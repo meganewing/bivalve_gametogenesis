@@ -191,3 +191,54 @@ cd ../data/phyluce/
         2> phyluce_v2.log
 
 ```
+
+### Extracting FASTA sequence matching UCE loci from genome sequences
+
+need to create a configuration file that tells the program where to find each genome
+
+```{r}
+library(fs)
+library(stringr)
+
+# Set paths
+base_dir <- path_expand("~/bivalve_gametogenesis/data/phyluce")
+output_file <- path_expand("~/bivalve_gametogenesis/data/phyluce/genomes.conf")  
+
+# List all .2bit files recursively in GCF_* directories
+bit_files <- dir_ls(base_dir, recurse = TRUE, glob = "*.2bit")
+
+# Filter for GCF-named .2bit files
+bit_files <- bit_files[grepl("GCF_\\d+/", bit_files)]
+
+# Build config lines
+config_lines <- c("[scaffolds]")
+
+for (file_path in bit_files) {
+  file_name <- path_file(file_path)
+  gcf_id <- str_match(file_name, "^(GCF_\\d+)")[,2]
+  full_path <- path_expand(file_path)
+  config_lines <- c(config_lines, paste0(gcf_id, ":", full_path))
+}
+
+# Write to genomes.conf
+writeLines(config_lines, output_file)
+```
+
+```{bash}
+head -2 ../data/phyluce/genomes.conf
+```
+
+```{bash}
+
+# for v1
+
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_probe_slice_sequence_from_genomes \
+        --lastz v1-genome-lastz \
+        --conf genomes.conf \
+        --flank 500 \
+        --name-pattern "Baits_Bivalve_v1.fasta_v_{}.lastz.clean" \
+        --output v1-genome-fasta
+```
