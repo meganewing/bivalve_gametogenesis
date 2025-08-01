@@ -138,6 +138,44 @@ for (old_path in bit_files) {
 ls -m ../data/phyluce/ | tr -d ','
 ```
 
+We also need to adjust the sequence names within the .2bit files. now, this may seem a little two-steps-forward-one-step-back, but to do this we'll convert the .2bit files back to fasta, change the sequence names, and then convert back to .2bit and delete the intermediate files. The reason we didn't just change the fastas in the first place, is because we want to keep those exactly how they came from ncbi. we just want some change in the .2bit sequence names so that we can run lastz without the names getting overly truncated.
+
+```{bash}
+
+# Base directory where .2bit files live
+BASE_DIR="../data/phyluce"
+
+# Loop through all .2bit files
+find "$BASE_DIR" -name "*.2bit" | while read -r twoBitFile; do
+    # Extract directory and base name
+    dir=$(dirname "$twoBitFile")
+    base=$(basename "$twoBitFile" .2bit)
+
+    echo "Processing: $twoBitFile"
+
+    # Convert to .fasta
+    /opt/anaconda/anaconda3/envs/twoBit/bin/twoBitToFa "$twoBitFile" "$dir/${base}.fasta"
+
+    # Remove lcl| from headers
+    sed 's/^>lcl|/>/' "$dir/${base}.fasta" > "$dir/${base}_clean.fasta"
+
+    # Convert back to .2bit
+    /opt/anaconda/anaconda3/envs/twoBit/bin/faToTwoBit "$dir/${base}_clean.fasta" "$dir/${base}_clean.2bit"
+
+    echo "Cleaned .2bit written: $dir/${base}_clean.2bit"
+done
+
+# Replace original .2bit files with cleaned versions
+find "$BASE_DIR" -name "*_clean.2bit" | while read -r cleanBit; do
+    original="${cleanBit%_clean.2bit}.2bit"
+    mv "$cleanBit" "$original"
+done
+
+# Optionally remove intermediate FASTAs
+find "$BASE_DIR" -name "*.fasta" -delete
+
+```
+
 you'll need to ensure [phyluce](https://github.com/faircloth-lab/phyluce/releases/tag/v1.7.3) is installed for this
 
 phyluce installed mamba environment: `/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce/`
@@ -241,4 +279,18 @@ cd ../data/phyluce/
         --flank 500 \
         --name-pattern "Baits_Bivalve_v1.fasta_v_{}.lastz.clean" \
         --output v1-genome-fasta
+```
+
+```{bash}
+# for v2
+
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_probe_slice_sequence_from_genomes \
+        --lastz v2-genome-lastz \
+        --conf genomes.conf \
+        --flank 500 \
+        --name-pattern "Baits_Bivalve_v2.fasta_v_{}.lastz.clean" \
+        --output v2-genome-fasta
 ```
