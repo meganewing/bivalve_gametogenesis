@@ -18,14 +18,8 @@ Comparative transcriptomics for bivalve gametogenesis
 
 -   `data/genome_info-20250407.tsv` NCBI table with metainfo on the refseq annotated *Bivalvia* genomes
 
-```{=html}
-<!-- -->
-```
 -   `data/genomes_refseq/` has the ncbi output sequences
 
-```{=html}
-<!-- -->
-```
 -   `data/phyluce/` contains all the data related to phyluce including:
 
     -   .2bit genome files: `GCF_#########/GCF_#########.2bit`
