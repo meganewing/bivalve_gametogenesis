@@ -292,5 +292,74 @@ cd ../data/phyluce/
         --conf genomes.conf \
         --flank 500 \
         --name-pattern "Baits_Bivalve_v2.fasta_v_{}.lastz.clean" \
-        --output v2-genome-fasta
+        --output v2-genome-fasta \
+
+```
+
+below creates a summary table showing how many sequences hit for each step. notes that the fasta sequence \# may be lower than the lastz \# due to sequences getting cutoff in the flanking region
+
+```{r}
+library(tidyverse)
+
+# Define directories
+base_dir <- "../data/phyluce"
+paths <- list(
+  v1_lastz = file.path(base_dir, "v1-genome-lastz"),
+  v2_lastz = file.path(base_dir, "v2-genome-lastz"),
+  v1_fasta = file.path(base_dir, "v1-genome-fasta"),
+  v2_fasta = file.path(base_dir, "v2-genome-fasta")
+)
+
+# Function to count lines (lastz) or headers (fasta)
+count_lastz <- function(file) {
+  # Count non-empty lines = one match per line
+  length(readLines(file))
+}
+
+count_fasta <- function(file) {
+  # Count how many lines start with >
+  sum(readLines(file) %>% str_starts(">"))
+}
+
+# Parse sample ID from filenames
+parse_sample_lastz <- function(filename) {
+  str_extract(filename, "(?<=_v_GCF_)\\d+")
+}
+
+parse_sample_fasta <- function(filename) {
+  str_extract(tolower(filename), "(?<=gcf_)\\d+")
+}
+
+# Collect counts
+collect_counts <- function(folder, type) {
+  files <- list.files(folder, full.names = TRUE)
+  if (length(files) == 0) return(data.frame())
+  
+  tibble(
+    file = files,
+    sample = case_when(
+      str_detect(type, "lastz") ~ paste0("GCF_", parse_sample_lastz(basename(files))),
+      str_detect(type, "fasta") ~ paste0("GCF_", parse_sample_fasta(basename(files)))
+    ),
+    count = if (str_detect(type, "lastz")) {
+      map_int(files, count_lastz)
+    } else {
+      map_int(files, count_fasta)
+    },
+    source = type
+  )
+}
+
+# Run for all sources
+all_counts <- map2_dfr(paths, names(paths), collect_counts)
+
+# Reshape to wide format
+df_summary <- all_counts %>%
+  select(sample, source, count) %>%
+  pivot_wider(names_from = source, values_from = count, values_fill = 0) %>%
+  arrange(sample)
+
+print(df_summary)
+
+
 ```
