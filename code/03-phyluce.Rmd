@@ -361,5 +361,5 @@ df_summary <- all_counts %>%
 
 print(df_summary)
 
-
+write.csv(df_summary, "../data/phyluce/sequence_summary.csv")
 ```
