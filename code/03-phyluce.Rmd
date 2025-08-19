@@ -208,6 +208,7 @@ cd ../data/phyluce/
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v1.fasta \
         --cores 10 \
+        --identity 80 \
         2> phyluce.log
         
 ```
@@ -226,6 +227,7 @@ cd ../data/phyluce/
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v2.fasta \
         --cores 10 \
+        --identity 80 \
         2> phyluce_v2.log
 
 ```
@@ -362,4 +364,18 @@ df_summary <- all_counts %>%
 print(df_summary)
 
 write.csv(df_summary, "../data/phyluce/sequence_summary.csv")
+```
+
+sanity check: shouldn't have more hits than their are in the bait files:
+
+```{bash}
+head ../data/phyluce/Baits_Bivalve_v1.fasta
+echo "Number of Sequences"
+grep -c ">" ../data/phyluce/Baits_Bivalve_v1.fasta
+```
+
+```{bash}
+head ../data/phyluce/Baits_Bivalve_v2.fasta
+echo "Number of Sequences"
+grep -c ">" ../data/phyluce/Baits_Bivalve_v2.fasta
 ```

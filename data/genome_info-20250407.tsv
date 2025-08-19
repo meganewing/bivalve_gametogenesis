@@ -1,0 +1,18 @@
+Assembly Accession	Assembly Name	Organism Name	Organism Infraspecific Names Breed	Organism Infraspecific Names Strain	Organism Infraspecific Names Cultivar	Organism Infraspecific Names Ecotype	Organism Infraspecific Names Isolate	Organism Infraspecific Names Sex	Annotation Name	Assembly Level	Assembly Release Date	WGS project accession	Assembly Stats Number of Scaffolds
+GCF_002022765.2	C_virginica-3.0	Crassostrea virginica					RU13XGHG1-28		NCBI Crassostrea virginica Annotation Release 100	Chromosome	2017-09-01	MWPT03	10
+GCF_026914265.1	ASM2691426v1	Mya arenaria					MELC-2E11	female	GCF_026914265.1-RS_2023_01	Chromosome	2022-12-15		17
+GCF_963853765.1	xbMagGiga1.1	Magallana gigas							GCF_963853765.1-RS_2024_06	Chromosome	2023-12-12	CAWKXY01	29
+GCF_041381155.1	Ai_NY	Argopecten irradians					NY		GCF_041381155.1-RS_2024_10	Chromosome	2024-08-21	JAYEEO01	1508
+GCF_963676685.1	xbMytEdul2.2	Mytilus edulis							GCF_963676685.1-RS_2025_02	Chromosome	2024-03-10	CAVMBL02	2368
+GCF_902652985.1	xPecMax1.1	Pecten maximus							NCBI Pecten maximus Annotation Release 100	Chromosome	2019-11-26	CACRWE01	3983
+GCF_025612915.1	ASM2561291v2	Magallana angulata					pt1a10	female	GCF_025612915.1-RS_2022_12	Chromosome	2022-10-07	JANFPH01	410
+GCF_947568905.1	xbOstEdul1.1	Ostrea edulis							GCF_947568905.1-RS_2023_05	Chromosome	2022-12-16	CANOQP01	52
+GCF_021730395.1	MADL_Memer_1	Mercenaria mercenaria		notata					GCF_021730395.1-RS_2023_01	Chromosome	2022-02-01	JAIXLV01	4975
+GCF_020536995.1	UMN_Dpol_1.0	Dreissena polymorpha					Duluth1	male	NCBI Dreissena polymorpha Annotation Release 100	Chromosome	2021-10-21	JAIWYP01	193
+GCF_036588685.1	PNRI_Mtr1.1.1.hap1	Mytilus trossulus					FHL-02		GCF_036588685.1-RS_2024_02	Chromosome	2024-02-13	JAZBVT01	540
+GCF_026571515.1	ASM2657151v2	Ruditapes philippinarum					M1	male	GCF_026571515.1-RS_2023_10	Contig	2022-12-01	JAKTTH01	15873
+GCF_002113885.1	ASM211388v2	Mizuhopecten yessoensis		PY_sf001				male	NCBI Mizuhopecten yessoensis Annotation Release 100	Scaffold	2017-06-12	NEDP02	82658
+GCF_021869535.1	xbMytCali1.0.p	Mytilus californianus					M0D057914Y		NCBI Mytilus californianus Annotation Release 100	Scaffold	2022-02-02	JAKFGE01	175
+GCF_033153115.1	CSIRO_AGI_Sech_v1	Saccostrea echinata				Australia	AGI-Se365-2		GCF_033153115.1-RS_2023_12	Contig	2023-10-31	JAVQLB01	424
+GCF_032062105.1	CSIRO_AGI_Scuc_v1	Saccostrea cuccullata					Sc308-1		GCF_032062105.1-RS_2024_01	Contig	2023-09-27	JAVVLV01	23868
+GCF_031769215.1	AGI_CSIRO_Ybal_v1	Ylistrum balloti					Yb309-2		GCF_031769215.1-RS_2023_10	Contig	2023-09-20	JAUZWB01	1371
