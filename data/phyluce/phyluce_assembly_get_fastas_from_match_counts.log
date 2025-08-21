@@ -1,0 +1,828 @@
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: False
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_complete_v1.fasta
+2025-08-21 15:27:57,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:27:57,804 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v1.conf
+2025-08-21 15:27:57,804 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 shared UCE loci in a COMPLETE matrix
+2025-08-21 15:27:57,804 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:27:57,806 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002022765
+2025-08-21 15:27:57,806 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:27:57,927 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:27:57,928 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002113885
+2025-08-21 15:27:57,928 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:27:58,066 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:27:58,067 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_020536995
+2025-08-21 15:27:58,067 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:27:58,123 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:27:58,124 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021730395
+2025-08-21 15:27:58,124 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:27:58,227 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:27:58,228 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021869535
+2025-08-21 15:27:58,228 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:27:58,344 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:27:58,344 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_025612915
+2025-08-21 15:27:58,344 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:27:58,409 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:27:58,409 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026571515
+2025-08-21 15:27:58,409 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:27:58,503 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:27:58,503 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026914265
+2025-08-21 15:27:58,503 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:27:58,540 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:27:58,540 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_031769215
+2025-08-21 15:27:58,541 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:27:58,682 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:27:58,683 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_032062105
+2025-08-21 15:27:58,683 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:27:58,745 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:27:58,746 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_033153115
+2025-08-21 15:27:58,746 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:27:58,853 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:27:58,854 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_036588685
+2025-08-21 15:27:58,854 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:27:58,938 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:27:58,939 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_041381155
+2025-08-21 15:27:58,939 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:27:59,049 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:27:59,049 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_902652985
+2025-08-21 15:27:59,049 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:27:59,174 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:27:59,175 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_947568905
+2025-08-21 15:27:59,175 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:27:59,190 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:27:59,191 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963676685
+2025-08-21 15:27:59,191 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:27:59,253 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:27:59,254 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963853765
+2025-08-21 15:27:59,254 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:27:59,268 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: False
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.conf
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_complete_v2.fasta
+2025-08-21 15:28:23,164 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:28:23,165 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v2.conf
+2025-08-21 15:28:23,165 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 shared UCE loci in a COMPLETE matrix
+2025-08-21 15:28:23,165 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:28:23,167 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_002022765
+2025-08-21 15:28:23,167 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:28:23,213 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:28:23,214 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_002113885
+2025-08-21 15:28:23,214 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:28:23,326 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:28:23,327 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_020536995
+2025-08-21 15:28:23,327 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:28:23,377 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:28:23,378 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_021730395
+2025-08-21 15:28:23,378 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:28:23,520 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:28:23,521 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_021869535
+2025-08-21 15:28:23,521 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:28:23,664 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:28:23,665 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_025612915
+2025-08-21 15:28:23,665 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:28:23,776 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:28:23,777 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_026571515
+2025-08-21 15:28:23,777 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:28:23,891 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:28:23,892 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_026914265
+2025-08-21 15:28:23,892 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:28:24,000 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:28:24,001 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_031769215
+2025-08-21 15:28:24,001 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:28:24,163 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:28:24,165 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_032062105
+2025-08-21 15:28:24,165 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:28:24,262 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:28:24,263 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_033153115
+2025-08-21 15:28:24,263 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:28:24,336 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:28:24,337 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_036588685
+2025-08-21 15:28:24,337 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:28:24,434 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:28:24,435 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_041381155
+2025-08-21 15:28:24,435 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:28:24,540 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:28:24,541 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_902652985
+2025-08-21 15:28:24,541 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:28:24,580 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:28:24,581 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_947568905
+2025-08-21 15:28:24,581 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:28:24,632 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:28:24,633 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_963676685
+2025-08-21 15:28:24,633 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:28:24,758 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:28:24,759 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_963853765
+2025-08-21 15:28:24,759 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:28:24,839 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_complete_v1.fasta
+2025-08-21 15:37:41,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:37:41,381 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v1.conf
+2025-08-21 15:37:41,381 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:37:41,381 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:37:41,383 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002022765
+2025-08-21 15:37:41,383 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:37:41,507 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:37:41,508 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002113885
+2025-08-21 15:37:41,508 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:37:41,650 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:37:41,651 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_020536995
+2025-08-21 15:37:41,651 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:37:41,708 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:37:41,709 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021730395
+2025-08-21 15:37:41,709 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:37:41,813 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:37:41,814 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021869535
+2025-08-21 15:37:41,814 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:37:41,932 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:37:41,933 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_025612915
+2025-08-21 15:37:41,933 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:37:41,998 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:37:41,999 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026571515
+2025-08-21 15:37:41,999 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:37:42,094 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:37:42,095 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026914265
+2025-08-21 15:37:42,095 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:37:42,132 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:37:42,133 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_031769215
+2025-08-21 15:37:42,133 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:37:42,277 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:37:42,278 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_032062105
+2025-08-21 15:37:42,278 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:37:42,341 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:37:42,341 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_033153115
+2025-08-21 15:37:42,342 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:37:42,453 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:37:42,454 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_036588685
+2025-08-21 15:37:42,454 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:37:42,540 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:37:42,541 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_041381155
+2025-08-21 15:37:42,541 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:37:42,652 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:37:42,653 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_902652985
+2025-08-21 15:37:42,653 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:37:42,781 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:37:42,782 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_947568905
+2025-08-21 15:37:42,782 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:37:42,797 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:37:42,798 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963676685
+2025-08-21 15:37:42,798 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:37:42,863 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:37:42,863 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963853765
+2025-08-21 15:37:42,864 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:37:42,878 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: False
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_complete_v1.fasta
+2025-08-21 15:37:58,728 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:37:58,729 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v1.conf
+2025-08-21 15:37:58,729 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 shared UCE loci in a COMPLETE matrix
+2025-08-21 15:37:58,729 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:37:58,731 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002022765
+2025-08-21 15:37:58,731 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:37:58,852 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:37:58,853 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002113885
+2025-08-21 15:37:58,853 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:37:58,993 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:37:58,993 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_020536995
+2025-08-21 15:37:58,993 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:37:59,049 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:37:59,050 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021730395
+2025-08-21 15:37:59,050 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:37:59,154 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:37:59,155 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021869535
+2025-08-21 15:37:59,155 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:37:59,271 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:37:59,272 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_025612915
+2025-08-21 15:37:59,272 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:37:59,336 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:37:59,336 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026571515
+2025-08-21 15:37:59,336 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:37:59,429 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:37:59,430 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026914265
+2025-08-21 15:37:59,430 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:37:59,467 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:37:59,468 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_031769215
+2025-08-21 15:37:59,468 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:37:59,610 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:37:59,611 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_032062105
+2025-08-21 15:37:59,611 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:37:59,673 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:37:59,674 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_033153115
+2025-08-21 15:37:59,674 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:37:59,782 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:37:59,783 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_036588685
+2025-08-21 15:37:59,783 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:37:59,868 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:37:59,869 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_041381155
+2025-08-21 15:37:59,869 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:37:59,980 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:37:59,981 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_902652985
+2025-08-21 15:37:59,981 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:38:00,107 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:38:00,108 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_947568905
+2025-08-21 15:38:00,108 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:38:00,123 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:38:00,124 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963676685
+2025-08-21 15:38:00,124 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:38:00,187 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:38:00,188 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963853765
+2025-08-21 15:38:00,188 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:38:00,201 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:38:09,017 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_incomplete_v1.fasta
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v1.conf
+2025-08-21 15:38:09,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:38:09,019 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:38:09,021 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002022765
+2025-08-21 15:38:09,021 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:38:09,143 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:38:09,144 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002113885
+2025-08-21 15:38:09,144 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:38:09,283 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:38:09,284 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_020536995
+2025-08-21 15:38:09,284 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:38:09,340 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:38:09,341 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021730395
+2025-08-21 15:38:09,341 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:38:09,445 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:38:09,446 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021869535
+2025-08-21 15:38:09,446 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:38:09,561 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:38:09,562 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_025612915
+2025-08-21 15:38:09,562 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:38:09,626 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:38:09,627 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026571515
+2025-08-21 15:38:09,627 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:38:09,719 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:38:09,720 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026914265
+2025-08-21 15:38:09,720 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:38:09,756 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:38:09,757 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_031769215
+2025-08-21 15:38:09,757 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:38:09,899 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:38:09,900 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_032062105
+2025-08-21 15:38:09,900 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:38:09,961 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:38:09,962 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_033153115
+2025-08-21 15:38:09,962 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:38:10,070 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:38:10,070 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_036588685
+2025-08-21 15:38:10,070 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:38:10,154 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:38:10,155 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_041381155
+2025-08-21 15:38:10,155 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:38:10,265 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:38:10,266 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_902652985
+2025-08-21 15:38:10,266 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:38:10,390 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:38:10,391 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_947568905
+2025-08-21 15:38:10,391 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:38:10,406 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:38:10,407 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963676685
+2025-08-21 15:38:10,407 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:38:10,469 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:38:10,470 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963853765
+2025-08-21 15:38:10,470 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:38:10,484 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:38:43,967 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.conf
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_incomplete_v2.fasta
+2025-08-21 15:38:43,968 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:38:43,969 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v2.conf
+2025-08-21 15:38:43,969 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:38:43,969 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:38:43,971 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_002022765
+2025-08-21 15:38:43,971 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:38:44,017 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:38:44,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_002113885
+2025-08-21 15:38:44,018 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:38:44,125 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:38:44,126 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_020536995
+2025-08-21 15:38:44,126 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:38:44,174 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:38:44,175 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_021730395
+2025-08-21 15:38:44,175 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:38:44,313 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:38:44,314 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_021869535
+2025-08-21 15:38:44,314 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:38:44,451 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:38:44,452 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_025612915
+2025-08-21 15:38:44,452 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:38:44,561 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:38:44,562 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_026571515
+2025-08-21 15:38:44,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:38:44,674 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:38:44,674 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_026914265
+2025-08-21 15:38:44,675 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:38:44,781 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:38:44,782 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_031769215
+2025-08-21 15:38:44,782 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:38:44,943 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:38:44,944 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_032062105
+2025-08-21 15:38:44,944 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:38:45,039 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:38:45,040 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_033153115
+2025-08-21 15:38:45,040 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:38:45,112 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:38:45,113 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_036588685
+2025-08-21 15:38:45,113 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:38:45,208 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:38:45,209 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_041381155
+2025-08-21 15:38:45,209 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:38:45,311 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:38:45,312 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_902652985
+2025-08-21 15:38:45,312 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:38:45,351 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:38:45,352 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_947568905
+2025-08-21 15:38:45,352 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:38:45,401 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:38:45,402 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_963676685
+2025-08-21 15:38:45,402 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:38:45,525 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:38:45,526 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_963853765
+2025-08-21 15:38:45,526 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:38:45,604 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_incomplete_v1.fasta
+2025-08-21 15:40:14,954 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:40:14,955 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v1.conf
+2025-08-21 15:40:14,955 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:40:14,955 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:40:14,957 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002022765
+2025-08-21 15:40:14,957 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:40:15,081 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:40:15,082 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002113885
+2025-08-21 15:40:15,082 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:40:15,218 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:40:15,219 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_020536995
+2025-08-21 15:40:15,219 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:40:15,274 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:40:15,275 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021730395
+2025-08-21 15:40:15,275 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:40:15,377 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:40:15,378 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021869535
+2025-08-21 15:40:15,378 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:40:15,493 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:40:15,493 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_025612915
+2025-08-21 15:40:15,494 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:40:15,555 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:40:15,556 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026571515
+2025-08-21 15:40:15,556 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:40:15,647 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:40:15,648 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026914265
+2025-08-21 15:40:15,648 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:40:15,684 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:40:15,684 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_031769215
+2025-08-21 15:40:15,684 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:40:15,825 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:40:15,826 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_032062105
+2025-08-21 15:40:15,826 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:40:15,888 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:40:15,888 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_033153115
+2025-08-21 15:40:15,889 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:40:15,995 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:40:15,996 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_036588685
+2025-08-21 15:40:15,996 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:40:16,080 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:40:16,081 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_041381155
+2025-08-21 15:40:16,081 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:40:16,189 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:40:16,189 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_902652985
+2025-08-21 15:40:16,189 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:40:16,312 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:40:16,313 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_947568905
+2025-08-21 15:40:16,313 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:40:16,328 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:40:16,328 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963676685
+2025-08-21 15:40:16,329 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:40:16,390 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:40:16,391 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963853765
+2025-08-21 15:40:16,391 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:40:16,404 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.conf
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_incomplete_v2.fasta
+2025-08-21 15:40:21,802 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:40:21,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v2.conf
+2025-08-21 15:40:21,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:40:21,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:40:21,805 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_002022765
+2025-08-21 15:40:21,805 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:40:21,851 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:40:21,852 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_002113885
+2025-08-21 15:40:21,852 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:40:21,959 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:40:21,960 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_020536995
+2025-08-21 15:40:21,960 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:40:22,009 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:40:22,010 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_021730395
+2025-08-21 15:40:22,010 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:40:22,149 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:40:22,150 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_021869535
+2025-08-21 15:40:22,150 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:40:22,292 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:40:22,293 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_025612915
+2025-08-21 15:40:22,293 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:40:22,404 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:40:22,405 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_026571515
+2025-08-21 15:40:22,405 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:40:22,516 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:40:22,517 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_026914265
+2025-08-21 15:40:22,517 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:40:22,623 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:40:22,624 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_031769215
+2025-08-21 15:40:22,624 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:40:22,787 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:40:22,789 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_032062105
+2025-08-21 15:40:22,789 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:40:22,885 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:40:22,886 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_033153115
+2025-08-21 15:40:22,886 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:40:22,959 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:40:22,960 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_036588685
+2025-08-21 15:40:22,960 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:40:23,055 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:40:23,056 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_041381155
+2025-08-21 15:40:23,056 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:40:23,160 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:40:23,161 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_902652985
+2025-08-21 15:40:23,161 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:40:23,200 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:40:23,201 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_947568905
+2025-08-21 15:40:23,201 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:40:23,251 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:40:23,253 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_963676685
+2025-08-21 15:40:23,253 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:40:23,377 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:40:23,378 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_963853765
+2025-08-21 15:40:23,378 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:40:23,456 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_incomplete_v1.fasta
+2025-08-21 15:41:51,557 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:41:51,558 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v1.conf
+2025-08-21 15:41:51,558 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:41:51,558 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:41:51,560 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002022765
+2025-08-21 15:41:51,560 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:41:51,684 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:41:51,684 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_002113885
+2025-08-21 15:41:51,685 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:41:51,826 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:41:51,827 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_020536995
+2025-08-21 15:41:51,827 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:41:51,884 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:41:51,885 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021730395
+2025-08-21 15:41:51,885 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:41:51,990 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:41:51,991 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_021869535
+2025-08-21 15:41:51,991 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:41:52,107 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:41:52,107 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_025612915
+2025-08-21 15:41:52,107 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:41:52,173 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:41:52,174 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026571515
+2025-08-21 15:41:52,174 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:41:52,266 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:41:52,267 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_026914265
+2025-08-21 15:41:52,267 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:41:52,304 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:41:52,305 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_031769215
+2025-08-21 15:41:52,305 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:41:52,448 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:41:52,448 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_032062105
+2025-08-21 15:41:52,449 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:41:52,510 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:41:52,510 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_033153115
+2025-08-21 15:41:52,510 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:41:52,619 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:41:52,620 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_036588685
+2025-08-21 15:41:52,620 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:41:52,706 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:41:52,707 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_041381155
+2025-08-21 15:41:52,707 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:41:52,817 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:41:52,818 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_902652985
+2025-08-21 15:41:52,818 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:41:52,944 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:41:52,944 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_947568905
+2025-08-21 15:41:52,945 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:41:52,960 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:41:52,960 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963676685
+2025-08-21 15:41:52,960 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:41:53,024 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:41:53,024 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 2 UCE loci for gcf_963853765
+2025-08-21 15:41:53,024 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:41:53,038 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:41:58,491 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:41:58,492 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.conf
+2025-08-21 15:41:58,492 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_incomplete_v2.fasta
+2025-08-21 15:41:58,492 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:41:58,492 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v2.conf
+2025-08-21 15:41:58,492 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:41:58,493 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:41:58,495 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_002022765
+2025-08-21 15:41:58,495 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:41:58,542 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:41:58,543 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_002113885
+2025-08-21 15:41:58,543 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:41:58,653 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:41:58,654 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_020536995
+2025-08-21 15:41:58,654 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:41:58,704 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:41:58,705 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_021730395
+2025-08-21 15:41:58,705 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:41:58,844 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:41:58,845 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_021869535
+2025-08-21 15:41:58,845 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:41:58,987 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:41:58,988 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_025612915
+2025-08-21 15:41:58,988 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:41:59,100 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:41:59,101 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_026571515
+2025-08-21 15:41:59,101 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:41:59,214 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:41:59,215 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_026914265
+2025-08-21 15:41:59,215 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:41:59,322 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:41:59,323 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_031769215
+2025-08-21 15:41:59,323 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:41:59,485 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:41:59,486 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_032062105
+2025-08-21 15:41:59,486 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:41:59,581 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:41:59,582 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_033153115
+2025-08-21 15:41:59,582 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:41:59,655 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:41:59,656 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_036588685
+2025-08-21 15:41:59,656 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:41:59,752 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:41:59,753 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_041381155
+2025-08-21 15:41:59,753 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:41:59,857 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:41:59,858 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_902652985
+2025-08-21 15:41:59,859 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:41:59,897 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:41:59,898 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_947568905
+2025-08-21 15:41:59,898 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:41:59,949 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:41:59,950 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_963676685
+2025-08-21 15:41:59,950 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:42:00,073 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:42:00,074 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 3 UCE loci for gcf_963853765
+2025-08-21 15:42:00,074 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:42:00,153 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:47:26,563 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
+2025-08-21 15:47:26,564 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_incomplete_v1.fasta
+2025-08-21 15:47:26,564 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:47:26,569 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v1_incomplete.conf
+2025-08-21 15:47:26,570 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 1424 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:47:26,570 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:47:26,691 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 437 UCE loci for gcf_002022765
+2025-08-21 15:47:26,691 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:47:26,874 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:26,875 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:47:26,998 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 470 UCE loci for gcf_002113885
+2025-08-21 15:47:26,998 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:47:27,190 - phyluce_assembly_get_fastas_from_match_counts - INFO - Replaced <20 ambiguous bases (N) in 4 contigs for gcf_002113885
+2025-08-21 15:47:27,190 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:27,191 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:47:27,250 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 227 UCE loci for gcf_020536995
+2025-08-21 15:47:27,250 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:47:27,344 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:27,345 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:47:27,446 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 388 UCE loci for gcf_021730395
+2025-08-21 15:47:27,446 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:47:27,621 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:27,622 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:47:27,719 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 372 UCE loci for gcf_021869535
+2025-08-21 15:47:27,719 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:47:27,867 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:27,868 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:47:27,965 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 363 UCE loci for gcf_025612915
+2025-08-21 15:47:27,965 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:47:28,113 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:28,114 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:47:28,228 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 437 UCE loci for gcf_026571515
+2025-08-21 15:47:28,228 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:47:28,421 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:28,422 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:47:28,481 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 219 UCE loci for gcf_026914265
+2025-08-21 15:47:28,481 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:47:28,572 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:28,573 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:47:28,765 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 739 UCE loci for gcf_031769215
+2025-08-21 15:47:28,765 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:47:29,080 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:29,081 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:47:29,181 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 376 UCE loci for gcf_032062105
+2025-08-21 15:47:29,181 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:47:29,340 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:29,340 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:47:29,444 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 389 UCE loci for gcf_033153115
+2025-08-21 15:47:29,444 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:47:29,605 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:29,606 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:47:29,702 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 361 UCE loci for gcf_036588685
+2025-08-21 15:47:29,703 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:47:29,843 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:29,844 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:47:29,972 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 484 UCE loci for gcf_041381155
+2025-08-21 15:47:29,972 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:47:30,181 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:30,181 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:47:30,317 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 524 UCE loci for gcf_902652985
+2025-08-21 15:47:30,317 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:47:30,542 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:30,542 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:47:30,618 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 284 UCE loci for gcf_947568905
+2025-08-21 15:47:30,618 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:47:30,736 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:30,737 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:47:30,828 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 340 UCE loci for gcf_963676685
+2025-08-21 15:47:30,828 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:47:30,964 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:30,964 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:47:31,048 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 314 UCE loci for gcf_963853765
+2025-08-21 15:47:31,048 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:47:31,174 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.incomplete
+2025-08-21 15:47:31,194 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:47:59,957 - phyluce_assembly_get_fastas_from_match_counts - INFO - ===== Starting phyluce_assembly_get_fastas_from_match_counts ====
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Version: 1.7.3
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Commit: None
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_contigs: None
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --extend_locus_db: None
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --incomplete_matrix: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --log_path: None
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --match_count_output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_incomplete_v2.fasta
+2025-08-21 15:47:59,958 - phyluce_assembly_get_fastas_from_match_counts - INFO - Argument --verbosity: INFO
+2025-08-21 15:47:59,962 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 17 taxa in the match-count-config file named dataset1_v2_incomplete.conf
+2025-08-21 15:47:59,963 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 1052 UCE loci in an INCOMPLETE matrix
+2025-08-21 15:47:59,963 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002022765---------------
+2025-08-21 15:48:00,048 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 293 UCE loci for gcf_002022765
+2025-08-21 15:48:00,048 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002022765
+2025-08-21 15:48:00,176 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:00,176 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_002113885---------------
+2025-08-21 15:48:00,298 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 472 UCE loci for gcf_002113885
+2025-08-21 15:48:00,298 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_002113885
+2025-08-21 15:48:00,524 - phyluce_assembly_get_fastas_from_match_counts - INFO - Replaced <20 ambiguous bases (N) in 1 contigs for gcf_002113885
+2025-08-21 15:48:00,524 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:00,525 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_020536995---------------
+2025-08-21 15:48:00,582 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 212 UCE loci for gcf_020536995
+2025-08-21 15:48:00,582 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_020536995
+2025-08-21 15:48:00,679 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:00,679 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021730395---------------
+2025-08-21 15:48:00,777 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 376 UCE loci for gcf_021730395
+2025-08-21 15:48:00,778 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021730395
+2025-08-21 15:48:00,965 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:00,965 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_021869535---------------
+2025-08-21 15:48:01,080 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 438 UCE loci for gcf_021869535
+2025-08-21 15:48:01,080 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_021869535
+2025-08-21 15:48:01,291 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:01,291 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_025612915---------------
+2025-08-21 15:48:01,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 333 UCE loci for gcf_025612915
+2025-08-21 15:48:01,380 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_025612915
+2025-08-21 15:48:01,525 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:01,526 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026571515---------------
+2025-08-21 15:48:01,630 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 394 UCE loci for gcf_026571515
+2025-08-21 15:48:01,630 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026571515
+2025-08-21 15:48:01,818 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:01,819 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_026914265---------------
+2025-08-21 15:48:01,889 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 262 UCE loci for gcf_026914265
+2025-08-21 15:48:01,889 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_026914265
+2025-08-21 15:48:02,016 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:02,017 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_031769215---------------
+2025-08-21 15:48:02,179 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 620 UCE loci for gcf_031769215
+2025-08-21 15:48:02,180 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_031769215
+2025-08-21 15:48:02,476 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:02,476 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_032062105---------------
+2025-08-21 15:48:02,565 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 333 UCE loci for gcf_032062105
+2025-08-21 15:48:02,565 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_032062105
+2025-08-21 15:48:02,712 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:02,713 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_033153115---------------
+2025-08-21 15:48:02,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 343 UCE loci for gcf_033153115
+2025-08-21 15:48:02,803 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_033153115
+2025-08-21 15:48:02,962 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:02,963 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_036588685---------------
+2025-08-21 15:48:03,073 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 416 UCE loci for gcf_036588685
+2025-08-21 15:48:03,073 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_036588685
+2025-08-21 15:48:03,267 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:03,268 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_041381155---------------
+2025-08-21 15:48:03,393 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 471 UCE loci for gcf_041381155
+2025-08-21 15:48:03,393 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_041381155
+2025-08-21 15:48:03,627 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:03,628 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_902652985---------------
+2025-08-21 15:48:03,749 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 463 UCE loci for gcf_902652985
+2025-08-21 15:48:03,749 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_902652985
+2025-08-21 15:48:03,971 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:03,971 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_947568905---------------
+2025-08-21 15:48:04,044 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 271 UCE loci for gcf_947568905
+2025-08-21 15:48:04,044 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_947568905
+2025-08-21 15:48:04,166 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:04,167 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963676685---------------
+2025-08-21 15:48:04,274 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 409 UCE loci for gcf_963676685
+2025-08-21 15:48:04,275 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963676685
+2025-08-21 15:48:04,469 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:04,469 - phyluce_assembly_get_fastas_from_match_counts - INFO - ----------------Getting UCE loci for gcf_963853765---------------
+2025-08-21 15:48:04,549 - phyluce_assembly_get_fastas_from_match_counts - INFO - There are 300 UCE loci for gcf_963853765
+2025-08-21 15:48:04,549 - phyluce_assembly_get_fastas_from_match_counts - INFO - Parsing and renaming contigs for gcf_963853765
+2025-08-21 15:48:04,683 - phyluce_assembly_get_fastas_from_match_counts - INFO - Writing missing locus information to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.incomplete
+2025-08-21 15:48:04,684 - phyluce_assembly_get_fastas_from_match_counts - INFO - ==== Completed phyluce_assembly_get_fastas_from_match_counts ====

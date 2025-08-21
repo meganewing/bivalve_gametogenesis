@@ -403,7 +403,7 @@ cd ../data/phyluce/
     --log-path log
 ```
 
-**Creating complete taxon set**
+### **Creating complete taxon set**
 
 this will give us a list of UCEs that are "complete" within our group of taxa -- meaning present in all taxa.
 
@@ -448,4 +448,116 @@ cd ../data/phyluce/
     --taxon-group 'dataset1' \
     --output dataset1_v2.conf \
     2> dataset1_v2.log
+```
+
+### **Incomplete data matrix**
+
+```{bash}
+cd ../data/phyluce/
+
+# create the data matrix configuration file
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_get_match_counts \
+    --locus-db v1-contigs_to_probes/probe.matches.sqlite \
+    --taxon-list-config taxonset.conf \
+    --taxon-group 'dataset1' \
+    --output dataset1_v1_incomplete.conf \
+    --incomplete-matrix \
+    2> dataset1_v1.log
+```
+
+```{bash}
+cd ../data/phyluce/
+
+# create the data matrix configuration file
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_get_match_counts \
+    --locus-db v2-contigs_to_probes/probe.matches.sqlite \
+    --taxon-list-config taxonset.conf \
+    --taxon-group 'dataset1' \
+    --output dataset1_v2_incomplete.conf \
+    --incomplete-matrix \
+    2> dataset1_v2.log
+```
+
+### **Extracting FASTAs**
+
+complete data matrix
+
+```{bash}
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_get_fastas_from_match_counts \
+    --contigs v1-contigs \
+    --locus-db v1-contigs_to_probes/probe.matches.sqlite \
+    --match-count-output dataset1_v1.conf \
+    --output taxon-set1/dataset1_complete_v1.fasta
+```
+
+```{bash}
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_get_fastas_from_match_counts \
+    --contigs v2-contigs \
+    --locus-db v2-contigs_to_probes/probe.matches.sqlite \
+    --match-count-output dataset1_v2.conf \
+    --output taxon-set1/dataset1_complete_v2.fasta
+```
+
+preview outputs for V1 and V2
+
+```{bash}
+head ../data/phyluce/taxon-set1/dataset1_complete_v1.fasta
+
+echo "number of sequences"
+grep -c "^>" ../data/phyluce/taxon-set1/dataset1_complete_v1.fasta
+```
+
+```{bash}
+head ../data/phyluce/taxon-set1/dataset1_complete_v2.fasta
+
+echo "number of sequences"
+grep -c "^>" ../data/phyluce/taxon-set1/dataset1_complete_v2.fasta
+```
+
+incomplete data matrix
+
+```{bash}
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_get_fastas_from_match_counts \
+    --contigs v1-contigs \
+    --locus-db v1-contigs_to_probes/probe.matches.sqlite \
+    --match-count-output dataset1_v1_incomplete.conf \
+    --incomplete-matrix dataset1_v1.incomplete \
+    --output taxon-set1/dataset1_incomplete_v1.fasta
+```
+
+```{bash}
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_get_fastas_from_match_counts \
+    --contigs v2-contigs \
+    --locus-db v2-contigs_to_probes/probe.matches.sqlite \
+    --match-count-output dataset1_v2_incomplete.conf \
+    --incomplete-matrix dataset1_v2.incomplete \
+    --output taxon-set1/dataset1_incomplete_v2.fasta
+```
+
+```{bash}
+head ../data/phyluce/taxon-set1/dataset1_incomplete_v1.fasta
+
+echo "number of sequences"
+grep -c "^>" ../data/phyluce/taxon-set1/dataset1_incomplete_v1.fasta
+```
+
+```{bash}
+head ../data/phyluce/taxon-set1/dataset1_incomplete_v2.fasta
+
+echo "number of sequences"
+grep -c "^>" ../data/phyluce/taxon-set1/dataset1_incomplete_v2.fasta
 ```
