@@ -1,0 +1,76 @@
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - ======= Starting phyluce_assembly_match_contigs_to_probes =======
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Version: 1.7.3
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Commit: None
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --csv: None
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --dupefile: None
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --keep_duplicates: None
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/log
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --min_coverage: 80
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --min_identity: 80
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --probes: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/Baits_Bivalve_v1.fasta
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --regex: ^(uce-\d+)(?:_p\d+.*)
+2025-08-21 12:16:23,092 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --verbosity: INFO
+2025-08-21 12:16:23,271 - phyluce_assembly_match_contigs_to_probes - INFO - Creating the UCE-match database
+2025-08-21 12:16:23,529 - phyluce_assembly_match_contigs_to_probes - INFO - Processing contig data
+2025-08-21 12:16:23,529 - phyluce_assembly_match_contigs_to_probes - INFO - -----------------------------------------------------------------
+2025-08-21 12:16:26,609 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_002022765: 437 (78.60%) uniques of 556 contigs, 0 dupe probe matches, 116 UCE loci removed for matching multiple contigs, 119 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:29,475 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_002113885: 470 (79.53%) uniques of 591 contigs, 0 dupe probe matches, 119 UCE loci removed for matching multiple contigs, 121 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:31,545 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_020536995: 227 (78.28%) uniques of 290 contigs, 0 dupe probe matches, 60 UCE loci removed for matching multiple contigs, 63 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:34,784 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_021730395: 388 (71.59%) uniques of 542 contigs, 0 dupe probe matches, 150 UCE loci removed for matching multiple contigs, 154 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:37,134 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_021869535: 372 (81.76%) uniques of 455 contigs, 0 dupe probe matches, 77 UCE loci removed for matching multiple contigs, 83 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:39,518 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_025612915: 363 (80.49%) uniques of 451 contigs, 0 dupe probe matches, 85 UCE loci removed for matching multiple contigs, 88 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:42,951 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_026571515: 437 (72.23%) uniques of 605 contigs, 0 dupe probe matches, 163 UCE loci removed for matching multiple contigs, 168 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:44,785 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_026914265: 219 (78.78%) uniques of 278 contigs, 0 dupe probe matches, 56 UCE loci removed for matching multiple contigs, 59 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:49,417 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_031769215: 739 (77.14%) uniques of 958 contigs, 0 dupe probe matches, 214 UCE loci removed for matching multiple contigs, 219 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:52,076 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_032062105: 376 (78.66%) uniques of 478 contigs, 0 dupe probe matches, 100 UCE loci removed for matching multiple contigs, 101 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:54,816 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_033153115: 389 (79.39%) uniques of 490 contigs, 0 dupe probe matches, 100 UCE loci removed for matching multiple contigs, 101 contigs removed for matching multiple UCE loci
+2025-08-21 12:16:56,934 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_036588685: 361 (85.34%) uniques of 423 contigs, 0 dupe probe matches, 58 UCE loci removed for matching multiple contigs, 62 contigs removed for matching multiple UCE loci
+2025-08-21 12:17:00,007 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_041381155: 484 (80.27%) uniques of 603 contigs, 0 dupe probe matches, 116 UCE loci removed for matching multiple contigs, 119 contigs removed for matching multiple UCE loci
+2025-08-21 12:17:03,426 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_902652985: 524 (76.38%) uniques of 686 contigs, 0 dupe probe matches, 155 UCE loci removed for matching multiple contigs, 162 contigs removed for matching multiple UCE loci
+2025-08-21 12:17:05,452 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_947568905: 284 (79.11%) uniques of 359 contigs, 0 dupe probe matches, 72 UCE loci removed for matching multiple contigs, 75 contigs removed for matching multiple UCE loci
+2025-08-21 12:17:07,594 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_963676685: 340 (82.73%) uniques of 411 contigs, 0 dupe probe matches, 67 UCE loci removed for matching multiple contigs, 71 contigs removed for matching multiple UCE loci
+2025-08-21 12:17:09,611 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_963853765: 314 (83.07%) uniques of 378 contigs, 0 dupe probe matches, 59 UCE loci removed for matching multiple contigs, 64 contigs removed for matching multiple UCE loci
+2025-08-21 12:17:09,611 - phyluce_assembly_match_contigs_to_probes - INFO - -----------------------------------------------------------------
+2025-08-21 12:17:09,611 - phyluce_assembly_match_contigs_to_probes - INFO - The LASTZ alignments are in /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes
+2025-08-21 12:17:09,611 - phyluce_assembly_match_contigs_to_probes - INFO - The UCE match database is in /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-08-21 12:17:09,612 - phyluce_assembly_match_contigs_to_probes - INFO - ======= Completed phyluce_assembly_match_contigs_to_probes ======
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - ======= Starting phyluce_assembly_match_contigs_to_probes =======
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Version: 1.7.3
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Commit: None
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --contigs: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --csv: None
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --dupefile: None
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --keep_duplicates: None
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/log
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --min_coverage: 80
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --min_identity: 80
+2025-08-21 12:19:26,896 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes
+2025-08-21 12:19:26,897 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --probes: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/Baits_Bivalve_v2.fasta
+2025-08-21 12:19:26,897 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --regex: ^(uce-\d+)(?:_p\d+.*)
+2025-08-21 12:19:26,897 - phyluce_assembly_match_contigs_to_probes - INFO - Argument --verbosity: INFO
+2025-08-21 12:19:26,950 - phyluce_assembly_match_contigs_to_probes - INFO - Creating the UCE-match database
+2025-08-21 12:19:27,215 - phyluce_assembly_match_contigs_to_probes - INFO - Processing contig data
+2025-08-21 12:19:27,215 - phyluce_assembly_match_contigs_to_probes - INFO - -----------------------------------------------------------------
+2025-08-21 12:19:30,120 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_002022765: 293 (74.55%) uniques of 393 contigs, 0 dupe probe matches, 99 UCE loci removed for matching multiple contigs, 100 contigs removed for matching multiple UCE loci
+2025-08-21 12:19:34,595 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_002113885: 472 (66.86%) uniques of 706 contigs, 0 dupe probe matches, 230 UCE loci removed for matching multiple contigs, 234 contigs removed for matching multiple UCE loci
+2025-08-21 12:19:36,934 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_020536995: 212 (70.43%) uniques of 301 contigs, 0 dupe probe matches, 86 UCE loci removed for matching multiple contigs, 88 contigs removed for matching multiple UCE loci
+2025-08-21 12:19:41,287 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_021730395: 376 (63.95%) uniques of 588 contigs, 0 dupe probe matches, 209 UCE loci removed for matching multiple contigs, 212 contigs removed for matching multiple UCE loci
+2025-08-21 12:19:46,195 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_021869535: 438 (66.16%) uniques of 662 contigs, 0 dupe probe matches, 222 UCE loci removed for matching multiple contigs, 224 contigs removed for matching multiple UCE loci
+2025-08-21 12:19:49,191 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_025612915: 333 (74.83%) uniques of 445 contigs, 0 dupe probe matches, 110 UCE loci removed for matching multiple contigs, 112 contigs removed for matching multiple UCE loci
+2025-08-21 12:19:53,462 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_026571515: 394 (67.81%) uniques of 581 contigs, 0 dupe probe matches, 179 UCE loci removed for matching multiple contigs, 186 contigs removed for matching multiple UCE loci
+2025-08-21 12:19:56,314 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_026914265: 262 (66.16%) uniques of 396 contigs, 0 dupe probe matches, 132 UCE loci removed for matching multiple contigs, 134 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:02,004 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_031769215: 620 (67.91%) uniques of 913 contigs, 0 dupe probe matches, 292 UCE loci removed for matching multiple contigs, 293 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:05,113 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_032062105: 333 (73.03%) uniques of 456 contigs, 0 dupe probe matches, 117 UCE loci removed for matching multiple contigs, 122 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:08,545 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_033153115: 343 (69.86%) uniques of 491 contigs, 0 dupe probe matches, 146 UCE loci removed for matching multiple contigs, 147 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:12,873 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_036588685: 416 (69.33%) uniques of 600 contigs, 0 dupe probe matches, 182 UCE loci removed for matching multiple contigs, 184 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:17,387 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_041381155: 471 (67.19%) uniques of 701 contigs, 0 dupe probe matches, 229 UCE loci removed for matching multiple contigs, 230 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:22,012 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_902652985: 463 (67.00%) uniques of 691 contigs, 0 dupe probe matches, 222 UCE loci removed for matching multiple contigs, 227 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:24,795 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_947568905: 271 (72.07%) uniques of 376 contigs, 0 dupe probe matches, 103 UCE loci removed for matching multiple contigs, 104 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:29,338 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_963676685: 409 (67.83%) uniques of 603 contigs, 0 dupe probe matches, 193 UCE loci removed for matching multiple contigs, 194 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:32,188 - phyluce_assembly_match_contigs_to_probes - INFO - gcf_963853765: 300 (72.99%) uniques of 411 contigs, 0 dupe probe matches, 109 UCE loci removed for matching multiple contigs, 111 contigs removed for matching multiple UCE loci
+2025-08-21 12:20:32,188 - phyluce_assembly_match_contigs_to_probes - INFO - -----------------------------------------------------------------
+2025-08-21 12:20:32,188 - phyluce_assembly_match_contigs_to_probes - INFO - The LASTZ alignments are in /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes
+2025-08-21 12:20:32,188 - phyluce_assembly_match_contigs_to_probes - INFO - The UCE match database is in /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
+2025-08-21 12:20:32,188 - phyluce_assembly_match_contigs_to_probes - INFO - ======= Completed phyluce_assembly_match_contigs_to_probes ======

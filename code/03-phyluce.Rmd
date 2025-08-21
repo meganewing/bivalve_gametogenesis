@@ -9,6 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Harvesting UCE Loci
+
 This is following [phyluce tutorial III: harvesting UCE loci from genomes](https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-3.html).
 
 Important folder paths:
@@ -366,16 +368,84 @@ print(df_summary)
 write.csv(df_summary, "../data/phyluce/sequence_summary.csv")
 ```
 
-sanity check: shouldn't have more hits than their are in the bait files:
+*\~ end of tutorial III \~*
+
+## UCE Processing for Phylogenomics
+
+A different [tutorial for phyluce](https://phyluce.readthedocs.io/en/latest/daily-use/daily-use-3-uce-processing.html#uce-processing) for processing UCE info and getting a matrix / fasta files that can be used to create a tree.
+
+created contig files (just duplicated the output files above and renamed)
 
 ```{bash}
-head ../data/phyluce/Baits_Bivalve_v1.fasta
-echo "Number of Sequences"
-grep -c ">" ../data/phyluce/Baits_Bivalve_v1.fasta
+# make a directory for log files
+mkdir ../data/phyluce/log
+
+# match contigs to probes
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_match_contigs_to_probes \
+    --contigs v1-contigs \
+    --probes Baits_Bivalve_v1.fasta \
+    --output v1-contigs_to_probes \
+    --log-path log
 ```
 
 ```{bash}
-head ../data/phyluce/Baits_Bivalve_v2.fasta
-echo "Number of Sequences"
-grep -c ">" ../data/phyluce/Baits_Bivalve_v2.fasta
+# match contigs to probes
+cd ../data/phyluce/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_match_contigs_to_probes \
+    --contigs v2-contigs \
+    --probes Baits_Bivalve_v2.fasta \
+    --output v2-contigs_to_probes \
+    --log-path log
+```
+
+**Creating complete taxon set**
+
+this will give us a list of UCEs that are "complete" within our group of taxa -- meaning present in all taxa.
+
+need to create configuration file with taxon names:
+
+```{bash}
+cd ../data/phyluce/v1-contigs/
+
+# write the header first
+echo "[dataset1]" > ../taxonset.conf
+
+# append the taxa names (stripping extensions)
+for f in *; do
+    echo "${f%.*}" >> ../taxonset.conf
+done
+```
+
+```{bash}
+# create the output directory for this taxon set
+mkdir ../data/phyluce/taxon-set1/
+
+cd ../data/phyluce/
+
+# create the data matrix configuration file
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_get_match_counts \
+    --locus-db v1-contigs_to_probes/probe.matches.sqlite \
+    --taxon-list-config taxonset.conf \
+    --taxon-group 'dataset1' \
+    --output dataset1_v1.conf \
+    2> dataset1_v1.log
+```
+
+```{bash}
+cd ../data/phyluce/
+
+# create the data matrix configuration file
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_assembly_get_match_counts \
+    --locus-db v2-contigs_to_probes/probe.matches.sqlite \
+    --taxon-list-config taxonset.conf \
+    --taxon-group 'dataset1' \
+    --output dataset1_v2.conf \
+    2> dataset1_v2.log
 ```
