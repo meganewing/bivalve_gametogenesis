@@ -562,6 +562,8 @@ echo "number of sequences"
 grep -c "^>" ../data/phyluce/taxon-set1/dataset1_incomplete_v2.fasta
 ```
 
+now that I have uce datasets, I am switching to the [Phyluce Tutorial I,](https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-1.html#aligning-uce-loci) starting with the 'aligning UCE loci' step, as this will prep the uce datasets and loci for use in IQ tree.
+
 ### Align and Trim UCE Fastas
 
 we will be using mafft as our aligner. I'll do edge trimming as it is quick, but we will focus on the internal trimming and gblocks conversion when moving on for downstream analysis as it is [more recommended](https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-1.html#aligning-uce-loci) for taxa that may have a wide range of divergence (\>50 MYA), which our bivalves [may have](https://www.sciencedirect.com/science/article/pii/S1055790310003660#f0050).
@@ -1038,4 +1040,92 @@ cd ../data/phyluce/taxon-set1
     --cores 12 \
     --log-path log-inc_v2
 
+```
+
+### Prep for IQ Tree
+
+need to convert to phylip formal file, which is what IQ tree takes
+
+**50% matrix**
+
+incomplete v1
+
+```{bash}
+cd ../data/phyluce/taxon-set1
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_concatenate_alignments \
+    --alignments mafft-nexus-internal-trimmed-gblocks-clean-50p_v1 \
+    --output mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml \
+    --phylip \
+    --log-path log-inc_v1
+```
+
+incomplete v2
+
+```{bash}
+cd ../data/phyluce/taxon-set1
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_concatenate_alignments \
+    --alignments mafft-nexus-internal-trimmed-gblocks-clean-50p_v2 \
+    --output mafft-nexus-internal-trimmed-gblocks-clean-50p_v2-raxml \
+    --phylip \
+    --log-path log-inc_v2
+```
+
+**75% matrix**
+
+incomplete v1
+
+```{bash}
+cd ../data/phyluce/taxon-set1
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_concatenate_alignments \
+    --alignments mafft-nexus-internal-trimmed-gblocks-clean-75p_v1 \
+    --output mafft-nexus-internal-trimmed-gblocks-clean-75p_v1-raxml \
+    --phylip \
+    --log-path log-inc_v1
+```
+
+incomplete v2
+
+```{bash}
+cd ../data/phyluce/taxon-set1
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_concatenate_alignments \
+    --alignments mafft-nexus-internal-trimmed-gblocks-clean-75p_v2 \
+    --output mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml \
+    --phylip \
+    --log-path log-inc_v2
+```
+
+**95% matrix**
+
+incomplete v1
+
+```{bash}
+cd ../data/phyluce/taxon-set1
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_concatenate_alignments \
+    --alignments mafft-nexus-internal-trimmed-gblocks-clean-95p_v1 \
+    --output mafft-nexus-internal-trimmed-gblocks-clean-95p_v1-raxml \
+    --phylip \
+    --log-path log-inc_v1
+```
+
+incomplete v2
+
+```{bash}
+cd ../data/phyluce/taxon-set1
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_concatenate_alignments \
+    --alignments mafft-nexus-internal-trimmed-gblocks-clean-95p_v2 \
+    --output mafft-nexus-internal-trimmed-gblocks-clean-95p_v2-raxml \
+    --phylip \
+    --log-path log-inc_v2
 ```
