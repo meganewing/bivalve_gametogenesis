@@ -564,7 +564,7 @@ grep -c "^>" ../data/phyluce/taxon-set1/dataset1_incomplete_v2.fasta
 
 now that I have uce datasets, I am switching to the [Phyluce Tutorial I,](https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-1.html#aligning-uce-loci) starting with the 'aligning UCE loci' step, as this will prep the uce datasets and loci for use in IQ tree.
 
-### Align and Trim UCE Fastas
+## Align and Trim UCE Fastas (Tutorial I)
 
 we will be using mafft as our aligner. I'll do edge trimming as it is quick, but we will focus on the internal trimming and gblocks conversion when moving on for downstream analysis as it is [more recommended](https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-1.html#aligning-uce-loci) for taxa that may have a wide range of divergence (\>50 MYA), which our bivalves [may have](https://www.sciencedirect.com/science/article/pii/S1055790310003660#f0050).
 
