@@ -1,0 +1,14 @@
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - ====== Starting phyluce_align_remove_locus_name_from_files ======
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Version: 1.7.3
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Commit: None
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Argument --alignments: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-inc_v2
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Argument --cores: 12
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Argument --input_format: nexus
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/log-inc_v2
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-inc_v2
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Argument --output_format: nexus
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Argument --taxa: None
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Argument --verbosity: INFO
+2025-08-28 14:30:46,957 - phyluce_align_remove_locus_name_from_files - INFO - Getting alignment files
+2025-08-28 14:30:47,500 - phyluce_align_remove_locus_name_from_files - INFO - Taxon names in alignments: gcf_021869535,gcf_963676685,gcf_021730395,gcf_031769215,gcf_026914265,gcf_026571515,gcf_032062105,gcf_947568905,gcf_002022765,gcf_902652985,gcf_963853765,gcf_036588685,gcf_002113885,gcf_033153115,gcf_025612915,gcf_020536995,gcf_041381155
+2025-08-28 14:30:47,501 - phyluce_align_remove_locus_name_from_files - INFO - ====== Completed phyluce_align_remove_locus_name_from_files =====

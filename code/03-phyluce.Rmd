@@ -581,11 +581,11 @@ mkdir log-cmp_v1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v1.fasta \
     --output mafft-nexus-edge-trimmed-cmp_v1 \
-    --taxa 4 \
+    --taxa 17 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
-    --log-path log-inc_v1
+    --log-path log-cmp_v1
 
 ```
 
@@ -613,11 +613,11 @@ mkdir log-cmp_v2
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v2.fasta \
     --output mafft-nexus-edge-trimmed-cmp_v2 \
-    --taxa 4 \
+    --taxa 17 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
-    --log-path log-inc_v2
+    --log-path log-cmp_v2
 
 ```
 
@@ -645,7 +645,7 @@ mkdir log-inc_v1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v1.fasta \
     --output mafft-nexus-edge-trimmed-inc_v1 \
-    --taxa 4 \
+    --taxa 17 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -677,7 +677,7 @@ mkdir log-inc_v2
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v2.fasta \
     --output mafft-nexus-edge-trimmed-inc_v2 \
-    --taxa 4 \
+    --taxa 17 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -696,7 +696,7 @@ cd ../data/phyluce/taxon-set1
     --log-path log-inc_v2
 ```
 
-#### **internal trimming (fasta output)**
+#### **alignment pre internal trimming (fasta output)**
 
 complete v1
 
@@ -707,7 +707,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v1.fasta \
     --output mafft-nexus-internal-trimmed-cmp_v1 \
-    --taxa 4 \
+    --taxa 17 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -726,7 +726,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v2.fasta \
     --output mafft-nexus-internal-trimmed-cmp_v2 \
-    --taxa 4 \
+    --taxa 17 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -745,7 +745,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v1.fasta \
     --output mafft-nexus-internal-trimmed-inc_v1 \
-    --taxa 4 \
+    --taxa 17 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -763,7 +763,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v2.fasta \
     --output mafft-nexus-internal-trimmed-inc_v2 \
-    --taxa 4 \
+    --taxa 17 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -774,7 +774,7 @@ cd ../data/phyluce/taxon-set1
 
 #### **Gblocks**
 
-takes the internal trim fasta ouputs and passes them to parallel wrapper around Gblocks
+takes the aligned fasta ouputs and passes them to parallel wrapper around Gblocks for internal trimming
 
 complete v1
 
@@ -940,7 +940,7 @@ cd ../data/phyluce/taxon-set1
 
 Want to get a matrices where 50%, 75%, and 95% of taxa are contained within the alignments. To do this, we will only use the alignments that came from 'incomplete' uce processesing.
 
-#### 50% taxa 
+#### 50% taxa
 
 incomplete v1
 
@@ -974,7 +974,7 @@ cd ../data/phyluce/taxon-set1
 
 ```
 
-#### 75% taxa 
+#### 75% taxa
 
 incomplete v1
 
@@ -1008,7 +1008,7 @@ cd ../data/phyluce/taxon-set1
 
 ```
 
-#### 95% taxa 
+#### 95% taxa
 
 incomplete v1
 

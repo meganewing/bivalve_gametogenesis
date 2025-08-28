@@ -1,0 +1,42 @@
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - ======= Starting phyluce_align_get_only_loci_with_min_taxa ======
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Version: 1.7.3
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Commit: None
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --alignments: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-inc_v2
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --cores: 12
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --input_format: nexus
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/log-inc_v2
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-50p_v2
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --percent: 0.5
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --taxa: 17
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --verbosity: INFO
+2025-08-28 14:30:57,800 - phyluce_align_get_only_loci_with_min_taxa - INFO - Getting alignment files
+2025-08-28 14:30:58,193 - phyluce_align_get_only_loci_with_min_taxa - INFO - Copied 357 alignments of 800 total containing ≥ 0.5 proportion of taxa (n = 8)
+2025-08-28 14:30:58,193 - phyluce_align_get_only_loci_with_min_taxa - INFO - ====== Completed phyluce_align_get_only_loci_with_min_taxa ======
+2025-08-28 14:31:07,098 - phyluce_align_get_only_loci_with_min_taxa - INFO - ======= Starting phyluce_align_get_only_loci_with_min_taxa ======
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Version: 1.7.3
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Commit: None
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --alignments: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-inc_v2
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --cores: 12
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --input_format: nexus
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/log-inc_v2
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --percent: 0.75
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --taxa: 17
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --verbosity: INFO
+2025-08-28 14:31:07,099 - phyluce_align_get_only_loci_with_min_taxa - INFO - Getting alignment files
+2025-08-28 14:31:07,504 - phyluce_align_get_only_loci_with_min_taxa - INFO - Copied 137 alignments of 800 total containing ≥ 0.75 proportion of taxa (n = 12)
+2025-08-28 14:31:07,505 - phyluce_align_get_only_loci_with_min_taxa - INFO - ====== Completed phyluce_align_get_only_loci_with_min_taxa ======
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - ======= Starting phyluce_align_get_only_loci_with_min_taxa ======
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Version: 1.7.3
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Commit: None
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --alignments: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-inc_v2
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --cores: 12
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --input_format: nexus
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/log-inc_v2
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-95p_v2
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --percent: 0.95
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --taxa: 17
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Argument --verbosity: INFO
+2025-08-28 14:31:16,049 - phyluce_align_get_only_loci_with_min_taxa - INFO - Getting alignment files
+2025-08-28 14:31:16,464 - phyluce_align_get_only_loci_with_min_taxa - INFO - Copied 14 alignments of 800 total containing ≥ 0.95 proportion of taxa (n = 16)
+2025-08-28 14:31:16,465 - phyluce_align_get_only_loci_with_min_taxa - INFO - ====== Completed phyluce_align_get_only_loci_with_min_taxa ======

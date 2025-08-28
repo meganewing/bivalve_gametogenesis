@@ -1,0 +1,52 @@
+2025-08-28 14:21:37,861 - phyluce_align_seqcap_align - INFO - ============== Starting phyluce_align_seqcap_align ==============
+2025-08-28 14:21:37,862 - phyluce_align_seqcap_align - INFO - Version: 1.7.3
+2025-08-28 14:21:37,862 - phyluce_align_seqcap_align - INFO - Commit: None
+2025-08-28 14:21:37,862 - phyluce_align_seqcap_align - INFO - Argument --aligner: mafft
+2025-08-28 14:21:37,862 - phyluce_align_seqcap_align - INFO - Argument --ambiguous: False
+2025-08-28 14:21:37,862 - phyluce_align_seqcap_align - INFO - Argument --cores: 12
+2025-08-28 14:21:37,862 - phyluce_align_seqcap_align - INFO - Argument --input: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_complete_v1.fasta
+2025-08-28 14:21:37,862 - phyluce_align_seqcap_align - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/log-cmp_v1
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --max_divergence: 0.2
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --min_length: 100
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --no_trim: False
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --notstrict: True
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-edge-trimmed-cmp_v1
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --output_format: nexus
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --proportion: 0.65
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --taxa: 17
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --threshold: 0.65
+2025-08-28 14:21:37,863 - phyluce_align_seqcap_align - INFO - Argument --verbosity: INFO
+2025-08-28 14:21:37,864 - phyluce_align_seqcap_align - INFO - Argument --window: 20
+2025-08-28 14:21:37,864 - phyluce_align_seqcap_align - INFO - Building the locus dictionary
+2025-08-28 14:21:37,864 - phyluce_align_seqcap_align - INFO - Removing ALL sequences with ambiguous bases...
+2025-08-28 14:21:37,868 - phyluce_align_seqcap_align - INFO - Aligning with MAFFT
+2025-08-28 14:21:37,868 - phyluce_align_seqcap_align - INFO - Alignment begins. 'X' indicates dropped alignments (these are reported after alignment)
+2025-08-28 14:21:38,918 - phyluce_align_seqcap_align - INFO - Alignment ends
+2025-08-28 14:21:38,919 - phyluce_align_seqcap_align - INFO - Writing output files
+2025-08-28 14:21:38,921 - phyluce_align_seqcap_align - INFO - ============== Completed phyluce_align_seqcap_align =============
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - ============== Starting phyluce_align_seqcap_align ==============
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Version: 1.7.3
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Commit: None
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --aligner: mafft
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --ambiguous: False
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --cores: 12
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --input: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/dataset1_complete_v1.fasta
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/log-cmp_v1
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --max_divergence: 0.2
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --min_length: 100
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --no_trim: True
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --notstrict: True
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-cmp_v1
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --output_format: fasta
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --proportion: 0.65
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --taxa: 17
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --threshold: 0.65
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --verbosity: INFO
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Argument --window: 20
+2025-08-28 14:27:36,909 - phyluce_align_seqcap_align - INFO - Building the locus dictionary
+2025-08-28 14:27:36,910 - phyluce_align_seqcap_align - INFO - Removing ALL sequences with ambiguous bases...
+2025-08-28 14:27:36,911 - phyluce_align_seqcap_align - INFO - Aligning with MAFFT
+2025-08-28 14:27:36,911 - phyluce_align_seqcap_align - INFO - Alignment begins. 'X' indicates dropped alignments (these are reported after alignment)
+2025-08-28 14:27:37,673 - phyluce_align_seqcap_align - INFO - Alignment ends
+2025-08-28 14:27:37,674 - phyluce_align_seqcap_align - INFO - Writing output files
+2025-08-28 14:27:37,676 - phyluce_align_seqcap_align - INFO - ============== Completed phyluce_align_seqcap_align =============
