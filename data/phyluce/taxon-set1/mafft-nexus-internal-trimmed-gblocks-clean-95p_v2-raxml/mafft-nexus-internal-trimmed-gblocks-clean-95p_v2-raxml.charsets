@@ -1,0 +1,18 @@
+
+begin sets;
+charset 'uce-1156.nexus' = 1-744;
+charset 'uce-1305.nexus' = 745-1674;
+charset 'uce-1790.nexus' = 1675-2529;
+charset 'uce-2161.nexus' = 2530-3441;
+charset 'uce-2310.nexus' = 3442-4154;
+charset 'uce-2544.nexus' = 4155-5093;
+charset 'uce-2614.nexus' = 5094-5650;
+charset 'uce-2773.nexus' = 5651-6208;
+charset 'uce-2830.nexus' = 6209-6954;
+charset 'uce-3173.nexus' = 6955-7870;
+charset 'uce-362.nexus' = 7871-8863;
+charset 'uce-536.nexus' = 8864-9601;
+charset 'uce-559.nexus' = 9602-10153;
+charset 'uce-938.nexus' = 10154-11241;
+charpartition combined = uce-1156.nexus: 1-744, uce-1305.nexus: 745-1674, uce-1790.nexus: 1675-2529, uce-2161.nexus: 2530-3441, uce-2310.nexus: 3442-4154, uce-2544.nexus: 4155-5093, uce-2614.nexus: 5094-5650, uce-2773.nexus: 5651-6208, uce-2830.nexus: 6209-6954, uce-3173.nexus: 6955-7870, uce-362.nexus: 7871-8863, uce-536.nexus: 8864-9601, uce-559.nexus: 9602-10153, uce-938.nexus: 10154-11241;
+end;
