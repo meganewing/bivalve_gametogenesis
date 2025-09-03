@@ -74,3 +74,39 @@ for (zip_file in zip_files) {
 }
 
 ```
+
+### downloading outgroup files for tree building
+
+only three genomes being downloaded so just enter manually into loop
+
+```{bash}
+
+# Path to datasets tool (which contains NCBI database)
+DATASETS_CMD="/home/shared/datasets"
+
+# Output directory
+OUTPUT_DIR="../data/genomes_refseq"
+
+# only three genomes being downloaded so just enter manually into loop
+accessions="GCF_003073045.1 GCF_000002075.1 GCF_000327385.1"
+
+# Loop over the list
+for accession in $accessions
+do
+  echo "Downloading CDS for $accession"
+  "$DATASETS_CMD" download genome accession "$accession" --include cds --filename "$OUTPUT_DIR/${accession}_cds.zip"
+done
+```
+
+unzip the files
+
+```{r}
+
+unzip("../data/genomes_refseq/GCF_003073045.1_cds.zip", exdir = "../data/genomes_refseq/")
+
+unzip("../data/genomes_refseq/GCF_000002075.1_cds.zip", exdir = "../data/genomes_refseq/")
+
+unzip("../data/genomes_refseq/GCF_000327385.1_cds.zip", exdir = "../data/genomes_refseq/")
+```
+
+#### 
