@@ -1,435 +1,136 @@
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probesprobe.matches.sqlite
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --output: /path/to/uce/taxon-set1/dataset1.conf
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:20:46,906 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probesprobe.matches.sqlite
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --output: /path/to/uce/taxon-set1/dataset1.conf
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:21:43,253 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:21:43,254 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probesprobe.matches.sqlite
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --output: /path/to/uce/taxon-set1/dataset1.conf
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1_v1
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:24:26,700 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:24:26,701 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1_v1]' in the config file taxonset.conf
-2025-08-21 14:24:26,701 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --output: /path/to/uce/taxon-set1/dataset1.conf
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1_v1
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:31:46,621 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:31:46,622 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1_v1]' in the config file taxonset.conf
-2025-08-21 14:31:46,622 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 14:31:46,623 - phyluce_assembly_get_match_counts - INFO - There are 2211 total UCE loci in the database
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a COMPLETE matrix
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - There are 2 shared UCE loci in a COMPLETE matrix
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1992 UCE loci in gcf_026914265
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1984 UCE loci in gcf_020536995
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1927 UCE loci in gcf_947568905
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1897 UCE loci in gcf_963853765
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1871 UCE loci in gcf_963676685
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1850 UCE loci in gcf_036588685
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1848 UCE loci in gcf_025612915
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1839 UCE loci in gcf_021869535
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1835 UCE loci in gcf_032062105
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1823 UCE loci in gcf_021730395
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1822 UCE loci in gcf_033153115
-2025-08-21 14:31:46,644 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1774 UCE loci in gcf_026571515
-2025-08-21 14:31:46,645 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1774 UCE loci in gcf_002022765
-2025-08-21 14:31:46,645 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1741 UCE loci in gcf_002113885
-2025-08-21 14:31:46,645 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1727 UCE loci in gcf_041381155
-2025-08-21 14:31:46,645 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1687 UCE loci in gcf_902652985
-2025-08-21 14:31:46,645 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1472 UCE loci in gcf_031769215
-2025-08-21 14:31:46,645 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /path/to/uce/taxon-set1/dataset1.conf
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1.conf
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1_v1
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:32:22,755 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:32:22,756 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1_v1]' in the config file taxonset.conf
-2025-08-21 14:32:22,756 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 14:32:22,757 - phyluce_assembly_get_match_counts - INFO - There are 2211 total UCE loci in the database
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a COMPLETE matrix
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - There are 2 shared UCE loci in a COMPLETE matrix
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1992 UCE loci in gcf_026914265
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1984 UCE loci in gcf_020536995
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1927 UCE loci in gcf_947568905
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1897 UCE loci in gcf_963853765
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1871 UCE loci in gcf_963676685
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1850 UCE loci in gcf_036588685
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1848 UCE loci in gcf_025612915
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1839 UCE loci in gcf_021869535
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1835 UCE loci in gcf_032062105
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1823 UCE loci in gcf_021730395
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1822 UCE loci in gcf_033153115
-2025-08-21 14:32:22,778 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1774 UCE loci in gcf_026571515
-2025-08-21 14:32:22,779 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1774 UCE loci in gcf_002022765
-2025-08-21 14:32:22,779 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1741 UCE loci in gcf_002113885
-2025-08-21 14:32:22,779 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1727 UCE loci in gcf_041381155
-2025-08-21 14:32:22,779 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1687 UCE loci in gcf_902652985
-2025-08-21 14:32:22,779 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1472 UCE loci in gcf_031769215
-2025-08-21 14:32:22,779 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1.conf
-2025-08-21 14:32:22,779 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:34:11,161 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:34:11,162 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:35:21,973 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:35:41,763 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:35:41,764 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 14:35:41,764 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 14:35:41,765 - phyluce_assembly_get_match_counts - INFO - There are 2211 total UCE loci in the database
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a COMPLETE matrix
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - There are 2 shared UCE loci in a COMPLETE matrix
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1992 UCE loci in gcf_026914265
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1984 UCE loci in gcf_020536995
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1927 UCE loci in gcf_947568905
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1897 UCE loci in gcf_963853765
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1871 UCE loci in gcf_963676685
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1850 UCE loci in gcf_036588685
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1848 UCE loci in gcf_025612915
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1839 UCE loci in gcf_021869535
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1835 UCE loci in gcf_032062105
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1823 UCE loci in gcf_021730395
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1822 UCE loci in gcf_033153115
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1774 UCE loci in gcf_026571515
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1774 UCE loci in gcf_002022765
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1741 UCE loci in gcf_002113885
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1727 UCE loci in gcf_041381155
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1687 UCE loci in gcf_902652985
-2025-08-21 14:35:41,786 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1472 UCE loci in gcf_031769215
-2025-08-21 14:35:41,787 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
-2025-08-21 14:35:41,787 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1.conf
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:36:01,136 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:36:01,137 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 14:36:01,137 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 14:36:01,138 - phyluce_assembly_get_match_counts - INFO - There are 1368 total UCE loci in the database
-2025-08-21 14:36:01,157 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a COMPLETE matrix
-2025-08-21 14:36:01,157 - phyluce_assembly_get_match_counts - INFO - There are 3 shared UCE loci in a COMPLETE matrix
-2025-08-21 14:36:01,157 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1156 UCE loci in gcf_020536995
-2025-08-21 14:36:01,157 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1106 UCE loci in gcf_026914265
-2025-08-21 14:36:01,157 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1097 UCE loci in gcf_947568905
-2025-08-21 14:36:01,157 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1075 UCE loci in gcf_002022765
-2025-08-21 14:36:01,157 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1068 UCE loci in gcf_963853765
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1035 UCE loci in gcf_032062105
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1035 UCE loci in gcf_025612915
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1025 UCE loci in gcf_033153115
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 992 UCE loci in gcf_021730395
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 974 UCE loci in gcf_026571515
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 959 UCE loci in gcf_963676685
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 952 UCE loci in gcf_036588685
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 930 UCE loci in gcf_021869535
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 905 UCE loci in gcf_902652985
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 897 UCE loci in gcf_041381155
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 896 UCE loci in gcf_002113885
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 748 UCE loci in gcf_031769215
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1.conf
-2025-08-21 14:36:01,158 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.conf
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:36:20,388 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:36:20,389 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 14:36:20,389 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 14:36:20,389 - phyluce_assembly_get_match_counts - INFO - There are 1368 total UCE loci in the database
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a COMPLETE matrix
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - There are 3 shared UCE loci in a COMPLETE matrix
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1156 UCE loci in gcf_020536995
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1106 UCE loci in gcf_026914265
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1097 UCE loci in gcf_947568905
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1075 UCE loci in gcf_002022765
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1068 UCE loci in gcf_963853765
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1035 UCE loci in gcf_032062105
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1035 UCE loci in gcf_025612915
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1025 UCE loci in gcf_033153115
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 992 UCE loci in gcf_021730395
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 974 UCE loci in gcf_026571515
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 959 UCE loci in gcf_963676685
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 952 UCE loci in gcf_036588685
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 930 UCE loci in gcf_021869535
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 905 UCE loci in gcf_902652985
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 897 UCE loci in gcf_041381155
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 896 UCE loci in gcf_002113885
-2025-08-21 14:36:20,409 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 748 UCE loci in gcf_031769215
-2025-08-21 14:36:20,410 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.conf
-2025-08-21 14:36:20,410 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: True
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:54:39,610 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:54:39,611 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 14:54:39,611 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 14:54:39,612 - phyluce_assembly_get_match_counts - INFO - There are 2211 total UCE loci in the database
-2025-08-21 14:54:39,633 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a INCOMPLETE matrix
-2025-08-21 14:54:39,633 - phyluce_assembly_get_match_counts - INFO - There are 1424 UCE loci in an INCOMPLETE matrix
-2025-08-21 14:54:39,633 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
-2025-08-21 14:54:39,634 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 14:55:25,929 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 14:55:25,929 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 14:55:25,929 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 14:55:25,929 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 14:55:25,929 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: True
-2025-08-21 14:55:25,929 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 14:55:25,929 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 14:55:25,930 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 14:55:25,931 - phyluce_assembly_get_match_counts - INFO - There are 1368 total UCE loci in the database
-2025-08-21 14:55:25,950 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a INCOMPLETE matrix
-2025-08-21 14:55:25,951 - phyluce_assembly_get_match_counts - INFO - There are 1052 UCE loci in an INCOMPLETE matrix
-2025-08-21 14:55:25,951 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
-2025-08-21 14:55:25,951 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: True
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 15:39:57,984 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 15:39:57,985 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 15:39:57,985 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 15:39:57,986 - phyluce_assembly_get_match_counts - INFO - There are 2211 total UCE loci in the database
-2025-08-21 15:39:58,006 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a INCOMPLETE matrix
-2025-08-21 15:39:58,007 - phyluce_assembly_get_match_counts - INFO - There are 1424 UCE loci in an INCOMPLETE matrix
-2025-08-21 15:39:58,007 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
-2025-08-21 15:39:58,007 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: True
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 15:40:03,942 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 15:40:03,943 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 15:40:03,943 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 15:40:03,943 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 15:40:03,944 - phyluce_assembly_get_match_counts - INFO - There are 1368 total UCE loci in the database
-2025-08-21 15:40:03,963 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a INCOMPLETE matrix
-2025-08-21 15:40:03,963 - phyluce_assembly_get_match_counts - INFO - There are 1052 UCE loci in an INCOMPLETE matrix
-2025-08-21 15:40:03,963 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
-2025-08-21 15:40:03,964 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 15:41:37,565 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 15:41:37,565 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 15:41:37,565 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 15:41:37,565 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 15:41:37,565 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: True
-2025-08-21 15:41:37,565 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 15:41:37,565 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
-2025-08-21 15:41:37,565 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 15:41:37,566 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 15:41:37,567 - phyluce_assembly_get_match_counts - INFO - There are 2211 total UCE loci in the database
-2025-08-21 15:41:37,588 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a INCOMPLETE matrix
-2025-08-21 15:41:37,588 - phyluce_assembly_get_match_counts - INFO - There are 1424 UCE loci in an INCOMPLETE matrix
-2025-08-21 15:41:37,588 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
-2025-08-21 15:41:37,589 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
-2025-08-21 15:41:40,753 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
-2025-08-21 15:41:40,753 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
-2025-08-21 15:41:40,753 - phyluce_assembly_get_match_counts - INFO - Commit: None
-2025-08-21 15:41:40,753 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
-2025-08-21 15:41:40,753 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: True
-2025-08-21 15:41:40,753 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
-2025-08-21 15:41:40,753 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - There are 17 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
-2025-08-21 15:41:40,754 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
-2025-08-21 15:41:40,755 - phyluce_assembly_get_match_counts - INFO - There are 1368 total UCE loci in the database
-2025-08-21 15:41:40,774 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a INCOMPLETE matrix
-2025-08-21 15:41:40,774 - phyluce_assembly_get_match_counts - INFO - There are 1052 UCE loci in an INCOMPLETE matrix
-2025-08-21 15:41:40,774 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
-2025-08-21 15:41:40,775 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
+2025-09-03 17:36:00,319 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
+2025-09-03 17:36:00,319 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
+2025-09-03 17:36:00,319 - phyluce_assembly_get_match_counts - INFO - Commit: None
+2025-09-03 17:36:00,319 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
+2025-09-03 17:36:00,319 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
+2025-09-03 17:36:00,319 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
+2025-09-03 17:36:00,319 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-09-03 17:36:00,319 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
+2025-09-03 17:36:00,320 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
+2025-09-03 17:36:00,321 - phyluce_assembly_get_match_counts - INFO - There are 20 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
+2025-09-03 17:36:00,321 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
+2025-09-03 17:36:00,322 - phyluce_assembly_get_match_counts - INFO - There are 2211 total UCE loci in the database
+2025-09-03 17:36:00,345 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a COMPLETE matrix
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - There are 1 shared UCE loci in a COMPLETE matrix
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 2061 UCE loci in gcf_003073045
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1992 UCE loci in gcf_026914265
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1984 UCE loci in gcf_020536995
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1967 UCE loci in gcf_000327385
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1927 UCE loci in gcf_947568905
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1897 UCE loci in gcf_963853765
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1871 UCE loci in gcf_963676685
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1850 UCE loci in gcf_036588685
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1848 UCE loci in gcf_025612915
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1839 UCE loci in gcf_021869535
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1835 UCE loci in gcf_032062105
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1823 UCE loci in gcf_021730395
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1822 UCE loci in gcf_033153115
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1774 UCE loci in gcf_026571515
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1774 UCE loci in gcf_002022765
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1741 UCE loci in gcf_002113885
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1727 UCE loci in gcf_041381155
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1687 UCE loci in gcf_902652985
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1602 UCE loci in gcf_000002075
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1472 UCE loci in gcf_031769215
+2025-09-03 17:36:00,346 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1.conf
+2025-09-03 17:36:00,347 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Commit: None
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: False
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.conf
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
+2025-09-03 17:36:03,951 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
+2025-09-03 17:36:03,952 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
+2025-09-03 17:36:03,952 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
+2025-09-03 17:36:03,952 - phyluce_assembly_get_match_counts - INFO - There are 20 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
+2025-09-03 17:36:03,952 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
+2025-09-03 17:36:03,953 - phyluce_assembly_get_match_counts - INFO - There are 1368 total UCE loci in the database
+2025-09-03 17:36:03,974 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a COMPLETE matrix
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - There are 1 shared UCE loci in a COMPLETE matrix
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1198 UCE loci in gcf_000002075
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1170 UCE loci in gcf_003073045
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1156 UCE loci in gcf_020536995
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1106 UCE loci in gcf_026914265
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1097 UCE loci in gcf_947568905
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1075 UCE loci in gcf_002022765
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1068 UCE loci in gcf_963853765
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1035 UCE loci in gcf_032062105
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1035 UCE loci in gcf_025612915
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1029 UCE loci in gcf_000327385
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 1025 UCE loci in gcf_033153115
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 992 UCE loci in gcf_021730395
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 974 UCE loci in gcf_026571515
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 959 UCE loci in gcf_963676685
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 952 UCE loci in gcf_036588685
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 930 UCE loci in gcf_021869535
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 905 UCE loci in gcf_902652985
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 897 UCE loci in gcf_041381155
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 896 UCE loci in gcf_002113885
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - 	Failed to detect 748 UCE loci in gcf_031769215
+2025-09-03 17:36:03,975 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2.conf
+2025-09-03 17:36:03,976 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Commit: None
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: True
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-contigs_to_probes/probe.matches.sqlite
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
+2025-09-03 17:36:07,626 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
+2025-09-03 17:36:07,627 - phyluce_assembly_get_match_counts - INFO - There are 20 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
+2025-09-03 17:36:07,627 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
+2025-09-03 17:36:07,628 - phyluce_assembly_get_match_counts - INFO - There are 2211 total UCE loci in the database
+2025-09-03 17:36:07,651 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a INCOMPLETE matrix
+2025-09-03 17:36:07,652 - phyluce_assembly_get_match_counts - INFO - There are 1597 UCE loci in an INCOMPLETE matrix
+2025-09-03 17:36:07,652 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v1_incomplete.conf
+2025-09-03 17:36:07,652 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - =========== Starting phyluce_assembly_get_match_counts ==========
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Version: 1.7.3
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Commit: None
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --extend_locus_db: None
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --incomplete_matrix: True
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --keep_counts: False
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --locus_db: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-contigs_to_probes/probe.matches.sqlite
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --log_path: None
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --optimize: False
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --random: False
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --sample_size: 10
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --samples: 10
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --silent: False
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_group: dataset1
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --taxon_list_config: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxonset.conf
+2025-09-03 17:36:22,701 - phyluce_assembly_get_match_counts - INFO - Argument --verbosity: INFO
+2025-09-03 17:36:22,702 - phyluce_assembly_get_match_counts - INFO - There are 20 taxa in the taxon-group '[dataset1]' in the config file taxonset.conf
+2025-09-03 17:36:22,702 - phyluce_assembly_get_match_counts - INFO - Getting UCE names from database
+2025-09-03 17:36:22,703 - phyluce_assembly_get_match_counts - INFO - There are 1368 total UCE loci in the database
+2025-09-03 17:36:22,724 - phyluce_assembly_get_match_counts - INFO - Getting UCE matches by organism to generate a INCOMPLETE matrix
+2025-09-03 17:36:22,725 - phyluce_assembly_get_match_counts - INFO - There are 1108 UCE loci in an INCOMPLETE matrix
+2025-09-03 17:36:22,725 - phyluce_assembly_get_match_counts - INFO - Writing the taxa and loci in the data matrix to /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/dataset1_v2_incomplete.conf
+2025-09-03 17:36:22,725 - phyluce_assembly_get_match_counts - INFO - ========== Completed phyluce_assembly_get_match_counts ==========

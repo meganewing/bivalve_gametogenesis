@@ -17,6 +17,8 @@ Important folder paths:
 
 -   genomes: `../data/genomes_refseq/ncbi_dataset/data/`
 
+genomes inlcude the **17 bivalve genomes** and the **3 molluscan outgroup genomes**
+
 Necessary packages: [fatotwobit](https://anaconda.org/bioconda/ucsc-fatotwobit) , [twobitinfo](https://anaconda.org/bioconda/ucsc-twobitinfo), and [twobittofa](https://anaconda.org/bioconda/ucsc-twobittofa) (which i have in an enviornment 'twoBit' for):
 
 ```{bash}
@@ -197,6 +199,8 @@ phyluce installed mamba environment: `/home/shared/8TB_HDD_02/mewing0/miniforge3
 # mamba activate phyluce 
 ```
 
+scaffold lists below are just the copied and pasted output of directory contents printed 2 chunks ago
+
 ```{bash}
 # for v1 baits
 
@@ -206,7 +210,7 @@ cd ../data/phyluce/
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_probe_run_multiple_lastzs_sqlite \
         --db uce_frombaits_v1 \
         --output v1-genome-lastz \
-        --scaffoldlist GCF_002022765 GCF_002113885 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
+        --scaffoldlist GCF_000002075 GCF_000327385 GCF_002022765 GCF_002113885 GCF_003073045 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v1.fasta \
         --cores 10 \
@@ -225,7 +229,7 @@ cd ../data/phyluce/
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_probe_run_multiple_lastzs_sqlite \
         --db uce_frombaits_v2 \
         --output v2-genome-lastz \
-        --scaffoldlist GCF_002022765 GCF_002113885 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
+        --scaffoldlist GCF_000002075 GCF_000327385 GCF_002022765 GCF_002113885 GCF_003073045 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v2.fasta \
         --cores 10 \
@@ -267,7 +271,7 @@ writeLines(config_lines, output_file)
 ```
 
 ```{bash}
-head -2 ../data/phyluce/genomes.conf
+head ../data/phyluce/genomes.conf
 ```
 
 ```{bash}
@@ -374,7 +378,7 @@ write.csv(df_summary, "../data/phyluce/sequence_summary.csv")
 
 A different [tutorial for phyluce](https://phyluce.readthedocs.io/en/latest/daily-use/daily-use-3-uce-processing.html#uce-processing) for processing UCE info and getting a matrix / fasta files that can be used to create a tree.
 
-created contig files (just duplicated the output files above and renamed)
+created contig files (just duplicated the `vX-genome-fasta/` output files above and renamed to `vX-contigs`)
 
 ```{bash}
 # make a directory for log files
@@ -581,7 +585,7 @@ mkdir log-cmp_v1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v1.fasta \
     --output mafft-nexus-edge-trimmed-cmp_v1 \
-    --taxa 17 \
+    --taxa 20 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -613,7 +617,7 @@ mkdir log-cmp_v2
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v2.fasta \
     --output mafft-nexus-edge-trimmed-cmp_v2 \
-    --taxa 17 \
+    --taxa 20 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -645,7 +649,7 @@ mkdir log-inc_v1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v1.fasta \
     --output mafft-nexus-edge-trimmed-inc_v1 \
-    --taxa 17 \
+    --taxa 20 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -677,7 +681,7 @@ mkdir log-inc_v2
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v2.fasta \
     --output mafft-nexus-edge-trimmed-inc_v2 \
-    --taxa 17 \
+    --taxa 20 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -707,7 +711,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v1.fasta \
     --output mafft-nexus-internal-trimmed-cmp_v1 \
-    --taxa 17 \
+    --taxa 20 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -726,7 +730,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v2.fasta \
     --output mafft-nexus-internal-trimmed-cmp_v2 \
-    --taxa 17 \
+    --taxa 20 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -745,7 +749,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v1.fasta \
     --output mafft-nexus-internal-trimmed-inc_v1 \
-    --taxa 17 \
+    --taxa 20 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -763,7 +767,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v2.fasta \
     --output mafft-nexus-internal-trimmed-inc_v2 \
-    --taxa 17 \
+    --taxa 20 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -950,7 +954,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v1 \
-    --taxa 17 \
+    --taxa 20 \
     --percent 0.50 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-50p_v1 \
     --cores 12 \
@@ -966,7 +970,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v2 \
-    --taxa 17 \
+    --taxa 20 \
     --percent 0.50 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-50p_v2 \
     --cores 12 \
@@ -984,7 +988,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v1 \
-    --taxa 17 \
+    --taxa 20 \
     --percent 0.75 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-75p_v1 \
     --cores 12 \
@@ -1000,7 +1004,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v2 \
-    --taxa 17 \
+    --taxa 20 \
     --percent 0.75 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-75p_v2 \
     --cores 12 \
@@ -1018,7 +1022,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v1 \
-    --taxa 17 \
+    --taxa 20 \
     --percent 0.95 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-95p_v1 \
     --cores 12 \
@@ -1034,7 +1038,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v2 \
-    --taxa 17 \
+    --taxa 20 \
     --percent 0.95 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-95p_v2 \
     --cores 12 \
@@ -1129,3 +1133,5 @@ cd ../data/phyluce/taxon-set1
     --phylip \
     --log-path log-inc_v2
 ```
+
+Can now export the `-raxml` folders with the phylip files for each data matrix and use the phylip files in IQ tree to determine tree model and create tree files!

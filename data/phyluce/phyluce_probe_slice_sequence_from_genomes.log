@@ -1,136 +1,154 @@
-2025-08-19 12:47:56,241 - phyluce_probe_slice_sequence_from_genomes - INFO - ======= Starting phyluce_probe_slice_sequence_from_genomes ======
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Version: 1.7.3
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Commit: None
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --conf: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/genomes.conf
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --contig_orient: False
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --exclude: None
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --flank: 500
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --lastz: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-genome-lastz
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --log_path: None
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-genome-fasta
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --pattern: Baits_Bivalve_v1.fasta_v_{}.lastz.clean
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probe_prefix: uce-
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probe_regex: ^({}\d+)(?:_p\d+.*)
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probes: None
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --verbosity: INFO
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - =================== Starting Phyluce: Slice Sequence ===================
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_002022765 genome ----------------
-2025-08-19 12:47:56,242 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_002022765 genome
-2025-08-19 12:47:58,496 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_002022765: 905 uces, 349 dupes, 556 non-dupes, 0 orient drop, 0 length drop, 556 written
-2025-08-19 12:47:58,496 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_002113885 genome ----------------
-2025-08-19 12:47:58,496 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_002113885 genome
-2025-08-19 12:48:00,982 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_002113885: 1146 uces, 555 dupes, 591 non-dupes, 0 orient drop, 0 length drop, 591 written
-2025-08-19 12:48:00,982 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_020536995 genome ----------------
-2025-08-19 12:48:00,983 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_020536995 genome
-2025-08-19 12:48:02,795 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_020536995: 645 uces, 355 dupes, 290 non-dupes, 0 orient drop, 0 length drop, 290 written
-2025-08-19 12:48:02,795 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_021730395 genome ----------------
-2025-08-19 12:48:02,795 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_021730395 genome
-2025-08-19 12:48:06,357 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_021730395: 1103 uces, 561 dupes, 542 non-dupes, 0 orient drop, 0 length drop, 542 written
-2025-08-19 12:48:06,357 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_021869535 genome ----------------
-2025-08-19 12:48:06,357 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_021869535 genome
-2025-08-19 12:48:08,914 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_021869535: 1019 uces, 564 dupes, 455 non-dupes, 0 orient drop, 0 length drop, 455 written
-2025-08-19 12:48:08,915 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_025612915 genome ----------------
-2025-08-19 12:48:08,915 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_025612915 genome
-2025-08-19 12:48:11,845 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_025612915: 986 uces, 535 dupes, 451 non-dupes, 0 orient drop, 0 length drop, 451 written
-2025-08-19 12:48:11,845 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_026571515 genome ----------------
-2025-08-19 12:48:11,845 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_026571515 genome
-2025-08-19 12:48:14,551 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_026571515: 1095 uces, 490 dupes, 605 non-dupes, 0 orient drop, 0 length drop, 605 written
-2025-08-19 12:48:14,551 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_026914265 genome ----------------
-2025-08-19 12:48:14,551 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_026914265 genome
-2025-08-19 12:48:16,666 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_026914265: 679 uces, 401 dupes, 278 non-dupes, 0 orient drop, 0 length drop, 278 written
-2025-08-19 12:48:16,666 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_031769215 genome ----------------
-2025-08-19 12:48:16,666 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_031769215 genome
-2025-08-19 12:48:17,944 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_031769215: 1124 uces, 166 dupes, 958 non-dupes, 0 orient drop, 0 length drop, 958 written
-2025-08-19 12:48:17,944 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_032062105 genome ----------------
-2025-08-19 12:48:17,944 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_032062105 genome
-2025-08-19 12:48:19,892 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_032062105: 868 uces, 390 dupes, 478 non-dupes, 0 orient drop, 0 length drop, 478 written
-2025-08-19 12:48:19,892 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_033153115 genome ----------------
-2025-08-19 12:48:19,892 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_033153115 genome
-2025-08-19 12:48:21,583 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_033153115: 877 uces, 387 dupes, 490 non-dupes, 0 orient drop, 0 length drop, 490 written
-2025-08-19 12:48:21,583 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_036588685 genome ----------------
-2025-08-19 12:48:21,583 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_036588685 genome
-2025-08-19 12:48:24,240 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_036588685: 1010 uces, 587 dupes, 423 non-dupes, 0 orient drop, 0 length drop, 423 written
-2025-08-19 12:48:24,240 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_041381155 genome ----------------
-2025-08-19 12:48:24,240 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_041381155 genome
-2025-08-19 12:48:26,525 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_041381155: 1066 uces, 462 dupes, 604 non-dupes, 0 orient drop, 1 length drop, 603 written
-2025-08-19 12:48:26,525 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_902652985 genome ----------------
-2025-08-19 12:48:26,525 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_902652985 genome
-2025-08-19 12:48:28,459 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_902652985: 1117 uces, 431 dupes, 686 non-dupes, 0 orient drop, 0 length drop, 686 written
-2025-08-19 12:48:28,460 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_947568905 genome ----------------
-2025-08-19 12:48:28,460 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_947568905 genome
-2025-08-19 12:48:31,505 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_947568905: 880 uces, 521 dupes, 359 non-dupes, 0 orient drop, 0 length drop, 359 written
-2025-08-19 12:48:31,505 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_963676685 genome ----------------
-2025-08-19 12:48:31,505 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_963676685 genome
-2025-08-19 12:48:35,273 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_963676685: 1037 uces, 626 dupes, 411 non-dupes, 0 orient drop, 0 length drop, 411 written
-2025-08-19 12:48:35,274 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_963853765 genome ----------------
-2025-08-19 12:48:35,274 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_963853765 genome
-2025-08-19 12:48:38,510 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_963853765: 954 uces, 576 dupes, 378 non-dupes, 0 orient drop, 0 length drop, 378 written
-2025-08-19 12:48:38,510 - phyluce_probe_slice_sequence_from_genomes - INFO - ====== Completed phyluce_probe_slice_sequence_from_genomes ======
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - ======= Starting phyluce_probe_slice_sequence_from_genomes ======
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Version: 1.7.3
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Commit: None
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --conf: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/genomes.conf
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --contig_orient: False
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --exclude: None
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --flank: 500
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --lastz: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-genome-lastz
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --log_path: None
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-genome-fasta
-2025-08-19 12:48:48,652 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --pattern: Baits_Bivalve_v2.fasta_v_{}.lastz.clean
-2025-08-19 12:48:48,653 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probe_prefix: uce-
-2025-08-19 12:48:48,653 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probe_regex: ^({}\d+)(?:_p\d+.*)
-2025-08-19 12:48:48,653 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probes: None
-2025-08-19 12:48:48,653 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --verbosity: INFO
-2025-08-19 12:48:48,653 - phyluce_probe_slice_sequence_from_genomes - INFO - =================== Starting Phyluce: Slice Sequence ===================
-2025-08-19 12:48:48,653 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_002022765 genome ----------------
-2025-08-19 12:48:48,653 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_002022765 genome
-2025-08-19 12:48:50,745 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_002022765: 694 uces, 301 dupes, 393 non-dupes, 0 orient drop, 0 length drop, 393 written
-2025-08-19 12:48:50,745 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_002113885 genome ----------------
-2025-08-19 12:48:50,746 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_002113885 genome
-2025-08-19 12:48:53,168 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_002113885: 1068 uces, 362 dupes, 706 non-dupes, 0 orient drop, 0 length drop, 706 written
-2025-08-19 12:48:53,168 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_020536995 genome ----------------
-2025-08-19 12:48:53,168 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_020536995 genome
-2025-08-19 12:48:55,883 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_020536995: 714 uces, 413 dupes, 301 non-dupes, 0 orient drop, 0 length drop, 301 written
-2025-08-19 12:48:55,883 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_021730395 genome ----------------
-2025-08-19 12:48:55,883 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_021730395 genome
-2025-08-19 12:48:58,994 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_021730395: 974 uces, 386 dupes, 588 non-dupes, 0 orient drop, 0 length drop, 588 written
-2025-08-19 12:48:58,994 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_021869535 genome ----------------
-2025-08-19 12:48:58,994 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_021869535 genome
-2025-08-19 12:49:03,550 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_021869535: 1139 uces, 477 dupes, 662 non-dupes, 0 orient drop, 0 length drop, 662 written
-2025-08-19 12:49:03,550 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_025612915 genome ----------------
-2025-08-19 12:49:03,550 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_025612915 genome
-2025-08-19 12:49:05,654 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_025612915: 706 uces, 260 dupes, 446 non-dupes, 0 orient drop, 1 length drop, 445 written
-2025-08-19 12:49:05,654 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_026571515 genome ----------------
-2025-08-19 12:49:05,654 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_026571515 genome
-2025-08-19 12:49:08,190 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_026571515: 938 uces, 357 dupes, 581 non-dupes, 0 orient drop, 0 length drop, 581 written
-2025-08-19 12:49:08,190 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_026914265 genome ----------------
-2025-08-19 12:49:08,190 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_026914265 genome
-2025-08-19 12:49:10,432 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_026914265: 743 uces, 347 dupes, 396 non-dupes, 0 orient drop, 0 length drop, 396 written
-2025-08-19 12:49:10,432 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_031769215 genome ----------------
-2025-08-19 12:49:10,432 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_031769215 genome
-2025-08-19 12:49:12,279 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_031769215: 1078 uces, 165 dupes, 913 non-dupes, 0 orient drop, 0 length drop, 913 written
-2025-08-19 12:49:12,279 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_032062105 genome ----------------
-2025-08-19 12:49:12,280 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_032062105 genome
-2025-08-19 12:49:14,110 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_032062105: 727 uces, 271 dupes, 456 non-dupes, 0 orient drop, 0 length drop, 456 written
-2025-08-19 12:49:14,110 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_033153115 genome ----------------
-2025-08-19 12:49:14,110 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_033153115 genome
-2025-08-19 12:49:15,975 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_033153115: 754 uces, 263 dupes, 491 non-dupes, 0 orient drop, 0 length drop, 491 written
-2025-08-19 12:49:15,975 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_036588685 genome ----------------
-2025-08-19 12:49:15,975 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_036588685 genome
-2025-08-19 12:49:20,033 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_036588685: 1112 uces, 512 dupes, 600 non-dupes, 0 orient drop, 0 length drop, 600 written
-2025-08-19 12:49:20,033 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_041381155 genome ----------------
-2025-08-19 12:49:20,033 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_041381155 genome
-2025-08-19 12:49:22,349 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_041381155: 1032 uces, 330 dupes, 702 non-dupes, 0 orient drop, 1 length drop, 701 written
-2025-08-19 12:49:22,349 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_902652985 genome ----------------
-2025-08-19 12:49:22,349 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_902652985 genome
-2025-08-19 12:49:24,860 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_902652985: 1066 uces, 375 dupes, 691 non-dupes, 0 orient drop, 0 length drop, 691 written
-2025-08-19 12:49:24,860 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_947568905 genome ----------------
-2025-08-19 12:49:24,860 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_947568905 genome
-2025-08-19 12:49:27,386 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_947568905: 696 uces, 320 dupes, 376 non-dupes, 0 orient drop, 0 length drop, 376 written
-2025-08-19 12:49:27,386 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_963676685 genome ----------------
-2025-08-19 12:49:27,386 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_963676685 genome
-2025-08-19 12:49:32,870 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_963676685: 1143 uces, 540 dupes, 603 non-dupes, 0 orient drop, 0 length drop, 603 written
-2025-08-19 12:49:32,870 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_963853765 genome ----------------
-2025-08-19 12:49:32,870 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_963853765 genome
-2025-08-19 12:49:35,247 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_963853765: 692 uces, 281 dupes, 411 non-dupes, 0 orient drop, 0 length drop, 411 written
-2025-08-19 12:49:35,247 - phyluce_probe_slice_sequence_from_genomes - INFO - ====== Completed phyluce_probe_slice_sequence_from_genomes ======
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - ======= Starting phyluce_probe_slice_sequence_from_genomes ======
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Version: 1.7.3
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Commit: None
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --conf: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/genomes.conf
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --contig_orient: False
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --exclude: None
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --flank: 500
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --lastz: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-genome-lastz
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --log_path: None
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v1-genome-fasta
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --pattern: Baits_Bivalve_v1.fasta_v_{}.lastz.clean
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probe_prefix: uce-
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probe_regex: ^({}\d+)(?:_p\d+.*)
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probes: None
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --verbosity: INFO
+2025-09-03 17:23:30,671 - phyluce_probe_slice_sequence_from_genomes - INFO - =================== Starting Phyluce: Slice Sequence ===================
+2025-09-03 17:23:30,672 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_000002075 genome ----------------
+2025-09-03 17:23:30,672 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_000002075 genome
+2025-09-03 17:23:32,423 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_000002075: 1088 uces, 325 dupes, 763 non-dupes, 0 orient drop, 0 length drop, 763 written
+2025-09-03 17:23:32,423 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_000327385 genome ----------------
+2025-09-03 17:23:32,423 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_000327385 genome
+2025-09-03 17:23:32,747 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_000327385: 285 uces, 4 dupes, 281 non-dupes, 0 orient drop, 0 length drop, 281 written
+2025-09-03 17:23:32,747 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_002022765 genome ----------------
+2025-09-03 17:23:32,747 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_002022765 genome
+2025-09-03 17:23:34,979 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_002022765: 905 uces, 349 dupes, 556 non-dupes, 0 orient drop, 0 length drop, 556 written
+2025-09-03 17:23:34,979 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_002113885 genome ----------------
+2025-09-03 17:23:34,979 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_002113885 genome
+2025-09-03 17:23:37,586 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_002113885: 1146 uces, 555 dupes, 591 non-dupes, 0 orient drop, 0 length drop, 591 written
+2025-09-03 17:23:37,586 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_003073045 genome ----------------
+2025-09-03 17:23:37,586 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_003073045 genome
+2025-09-03 17:23:38,397 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_003073045: 322 uces, 143 dupes, 179 non-dupes, 0 orient drop, 1 length drop, 178 written
+2025-09-03 17:23:38,398 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_020536995 genome ----------------
+2025-09-03 17:23:38,398 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_020536995 genome
+2025-09-03 17:23:40,277 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_020536995: 645 uces, 355 dupes, 290 non-dupes, 0 orient drop, 0 length drop, 290 written
+2025-09-03 17:23:40,277 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_021730395 genome ----------------
+2025-09-03 17:23:40,277 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_021730395 genome
+2025-09-03 17:23:43,937 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_021730395: 1103 uces, 561 dupes, 542 non-dupes, 0 orient drop, 0 length drop, 542 written
+2025-09-03 17:23:43,937 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_021869535 genome ----------------
+2025-09-03 17:23:43,937 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_021869535 genome
+2025-09-03 17:23:46,541 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_021869535: 1019 uces, 564 dupes, 455 non-dupes, 0 orient drop, 0 length drop, 455 written
+2025-09-03 17:23:46,541 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_025612915 genome ----------------
+2025-09-03 17:23:46,541 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_025612915 genome
+2025-09-03 17:23:49,559 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_025612915: 986 uces, 535 dupes, 451 non-dupes, 0 orient drop, 0 length drop, 451 written
+2025-09-03 17:23:49,559 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_026571515 genome ----------------
+2025-09-03 17:23:49,560 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_026571515 genome
+2025-09-03 17:23:52,362 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_026571515: 1095 uces, 490 dupes, 605 non-dupes, 0 orient drop, 0 length drop, 605 written
+2025-09-03 17:23:52,362 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_026914265 genome ----------------
+2025-09-03 17:23:52,362 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_026914265 genome
+2025-09-03 17:23:54,560 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_026914265: 679 uces, 401 dupes, 278 non-dupes, 0 orient drop, 0 length drop, 278 written
+2025-09-03 17:23:54,560 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_031769215 genome ----------------
+2025-09-03 17:23:54,560 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_031769215 genome
+2025-09-03 17:23:55,877 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_031769215: 1124 uces, 166 dupes, 958 non-dupes, 0 orient drop, 0 length drop, 958 written
+2025-09-03 17:23:55,877 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_032062105 genome ----------------
+2025-09-03 17:23:55,877 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_032062105 genome
+2025-09-03 17:23:57,911 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_032062105: 868 uces, 390 dupes, 478 non-dupes, 0 orient drop, 0 length drop, 478 written
+2025-09-03 17:23:57,911 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_033153115 genome ----------------
+2025-09-03 17:23:57,912 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_033153115 genome
+2025-09-03 17:23:59,688 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_033153115: 877 uces, 387 dupes, 490 non-dupes, 0 orient drop, 0 length drop, 490 written
+2025-09-03 17:23:59,688 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_036588685 genome ----------------
+2025-09-03 17:23:59,688 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_036588685 genome
+2025-09-03 17:24:02,430 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_036588685: 1010 uces, 587 dupes, 423 non-dupes, 0 orient drop, 0 length drop, 423 written
+2025-09-03 17:24:02,430 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_041381155 genome ----------------
+2025-09-03 17:24:02,430 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_041381155 genome
+2025-09-03 17:24:04,767 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_041381155: 1066 uces, 462 dupes, 604 non-dupes, 0 orient drop, 1 length drop, 603 written
+2025-09-03 17:24:04,767 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_902652985 genome ----------------
+2025-09-03 17:24:04,768 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_902652985 genome
+2025-09-03 17:24:06,770 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_902652985: 1117 uces, 431 dupes, 686 non-dupes, 0 orient drop, 0 length drop, 686 written
+2025-09-03 17:24:06,770 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_947568905 genome ----------------
+2025-09-03 17:24:06,770 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_947568905 genome
+2025-09-03 17:24:09,924 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_947568905: 880 uces, 521 dupes, 359 non-dupes, 0 orient drop, 0 length drop, 359 written
+2025-09-03 17:24:09,924 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_963676685 genome ----------------
+2025-09-03 17:24:09,924 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_963676685 genome
+2025-09-03 17:24:13,815 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_963676685: 1037 uces, 626 dupes, 411 non-dupes, 0 orient drop, 0 length drop, 411 written
+2025-09-03 17:24:13,816 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_963853765 genome ----------------
+2025-09-03 17:24:13,816 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_963853765 genome
+2025-09-03 17:24:17,165 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_963853765: 954 uces, 576 dupes, 378 non-dupes, 0 orient drop, 0 length drop, 378 written
+2025-09-03 17:24:17,166 - phyluce_probe_slice_sequence_from_genomes - INFO - ====== Completed phyluce_probe_slice_sequence_from_genomes ======
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - ======= Starting phyluce_probe_slice_sequence_from_genomes ======
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Version: 1.7.3
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Commit: None
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --conf: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/genomes.conf
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --contig_orient: False
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --exclude: None
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --flank: 500
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --lastz: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-genome-lastz
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --log_path: None
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/v2-genome-fasta
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --pattern: Baits_Bivalve_v2.fasta_v_{}.lastz.clean
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probe_prefix: uce-
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probe_regex: ^({}\d+)(?:_p\d+.*)
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --probes: None
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - Argument --verbosity: INFO
+2025-09-03 17:24:38,319 - phyluce_probe_slice_sequence_from_genomes - INFO - =================== Starting Phyluce: Slice Sequence ===================
+2025-09-03 17:24:38,320 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_000002075 genome ----------------
+2025-09-03 17:24:38,320 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_000002075 genome
+2025-09-03 17:24:39,125 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_000002075: 326 uces, 101 dupes, 225 non-dupes, 0 orient drop, 0 length drop, 225 written
+2025-09-03 17:24:39,125 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_000327385 genome ----------------
+2025-09-03 17:24:39,125 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_000327385 genome
+2025-09-03 17:24:39,808 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_000327385: 458 uces, 7 dupes, 451 non-dupes, 0 orient drop, 0 length drop, 451 written
+2025-09-03 17:24:39,808 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_002022765 genome ----------------
+2025-09-03 17:24:39,808 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_002022765 genome
+2025-09-03 17:24:41,860 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_002022765: 694 uces, 301 dupes, 393 non-dupes, 0 orient drop, 0 length drop, 393 written
+2025-09-03 17:24:41,860 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_002113885 genome ----------------
+2025-09-03 17:24:41,860 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_002113885 genome
+2025-09-03 17:24:44,363 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_002113885: 1068 uces, 362 dupes, 706 non-dupes, 0 orient drop, 0 length drop, 706 written
+2025-09-03 17:24:44,364 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_003073045 genome ----------------
+2025-09-03 17:24:44,364 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_003073045 genome
+2025-09-03 17:24:45,278 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_003073045: 375 uces, 109 dupes, 266 non-dupes, 0 orient drop, 0 length drop, 266 written
+2025-09-03 17:24:45,278 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_020536995 genome ----------------
+2025-09-03 17:24:45,278 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_020536995 genome
+2025-09-03 17:24:48,073 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_020536995: 714 uces, 413 dupes, 301 non-dupes, 0 orient drop, 0 length drop, 301 written
+2025-09-03 17:24:48,073 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_021730395 genome ----------------
+2025-09-03 17:24:48,073 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_021730395 genome
+2025-09-03 17:24:51,281 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_021730395: 974 uces, 386 dupes, 588 non-dupes, 0 orient drop, 0 length drop, 588 written
+2025-09-03 17:24:51,281 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_021869535 genome ----------------
+2025-09-03 17:24:51,281 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_021869535 genome
+2025-09-03 17:24:55,929 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_021869535: 1139 uces, 477 dupes, 662 non-dupes, 0 orient drop, 0 length drop, 662 written
+2025-09-03 17:24:55,929 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_025612915 genome ----------------
+2025-09-03 17:24:55,929 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_025612915 genome
+2025-09-03 17:24:58,102 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_025612915: 706 uces, 260 dupes, 446 non-dupes, 0 orient drop, 1 length drop, 445 written
+2025-09-03 17:24:58,102 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_026571515 genome ----------------
+2025-09-03 17:24:58,102 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_026571515 genome
+2025-09-03 17:25:00,712 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_026571515: 938 uces, 357 dupes, 581 non-dupes, 0 orient drop, 0 length drop, 581 written
+2025-09-03 17:25:00,713 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_026914265 genome ----------------
+2025-09-03 17:25:00,713 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_026914265 genome
+2025-09-03 17:25:03,027 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_026914265: 743 uces, 347 dupes, 396 non-dupes, 0 orient drop, 0 length drop, 396 written
+2025-09-03 17:25:03,027 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_031769215 genome ----------------
+2025-09-03 17:25:03,027 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_031769215 genome
+2025-09-03 17:25:04,922 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_031769215: 1078 uces, 165 dupes, 913 non-dupes, 0 orient drop, 0 length drop, 913 written
+2025-09-03 17:25:04,922 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_032062105 genome ----------------
+2025-09-03 17:25:04,922 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_032062105 genome
+2025-09-03 17:25:06,801 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_032062105: 727 uces, 271 dupes, 456 non-dupes, 0 orient drop, 0 length drop, 456 written
+2025-09-03 17:25:06,801 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_033153115 genome ----------------
+2025-09-03 17:25:06,801 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_033153115 genome
+2025-09-03 17:25:08,717 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_033153115: 754 uces, 263 dupes, 491 non-dupes, 0 orient drop, 0 length drop, 491 written
+2025-09-03 17:25:08,717 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_036588685 genome ----------------
+2025-09-03 17:25:08,717 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_036588685 genome
+2025-09-03 17:25:12,896 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_036588685: 1112 uces, 512 dupes, 600 non-dupes, 0 orient drop, 0 length drop, 600 written
+2025-09-03 17:25:12,896 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_041381155 genome ----------------
+2025-09-03 17:25:12,896 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_041381155 genome
+2025-09-03 17:25:15,272 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_041381155: 1032 uces, 330 dupes, 702 non-dupes, 0 orient drop, 1 length drop, 701 written
+2025-09-03 17:25:15,273 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_902652985 genome ----------------
+2025-09-03 17:25:15,273 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_902652985 genome
+2025-09-03 17:25:17,857 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_902652985: 1066 uces, 375 dupes, 691 non-dupes, 0 orient drop, 0 length drop, 691 written
+2025-09-03 17:25:17,857 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_947568905 genome ----------------
+2025-09-03 17:25:17,857 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_947568905 genome
+2025-09-03 17:25:20,463 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_947568905: 696 uces, 320 dupes, 376 non-dupes, 0 orient drop, 0 length drop, 376 written
+2025-09-03 17:25:20,463 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_963676685 genome ----------------
+2025-09-03 17:25:20,463 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_963676685 genome
+2025-09-03 17:25:26,101 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_963676685: 1143 uces, 540 dupes, 603 non-dupes, 0 orient drop, 0 length drop, 603 written
+2025-09-03 17:25:26,102 - phyluce_probe_slice_sequence_from_genomes - INFO - ---------------- Working on GCF_963853765 genome ----------------
+2025-09-03 17:25:26,102 - phyluce_probe_slice_sequence_from_genomes - INFO - Reading GCF_963853765 genome
+2025-09-03 17:25:28,549 - phyluce_probe_slice_sequence_from_genomes - INFO - GCF_963853765: 692 uces, 281 dupes, 411 non-dupes, 0 orient drop, 0 length drop, 411 written
+2025-09-03 17:25:28,549 - phyluce_probe_slice_sequence_from_genomes - INFO - ====== Completed phyluce_probe_slice_sequence_from_genomes ======
