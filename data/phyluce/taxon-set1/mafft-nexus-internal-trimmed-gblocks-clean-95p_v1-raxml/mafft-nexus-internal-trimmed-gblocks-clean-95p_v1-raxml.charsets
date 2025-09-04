@@ -1,11 +1,6 @@
 
 begin sets;
-charset 'uce-1959.nexus' = 1-757;
-charset 'uce-2415.nexus' = 758-1708;
-charset 'uce-3507.nexus' = 1709-2810;
-charset 'uce-4148.nexus' = 2811-3511;
-charset 'uce-4527.nexus' = 3512-4490;
-charset 'uce-5974.nexus' = 4491-5410;
-charset 'uce-5984.nexus' = 5411-6078;
-charpartition combined = uce-1959.nexus: 1-757, uce-2415.nexus: 758-1708, uce-3507.nexus: 1709-2810, uce-4148.nexus: 2811-3511, uce-4527.nexus: 3512-4490, uce-5974.nexus: 4491-5410, uce-5984.nexus: 5411-6078;
+charset 'uce-2415.nexus' = 1-878;
+charset 'uce-3507.nexus' = 879-1980;
+charpartition combined = uce-2415.nexus: 1-878, uce-3507.nexus: 879-1980;
 end;
