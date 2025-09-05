@@ -4,3 +4,76 @@ author: "Megan Ewing"
 date: "2025-09-05"
 output: html_document
 ---
+
+Here I seek to generate a fasta file for each 'gamete generation' gene, and pull the associated sequences from each bivalve genome. These will be used to generate gene trees to compare to the consensus tree to when calculating robinson-foulds distance.
+
+first need
+
+-   abridged gene list for each species that has the SPID & corresponding sequence number for that genome
+
+-   list of all of the unique SPIDs contained within all gene lists combined
+
+-   configuration file with taxa names
+
+```{r}
+# Load required libraries
+# Biostrings gives functions for handling DNA/RNA/AA sequences
+library(Biostrings)
+
+# Read in the master list of SwissProt IDs (~3500)
+swissprot_ids <- readLines("swissprot_ids.txt")
+
+# Get a list of all CDS fasta files (one per species/taxon)
+cds_files <- list.files("cds_fastas", pattern="_cds.fasta$", full.names=TRUE)
+
+# Loop through each SwissProt ID
+for (sp_id in swissprot_ids) {
+  
+  # Initialize an empty DNAStringSet to hold all sequences for this SwissProt ID
+  records <- DNAStringSet()
+  
+  # Loop through each species’ CDS fasta
+  for (cdsfile in cds_files) {
+    # Extract species/taxon name from file name (remove "_cds.fasta")
+    taxon <- sub("_cds.fasta$", "", basename(cdsfile))
+    
+    # Construct path to the gene map file for this taxon
+    mapfile <- file.path("gene_maps", paste0(taxon, "_gene_map.tsv"))
+    
+    # Load mapping file (must have at least two columns: seq_id and swissprot_id)
+    map <- read.table(mapfile, sep="\t", header=TRUE, stringsAsFactors=FALSE)
+    
+    # Check if this SwissProt ID is present in the mapping
+    if (sp_id %in% map$swissprot_id) {
+      # Get all sequence IDs in this taxon that match the SwissProt ID
+      seq_ids <- map$seq_id[map$swissprot_id == sp_id]
+      
+      # Load the CDS fasta file as a DNAStringSet
+      cds <- readDNAStringSet(cdsfile)
+      
+      # Keep only those sequence IDs that are both in the mapping and fasta
+      keep <- intersect(seq_ids, names(cds))
+      
+      if (length(keep) > 0) {
+        # Extract the matching sequences
+        cds_sub <- cds[keep]
+        
+        # Rename fasta headers as "species|seq_id"
+        names(cds_sub) <- paste0(taxon, "|", keep)
+        
+        # Add them to the running list of records for this SwissProt ID
+        records <- c(records, cds_sub)
+      }
+    }
+  }
+  
+  # If any sequences were found, write them to a fasta file
+  if (length(records) > 0) {
+    writeXStringSet(
+      records, 
+      filepath=file.path("swissprot_fastas", paste0(sp_id, ".fasta"))
+    )
+  }
+}
+
+```
