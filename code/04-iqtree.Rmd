@@ -1,0 +1,38 @@
+---
+title: "iqtree"
+author: "Megan Ewing"
+date: "2025-09-05"
+output: html_document
+---
+
+using iq tree to generate consensus trees based on phyluce output
+
+following this [IQ tree tutorial](https://iqtree.github.io/doc/Tutorial)
+
+will need to [install IQ tree](https://iqtree.github.io/) and adjust file path as needed for IQ tree location (I was using v3.0.1)
+
+to determine tree model, run model finder plus (MFP)
+
+*75p v2*
+
+```{bash}
+/Users/meganewing/Desktop/robertslab/ch1/iqtree/iqtree3  \
+-s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxmlmafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml.phylip \
+-m MFP
+```
+
+```{bash}
+# run iq tree with model (-m) defined by MFP
+# 1000 bootstraps and 1000 alrt iterations
+# outgroups gcf_000002075,gcf_000327385,gcf_003073045
+
+/Users/meganewing/Desktop/robertslab/ch1/iqtree/iqtree3  \
+-s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxmlmafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml.phylip \
+-m GTR+F+I+R3 \
+-bb 1000 \
+-alrt 1000 \
+-o gcf_000002075,gcf_000327385,gcf_003073045 \
+-bnni \
+-nt AUTO \
+-redo
+```
