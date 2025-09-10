@@ -130,3 +130,80 @@ for (sp_id in swissprot_ids) {
 }
 
 ```
+
+```{r}
+library(dplyr)
+library(Biostrings)
+library(stringr)
+
+# Output folder
+outdir <- "../output/genefastas/"
+dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
+
+# Read all gene lists
+files <- list.files("../output/", pattern = "^genelist_.*\\.csv$", full.names = TRUE)
+
+genelists <- lapply(files, function(f) {
+  species <- sub("^genelist_(.*)\\.csv$", "\\1", basename(f))
+  df <- read.csv(f, stringsAsFactors = FALSE)
+  df$species <- species
+  df
+})
+
+genelists <- bind_rows(genelists)
+
+# Pre-load all genome FASTAs
+species_names <- unique(genelists$species)
+genome_seqs <- list()
+
+for (sp in species_names) {
+  fna_path <- file.path("../data/genomes_refseq/ncbi_dataset/data", sp, "cds_from_genomic.fna")
+  
+  if (file.exists(fna_path)) {
+    fasta <- readDNAStringSet(fna_path)
+    
+    # Strip everything after the first space in the header
+    names(fasta) <- sub(" .*", "", names(fasta))
+    
+    genome_seqs[[sp]] <- fasta
+  } else {
+    message("Missing genome fasta for species: ", sp)
+  }
+}
+
+# Loop over each SPID
+spids <- unique(genelists$annot_w_GO.SPID)
+
+for (spid in spids) {
+  
+  subset_df <- genelists %>%
+    filter(annot_w_GO.SPID == spid)
+  
+  seqs_out <- DNAStringSet()
+  
+  for (i in seq_len(nrow(subset_df))) {
+    species <- subset_df$species[i]
+    seqid   <- subset_df$annot_w_GO.sseqid[i]
+    
+    if (!species %in% names(genome_seqs)) next
+    
+    fasta <- genome_seqs[[species]]
+    
+    # match by cleaned sequence ID
+    idx <- which(names(fasta) == seqid)
+    
+    if (length(idx) == 1) {
+      seq_name <- paste0(species, "|", seqid)
+      seqs_out <- c(seqs_out, setNames(fasta[idx], seq_name))
+    } else {
+      message("Sequence ID not found: ", seqid, " in ", species)
+    }
+  }
+  
+  if (length(seqs_out) > 0) {
+    outpath <- file.path(outdir, paste0(spid, ".fasta"))
+    writeXStringSet(seqs_out, outpath, format = "fasta")
+  }
+}
+
+```
