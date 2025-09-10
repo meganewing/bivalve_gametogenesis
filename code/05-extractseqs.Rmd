@@ -9,11 +9,64 @@ Here I seek to generate a fasta file for each 'gamete generation' gene, and pull
 
 first need
 
--   abridged gene list for each species that has the SPID & corresponding sequence number for that genome
+-   a gene list for each species that has the SPID & corresponding sequence number for that genome (done in `02-blastoncds` )
 
 -   list of all of the unique SPIDs contained within all gene lists combined
 
 -   configuration file with taxa names
+
+we can then
+
+### all unique SPIDs contained within all gene lists combined (with counts for how many species they are in)
+
+```{r}
+# get all files with full paths
+files <- list.files("../output/", pattern = "^genelist_.*\\.csv$", full.names = TRUE)
+
+# initialize list to store SPIDs by species
+spid_lists <- list()
+
+for (f in files) {
+  # extract species name from the filename
+  species <- sub("^genelist_(.*)\\.csv$", "\\1", basename(f))
+  
+  # read in gene lists
+  df <- read.csv(f, stringsAsFactors = FALSE)
+  
+  #get unique SPIDs from this file
+  spids <- unique(df$annot_w_GO.SPID)
+  
+  # store them
+  spid_lists[[species]] <- spids
+}
+
+#cCombine into one vector w/ species labels
+all_spids <- stack(spid_lists)
+
+# count in how many unique species each SPID appears
+library(dplyr)
+spid_counts <- all_spids %>%
+  distinct(values, ind) %>%           # remove duplicates within a species
+  count(values, name = "species_count") %>%
+  rename(SPID = values)
+
+# preview
+head(spid_counts)
+
+```
+
+```{bash}
+
+mkdir ../output/extractsequences/
+```
+
+```{r}
+
+# write spid list to csv
+write.csv(spid_counts, "../output/extractsequences/uniqueSPIDlistandcounts.csv")
+```
+
+### 
 
 ```{r}
 # Load required libraries
