@@ -595,7 +595,7 @@ mkdir log-cmp_v1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v1.fasta \
     --output mafft-nexus-edge-trimmed-cmp_v1 \
-    --taxa 20 \
+    --taxa 18 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -627,7 +627,7 @@ mkdir log-cmp_v2
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v2.fasta \
     --output mafft-nexus-edge-trimmed-cmp_v2 \
-    --taxa 20 \
+    --taxa 18 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -659,7 +659,7 @@ mkdir log-inc_v1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v1.fasta \
     --output mafft-nexus-edge-trimmed-inc_v1 \
-    --taxa 20 \
+    --taxa 18 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -691,7 +691,7 @@ mkdir log-inc_v2
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v2.fasta \
     --output mafft-nexus-edge-trimmed-inc_v2 \
-    --taxa 20 \
+    --taxa 18 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -721,7 +721,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v1.fasta \
     --output mafft-nexus-internal-trimmed-cmp_v1 \
-    --taxa 20 \
+    --taxa 18 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -740,7 +740,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_complete_v2.fasta \
     --output mafft-nexus-internal-trimmed-cmp_v2 \
-    --taxa 20 \
+    --taxa 18 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -759,7 +759,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v1.fasta \
     --output mafft-nexus-internal-trimmed-inc_v1 \
-    --taxa 20 \
+    --taxa 18 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -777,7 +777,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_seqcap_align \
     --input dataset1_incomplete_v2.fasta \
     --output mafft-nexus-internal-trimmed-inc_v2 \
-    --taxa 20 \
+    --taxa 18 \
     --aligner mafft \
     --cores 12 \
     --incomplete-matrix \
@@ -964,7 +964,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v1 \
-    --taxa 20 \
+    --taxa 18 \
     --percent 0.50 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-50p_v1 \
     --cores 12 \
@@ -980,7 +980,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v2 \
-    --taxa 20 \
+    --taxa 18 \
     --percent 0.50 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-50p_v2 \
     --cores 12 \
@@ -998,7 +998,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v1 \
-    --taxa 20 \
+    --taxa 18 \
     --percent 0.75 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-75p_v1 \
     --cores 12 \
@@ -1014,7 +1014,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v2 \
-    --taxa 20 \
+    --taxa 18 \
     --percent 0.75 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-75p_v2 \
     --cores 12 \
@@ -1032,7 +1032,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v1 \
-    --taxa 20 \
+    --taxa 18 \
     --percent 0.95 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-95p_v1 \
     --cores 12 \
@@ -1048,7 +1048,7 @@ cd ../data/phyluce/taxon-set1
 /home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda run -n phyluce \
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_align_get_only_loci_with_min_taxa \
     --alignments mafft-nexus-internal-trimmed-gblocks-clean-inc_v2 \
-    --taxa 20 \
+    --taxa 18 \
     --percent 0.95 \
     --output mafft-nexus-internal-trimmed-gblocks-clean-95p_v2 \
     --cores 12 \

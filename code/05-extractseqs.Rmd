@@ -144,3 +144,10 @@ for (spid in spids) {
 }
 
 ```
+
+preview output
+
+```{bash}
+
+head ../output/genefastas/A0AVF1.fasta
+```

@@ -29,23 +29,35 @@ to determine tree model, run model finder plus (MFP)
 *75p v2*
 
 ```{bash}
-/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3  \
--s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxmlmafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml.phylip \
--m MFP
+mkdir ../output/iqtree/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3 \
+  -s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml.phylip \
+  -m MFP \
+  &> ../output/iqtree/75_v2_mfp.txt
+
+# Print the best-fit model line to console
+grep "Best-fit model:" ../output/iqtree/75_v2_mfp.txt
+
 ```
 
 ```{bash}
 # run iq tree with model (-m) defined by MFP
-# 1000 bootstraps and 1000 alrt iterations
-# outgroups gcf_000002075,gcf_000327385,gcf_003073045
+# 10000 bootstraps and 10000 alrt iterations
+# gcf_000327385
+# output will be saved to ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml/
 
-/Users/meganewing/Desktop/robertslab/ch1/iqtree/iqtree3  \
--s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxmlmafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml.phylip \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3  \
+-s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml.phylip \
 -m GTR+F+I+R3 \
--bb 1000 \
--alrt 1000 \
--o gcf_000002075,gcf_000327385,gcf_003073045 \
+-bb 10000 \
+-alrt 10000 \
+-o gcf_000327385 \
 -bnni \
 -nt AUTO \
 -redo
+```
+
+```{r}
+
 ```
