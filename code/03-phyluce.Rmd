@@ -85,10 +85,6 @@ done
 
 ```
 
-### Bait Sequences for UCE
-
-Bait sequences were provided courtesy of Yi-Xuan Li, of Hong Kong Baptist University, from [Yi-Xuan et al. (2024)](https://academic.oup.com/sysbio/article-abstract/74/1/16/7758682)
-
 ### Align the probes to the genomes
 
 "Now, we need to think of some name for the database to create (here \`tutorial3.sqlite\`), the name of an output in which to store the \`lastz\` search results, the path to the genome sequences, the name of the genome sequences, the path to the probe file, and a number of compute cores to use:" (from phyluce tutorial)
@@ -96,8 +92,8 @@ Bait sequences were provided courtesy of Yi-Xuan Li, of Hong Kong Baptist Univer
 currently, the folders and files within are `GCF_#########.#`, but the `.#` will confuse phyluce, so let's get rid of those.
 
 ```{r}
-library(fs)
 library(stringr)
+library(fs)
 
 base_dir <- "../data/phyluce"
 
@@ -106,7 +102,7 @@ dirs <- dir_ls(base_dir, type = "directory", recurse = FALSE, regexp = "^.*/GCF_
 for (dir in dirs) {
   dir_name <- path_file(dir)
   new_dir_name <- str_replace(dir_name, "\\.\\d+$", "")
-  new_dir_path <- path(path_dir(dir), new_dir_name)
+  new_dir_path <- fs::path(fs::path_dir(dir), new_dir_name)
   file_move(dir, new_dir_path)  # <- Corrected line
   cat("Renamed dir:", dir, "->", new_dir_path, "\n")
 }
@@ -180,6 +176,10 @@ find "$BASE_DIR" -name "*.fasta" -delete
 
 ```
 
+### Bait Sequences for UCE
+
+Bait sequences were provided courtesy of Yi-Xuan Li, of Hong Kong Baptist University, from [Yi-Xuan et al. (2024)](https://academic.oup.com/sysbio/article-abstract/74/1/16/7758682)
+
 you'll need to ensure [phyluce](https://github.com/faircloth-lab/phyluce/releases/tag/v1.7.3) is installed for this
 
 phyluce installed mamba environment: `/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce/`
@@ -210,7 +210,7 @@ cd ../data/phyluce/
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_probe_run_multiple_lastzs_sqlite \
         --db uce_frombaits_v1 \
         --output v1-genome-lastz \
-        --scaffoldlist GCF_000002075 GCF_000327385 GCF_002022765 GCF_002113885 GCF_003073045 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
+        --scaffoldlist GCF_000327385 GCF_002022765 GCF_002113885 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v1.fasta \
         --cores 10 \
@@ -229,7 +229,7 @@ cd ../data/phyluce/
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/phyluce-1.7.3/bin/phyluce_probe_run_multiple_lastzs_sqlite \
         --db uce_frombaits_v2 \
         --output v2-genome-lastz \
-        --scaffoldlist GCF_000002075 GCF_000327385 GCF_002022765 GCF_002113885 GCF_003073045 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
+        --scaffoldlist GCF_000327385 GCF_002022765 GCF_002113885 GCF_020536995 GCF_021730395 GCF_021869535 GCF_025612915 GCF_026571515 GCF_026914265 GCF_031769215 GCF_032062105 GCF_033153115 GCF_036588685 GCF_041381155 GCF_902652985 GCF_947568905 GCF_963676685 GCF_963853765 \
         --genome-base-path ./ \
         --probefile Baits_Bivalve_v2.fasta \
         --cores 10 \
@@ -372,6 +372,11 @@ print(df_summary)
 write.csv(df_summary, "../data/phyluce/sequence_summary.csv")
 ```
 
+```{r}
+summary(df_summary$v1_fasta)
+summary(df_summary$v2_fasta)
+```
+
 *\~ end of tutorial III \~*
 
 ## UCE Processing for Phylogenomics
@@ -379,6 +384,11 @@ write.csv(df_summary, "../data/phyluce/sequence_summary.csv")
 A different [tutorial for phyluce](https://phyluce.readthedocs.io/en/latest/daily-use/daily-use-3-uce-processing.html#uce-processing) for processing UCE info and getting a matrix / fasta files that can be used to create a tree.
 
 created contig files (just duplicated the `vX-genome-fasta/` output files above and renamed to `vX-contigs`)
+
+```{bash}
+cp -r ../data/phyluce/v1-genome-fasta/ ../data/phyluce/v1-contigs/
+cp -r ../data/phyluce/v2-genome-fasta/ ../data/phyluce/v2-contigs/
+```
 
 ```{bash}
 # make a directory for log files

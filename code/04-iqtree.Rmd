@@ -5,18 +5,31 @@ date: "2025-09-05"
 output: html_document
 ---
 
-using iq tree to generate consensus trees based on phyluce output
+using iq tree to generate consensus trees based on phyluce output & gene trees
 
 following this [IQ tree tutorial](https://iqtree.github.io/doc/Tutorial)
 
 will need to [install IQ tree](https://iqtree.github.io/) and adjust file path as needed for IQ tree location (I was using v3.0.1)
+
+```{bash}
+## activate mamba environment 
+# eval "$(/home/shared/8TB_HDD_02/mewing0/miniforge3/bin/conda shell.bash hook)"
+# eval "$(mamba shell hook --shell bash)"
+#
+# mamba activate
+#
+## create new environment in mamba for iq tree
+# mamba create -n iqtree-v3.0.1 iqtree=3.0.1
+#
+## path to iqtree is: /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3
+```
 
 to determine tree model, run model finder plus (MFP)
 
 *75p v2*
 
 ```{bash}
-/Users/meganewing/Desktop/robertslab/ch1/iqtree/iqtree3  \
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3  \
 -s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxmlmafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml.phylip \
 -m MFP
 ```
