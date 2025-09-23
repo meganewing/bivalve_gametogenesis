@@ -26,10 +26,106 @@ will need to [install IQ tree](https://iqtree.github.io/) and adjust file path a
 
 to determine tree model, run model finder plus (MFP)
 
-*75p v2*
-
 ```{bash}
 mkdir ../output/iqtree/
+```
+
+# Consensus Trees
+
+#### *50p v1 consensus*
+
+model finder
+
+```{bash}
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3 \
+  -s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml/mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml.phylip \
+  -m MFP \
+  &> ../output/iqtree/50p_v1_mfp.txt
+
+# Print the best-fit model line to console
+grep "Best-fit model:" ../output/iqtree/50p_v1_mfp.txt
+```
+
+making tree, 10k bootstraps and 10k alrt iterations
+
+```{bash}
+# run iq tree with model (-m) defined by MFP
+# 10000 bootstraps and 10000 alrt iterations
+# gcf_000327385
+# output will be saved to ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3  \
+-s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml/mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml.phylip \
+-m TVM+F+R3 \
+-bb 10000 \
+-alrt 10000 \
+-o gcf_000327385 \
+-bnni \
+-nt AUTO \
+-redo
+```
+
+```{r}
+## need gg tree for visualization
+# install.packages("remotes")
+# remotes::install_github("YuLab-SMU/ggtree")
+
+library(treeio)
+library(tidyverse)
+library(ggtree)
+
+```
+
+```{r}
+tree <- read.tree("../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml/mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml.phylip.treefile")
+
+tree_rooted <- root(tree, outgroup = "gcf_000327385", resolve.root = TRUE)
+
+p <- ggtree(tree_rooted, layout = "rectangular") +
+     geom_tiplab(size = 3, fontface = "italic") +
+     geom_text2(aes(subset = !isTip, label = label), size = 2.5, vjust = -0.3) +
+     theme_tree2()
+p
+```
+
+#### *50p v2 consensus*
+
+mfp
+
+```{bash}
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3 \
+  -s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-50p_v2-raxml/mafft-nexus-internal-trimmed-gblocks-clean-50p_v2-raxml.phylip \
+  -m MFP \
+  &> ../output/iqtree/50p_v2_mfp.txt
+
+# Print the best-fit model line to console
+grep "Best-fit model:" ../output/iqtree/50p_v2_mfp.txt
+```
+
+making tree, 10k bootstraps and 10k alrt iterations
+
+```{bash}
+# run iq tree with model (-m) defined by MFP
+# 10000 bootstraps and 10000 alrt iterations
+# gcf_000327385
+# output will be saved to ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3  \
+-s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-50p_v2-raxml/mafft-nexus-internal-trimmed-gblocks-clean-50p_v2-raxml.phylip \
+-m GTR+F+I+R3 \
+-bb 10000 \
+-alrt 10000 \
+-o gcf_000327385 \
+-bnni \
+-nt AUTO \
+-redo
+```
+
+#### 
+
+#### *75p v2 consensus*
+
+```{bash}
 
 /home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3 \
   -s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml.phylip \
@@ -58,6 +154,54 @@ grep "Best-fit model:" ../output/iqtree/75_v2_mfp.txt
 -redo
 ```
 
-```{r}
+# Gene Trees
+
+```{bash}
+#!/bin/bash
+
+IQTREE=/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3
+FASTA_DIR="../output/genefastas"
+IQTREE_DIR="../output/iqtree"
+THREADS=10   # number of genes to run simultaneously
+LOG_FILE="$IQTREE_DIR/genetree.log"
+
+# Clear previous log
+> "$LOG_FILE"
+
+run_iqtree() {
+    fasta="$1"
+    gene=$(basename "$fasta" .fasta)
+    outdir="$IQTREE_DIR/$gene"
+    mkdir -p "$outdir"
+
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Running IQ-TREE for $gene ..." >> "$LOG_FILE"
+
+    # Step 1: Model Finder Plus
+    $IQTREE -s "$fasta" -m MFP -pre "$outdir/$gene"
+
+    # Extract best-fit model from the .iqtree file
+    model=$(grep "Best-fit model:" "$outdir/$gene.iqtree" | awk '{print $3}')
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Best-fit model for $gene: $model" >> "$LOG_FILE"
+
+    # Step 2: Generate tree
+    $IQTREE \
+        -s "$fasta" \
+        -m "$model" \
+        -bb 10000 \
+        -alrt 10000 \
+        -o gcf_000327385 \
+        -bnni \
+        -nt AUTO \
+        -redo \
+        -pre "$outdir/$gene"
+
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Finished $gene" >> "$LOG_FILE"
+}
+
+export -f run_iqtree
+export IQTREE IQTREE_DIR LOG_FILE
+
+# Run in parallel
+find "$FASTA_DIR" -name "*.fasta" | parallel -j $THREADS run_iqtree {}
 
 ```
