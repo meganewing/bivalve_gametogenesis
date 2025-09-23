@@ -1,19 +1,19 @@
-2025-08-28 14:30:15,799 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO -  Starting phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed 
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Version: 1.7.3
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Commit: None
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --alignments: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-inc_v2
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --b1: 0.5
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --b2: 0.85
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --b3: 8
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --b4: 10
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --cores: 12
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --input_format: fasta
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/log-inc_v2
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-inc_v2
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --output_format: nexus
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --verbosity: INFO
-2025-08-28 14:30:15,800 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Getting aligned sequences for trimming
-2025-08-28 14:30:15,805 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Alignment trimming begins.
-2025-08-28 14:30:16,848 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Alignment trimming ends
-2025-08-28 14:30:16,848 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Writing output files
-2025-08-28 14:30:17,512 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO -  Completed phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed 
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO -  Starting phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed 
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Version: 1.7.3
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Commit: None
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --alignments: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-inc_v2
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --b1: 0.5
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --b2: 0.85
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --b3: 8
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --b4: 10
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --cores: 12
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --input_format: fasta
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --log_path: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/log-inc_v2
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --output: /home/shared/8TB_HDD_02/mewing0/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-inc_v2
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --output_format: nexus
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Argument --verbosity: INFO
+2025-09-22 15:38:59,523 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Getting aligned sequences for trimming
+2025-09-22 15:38:59,529 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Alignment trimming begins.
+2025-09-22 15:39:00,566 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Alignment trimming ends
+2025-09-22 15:39:00,566 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO - Writing output files
+2025-09-22 15:39:01,279 - phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed - INFO -  Completed phyluce_align_get_gblocks_trimmed_alignments_from_untrimmed 
