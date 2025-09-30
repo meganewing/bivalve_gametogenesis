@@ -121,7 +121,36 @@ making tree, 10k bootstraps and 10k alrt iterations
 -redo
 ```
 
-#### 
+#### *75p v1 consensus*
+
+```{bash}
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3 \
+  -s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v1-raxml/mafft-nexus-internal-trimmed-gblocks-clean-75p_v1-raxml.phylip \
+  -m MFP \
+  &> ../output/iqtree/75_v1_mfp.txt
+
+# Print the best-fit model line to console
+grep "Best-fit model:" ../output/iqtree/75_v1_mfp.txt
+
+```
+
+```{bash}
+# run iq tree with model (-m) defined by MFP
+# 10000 bootstraps and 10000 alrt iterations
+# gcf_000327385
+# output will be saved to ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v2-raxml/
+
+/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3  \
+-s ../data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-75p_v1-raxml/mafft-nexus-internal-trimmed-gblocks-clean-75p_v1-raxml.phylip \
+-m TVM+F+I+R3 \
+-bb 10000 \
+-alrt 10000 \
+-o gcf_000327385 \
+-bnni \
+-nt AUTO \
+-redo
+```
 
 #### *75p v2 consensus*
 
@@ -157,15 +186,17 @@ grep "Best-fit model:" ../output/iqtree/75_v2_mfp.txt
 # Gene Trees
 
 ```{bash}
-#!/bin/bash
 
+# Paths to binaries
 IQTREE=/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3
+MAFFT=/usr/bin/mafft        # adjust if MAFFT is elsewhere
+
 FASTA_DIR="../output/genefastas"
 IQTREE_DIR="../output/iqtree"
-THREADS=10   # number of genes to run simultaneously
+THREADS=4                  # number of genes to run simultaneously
 LOG_FILE="$IQTREE_DIR/genetree.log"
 
-# Clear previous log
+# clear previous log
 > "$LOG_FILE"
 
 run_iqtree() {
@@ -174,18 +205,25 @@ run_iqtree() {
     outdir="$IQTREE_DIR/$gene"
     mkdir -p "$outdir"
 
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Running IQ-TREE for $gene ..." >> "$LOG_FILE"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting $gene" >> "$LOG_FILE"
+
+    # Step 0: Align sequences with MAFFT
+    aligned_fasta="$outdir/${gene}_aligned.fasta"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Aligning $gene with MAFFT ..." >> "$LOG_FILE"
+    $MAFFT --auto "$fasta" > "$aligned_fasta"
 
     # Step 1: Model Finder Plus
-    $IQTREE -s "$fasta" -m MFP -pre "$outdir/$gene"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Running Model Finder Plus for $gene ..." >> "$LOG_FILE"
+    $IQTREE -s "$aligned_fasta" -m MFP -pre "$outdir/$gene"
 
     # Extract best-fit model from the .iqtree file
     model=$(grep "Best-fit model:" "$outdir/$gene.iqtree" | awk '{print $3}')
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Best-fit model for $gene: $model" >> "$LOG_FILE"
 
     # Step 2: Generate tree
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Generating tree for $gene ..." >> "$LOG_FILE"
     $IQTREE \
-        -s "$fasta" \
+        -s "$aligned_fasta" \
         -m "$model" \
         -bb 10000 \
         -alrt 10000 \
@@ -199,9 +237,81 @@ run_iqtree() {
 }
 
 export -f run_iqtree
-export IQTREE IQTREE_DIR LOG_FILE
+export IQTREE MAFFT IQTREE_DIR LOG_FILE
 
-# Run in parallel
+# run in parallel
 find "$FASTA_DIR" -name "*.fasta" | parallel -j $THREADS run_iqtree {}
 
+
 ```
+
+```{bash}
+cd ../output/genefastas/
+# total number of files or subdir in source directory 
+ls -1 | wc -l
+
+
+cd ../iqtree/
+# total number of files or subdir in created directory (should equal above + consesus tree files + log file)
+ls -1 | wc -l
+
+# number of .treefiles created 
+find . -type f -name "*.treefile" | wc -l
+
+```
+
+**note**: the number of .treefiles created is less than the total number of fastas given to iqtree -- why? IQ tree ignores any fastas (inputs) with less than 3 sequences. which makes sense since a tree with two sequences would just look like: **[**
+
+we can confirm this by comparing the missing tree file with the SPID counts \< 3
+
+```{r}
+# create a dataframe from the input SPID list where counts (# of species represented) are less than 3
+
+spidcounts <- read_csv("../output/extractsequences/uniqueSPIDlistandcounts.csv")
+head(spidcounts)
+
+shortseqs <- spidcounts[spidcounts$species_count < 3, "SPID"]
+head(shortseqs)
+
+```
+
+```{r}
+
+# find which of the iqtree subdirectories do not contain tree files, save as dataframe `shorttrees`
+
+# list subdirectories (non-recursive)
+SPID <- list.dirs(path = "../output/iqtree/", full.names = TRUE, recursive = FALSE)
+
+# check each for .treefile
+missing_treefile <- character()
+for (d in SPID) {
+  treefiles <- list.files(d, pattern = "\\.treefile$", full.names = TRUE)
+  if (length(treefiles) == 0) {
+    missing_treefile <- c(missing_treefile, d)
+  }
+}
+
+missing_treefile
+
+shorttrees <- data.frame(
+  SPID = basename(missing_treefile),
+  stringsAsFactors = FALSE
+)
+
+shorttrees
+
+```
+
+compare input files \<3 to the iqtree subdirs missing tree files. if returns TRUE, the only iqtrees that weren't made were the ones with less than 3 sequences.
+
+```{r}
+# library(dplyr)
+
+#checks if the lists of 
+all_equal(shortseqs, shorttrees)
+
+```
+
+yay! TRUE returned. can now move on and start comparing our gene trees and chosen consensus tree.
+
+we will also be interested in these genes independently though, as they have low representation across our taxa!
