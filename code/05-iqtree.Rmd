@@ -32,7 +32,7 @@ mkdir ../output/iqtree/
 
 # Consensus Trees
 
-#### *50p v1 consensus*
+### *50p v1 consensus*
 
 model finder
 
@@ -65,6 +65,38 @@ making tree, 10k bootstraps and 10k alrt iterations
 -redo
 ```
 
+#### update tip names
+
+back when I ran phyluce, I needed to truncate the genome names. here I will add back the suffix (.1, .2, etc) so it matches the tip names found in the gene trees.
+
+```{bash}
+# --- Define paths ---
+refseq=~/bivalve_gametogenesis/data/genomes_refseq/ncbi_dataset/data
+tree=~/bivalve_gametogenesis/data/phyluce/taxon-set1/mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml/mafft-nexus-internal-trimmed-gblocks-clean-50p_v1-raxml.phylip.treefile
+out=~/bivalve_gametogenesis/output/iqtree/50v1_fullname.treefile
+
+# --- Build a mapping of truncated -> full (only GCF_ dirs) ---
+ls -1 "$refseq" | grep '^GCF_' | while read full; do
+    short=$(echo "$full" | sed 's/\.[0-9]\+$//')   # remove version suffix
+    echo -e "$short\t$full"
+done > mapping.tsv
+
+# --- Copy tree to new output file ---
+cp "$tree" "$out"
+
+# --- Replace lowercase truncated names with uppercase full names ---
+while IFS=$'\t' read -r short full; do
+    short_lc=$(echo "$short" | tr '[:upper:]' '[:lower:]')
+    sed -i "s/\b$short_lc\b/$full/g" "$out"
+done < mapping.tsv
+
+echo "updated tree written to: $out"
+
+head $out
+```
+
+#### ggtree
+
 ```{r}
 ## need gg tree for visualization
 # install.packages("remotes")
@@ -85,10 +117,17 @@ p <- ggtree(tree_rooted, layout = "rectangular") +
      geom_tiplab(size = 3, fontface = "italic") +
      geom_text2(aes(subset = !isTip, label = label), size = 2.5, vjust = -0.3) +
      theme_tree2()
-p
+
+# Save as PNG
+ggsave(
+  filename = "50v1_tree.png", 
+  plot = p,                      
+  width = 8, height = 8,        
+  dpi = 300,                     
+)
 ```
 
-#### *50p v2 consensus*
+### *50p v2 consensus*
 
 mfp
 
@@ -121,7 +160,7 @@ making tree, 10k bootstraps and 10k alrt iterations
 -redo
 ```
 
-#### *75p v1 consensus*
+### *75p v1 consensus*
 
 ```{bash}
 
@@ -152,7 +191,7 @@ grep "Best-fit model:" ../output/iqtree/75_v1_mfp.txt
 -redo
 ```
 
-#### *75p v2 consensus*
+### *75p v2 consensus*
 
 ```{bash}
 

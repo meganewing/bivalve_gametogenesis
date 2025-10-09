@@ -1,0 +1,35 @@
+---
+title: "calculating tree distances with phangorn"
+author: "Megan Ewing"
+date: "2025-09-30"
+output: html_document
+---
+
+```{r}
+# install.packages("phangorn")
+library("phangorn")
+```
+
+```{r}
+
+
+# Read trees
+consensus <- read.tree("../output/iqtree/50v1_fullname.treefile")
+genetree <- read.tree("../output/iqtree/A0A096MJN4/A0A096MJN4.treefile")
+
+# Clean gene tree labels to match consensus
+genetree$tip.label <- sapply(strsplit(genetree$tip.label, "\\|"), `[`, 1)
+
+# Identify common taxa
+common_taxa <- intersect(consensus$tip.label, genetree$tip.label)
+length(common_taxa)
+common_taxa
+
+# Prune trees to shared taxa
+consensus_pruned <- drop.tip(consensus, setdiff(consensus$tip.label, common_taxa))
+genetree_pruned <- drop.tip(genetree, setdiff(genetree$tip.label, common_taxa))
+
+# Now compute tree distance
+treedist(consensus_pruned, genetree_pruned, check.labels = TRUE)
+
+```
