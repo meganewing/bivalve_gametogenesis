@@ -33,3 +33,100 @@ genetree_pruned <- drop.tip(genetree, setdiff(genetree$tip.label, common_taxa))
 treedist(consensus_pruned, genetree_pruned, check.labels = TRUE)
 
 ```
+
+```{bash}
+mkdir ../output/treedist/
+```
+
+```{r}
+# Load libraries
+library(ape)
+
+# Paths
+consensus_path <- "../output/iqtree/50v1_fullname.treefile"
+iqtree_dir <- "../output/iqtree/"
+log_file <- "../output/treedist/treedist_log.txt"
+output_csv <- "../output/treedist/treedist_results.csv"
+
+# Read consensus tree
+consensus <- read.tree(consensus_path)
+
+# Find all gene treefiles recursively
+treefiles <- list.files(iqtree_dir, pattern = "\\.treefile$", recursive = TRUE, full.names = TRUE)
+# Exclude the consensus tree itself (so you don't compare it to itself)
+treefiles <- treefiles[!grepl("50v1_fullname.treefile$", treefiles)]
+
+# Initialize empty dataframe for results
+results <- data.frame(
+  gene = character(),
+  symmetric_difference = numeric(),
+  branch_score_difference = numeric(),
+  path_difference = numeric(),
+  quadratic_path_difference = numeric(),
+  stringsAsFactors = FALSE
+)
+
+# Initialize / clear the logfile
+writeLines("Tree distance log\n==================\n", log_file)
+
+# Loop through each gene tree
+for (file in treefiles) {
+  gene <- tools::file_path_sans_ext(basename(file))  # Extract gene name from filename
+  
+  tryCatch({
+    # Read gene tree
+    genetree <- read.tree(file)
+    
+    # Clean tip labels
+    genetree$tip.label <- sapply(strsplit(genetree$tip.label, "\\|"), `[`, 1)
+    
+    # Identify shared taxa
+    common_taxa <- intersect(consensus$tip.label, genetree$tip.label)
+    
+    # Prune both trees to shared taxa
+    consensus_pruned <- drop.tip(consensus, setdiff(consensus$tip.label, common_taxa))
+    genetree_pruned <- drop.tip(genetree, setdiff(genetree$tip.label, common_taxa))
+    
+    # Compute tree distance
+    dist_vals <- treedist(consensus_pruned, genetree_pruned, check.labels = TRUE)
+    
+    # Add to results
+    results <- rbind(results, data.frame(
+      gene = gene,
+      symmetric_difference = dist_vals["symmetric.difference"],
+      branch_score_difference = dist_vals["branch.score.difference"],
+      path_difference = dist_vals["path.difference"],
+      quadratic_path_difference = dist_vals["quadratic.path.difference"],
+      stringsAsFactors = FALSE
+    ))
+    
+    # Log success
+    write(sprintf("[%s] complete (%d common taxa)\n", gene, length(common_taxa)), file = log_file, append = TRUE)
+    
+  }, error = function(e) {
+    # Log error and continue
+    write(sprintf("[%s] ERROR: %s\n", gene, e$message), file = log_file, append = TRUE)
+  })
+}
+
+# Save results to CSV
+write.csv(results, output_csv, row.names = FALSE)
+
+cat("✅ Done! Results saved to:", output_csv, "\nLog saved to:", log_file, "\n")
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(results, aes(x=gene, y=branch_score_difference)) + 
+    geom_point() 
+
+```
+
+```{r}
+z_scores <- scale(results$branch_score_difference)
+outliers <- which(abs(z_scores) > 3)
+print(results$branch_score_difference[outliers])
+print(outliers)
+
+```
