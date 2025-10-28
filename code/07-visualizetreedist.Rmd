@@ -1,0 +1,94 @@
+---
+title: "visualize tree distances"
+author: "Megan Ewing"
+date: "2025-10-28"
+output: html_document
+---
+
+Read i
+
+```{r}
+treedist <- read.csv("../output/treedist/treedist_results.csv")
+
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(treedist, aes(x=gene, y=branch_score_difference)) + 
+    geom_point() 
+
+```
+
+```{r}
+
+hist(treedist$branch_score_difference)
+
+```
+
+```{r}
+z <- scale(treedist$branch_score_difference)
+outliers_z <- treedist[abs(z) > 3, c("gene", "branch_score_difference")]
+head(outliers_z)
+
+write.csv(outliers_z, "../output/treedist/outliertrees.csv", row.names = F)
+```
+
+```{r}
+SPIDcounts <- read.csv("../output/extractsequences/uniqueSPIDlistandcounts.csv", row.names = 1)
+head(SPIDcounts)
+```
+
+```{r}
+# library(dplyr)
+
+dist_by_taxacount <- left_join(SPIDcounts, treedist, by = c("SPID" = "gene" ))
+head(dist_by_taxacount)
+```
+
+```{r}
+
+ggplot(dist_by_taxacount, aes(x=species_count, y=branch_score_difference)) + 
+    geom_point() 
+```
+
+```{r}
+mosttaxa <- subset(dist_by_taxacount, species_count >= 17)
+
+ggplot(mosttaxa, aes(x = SPID, y = branch_score_difference)) +
+    geom_point()
+
+```
+
+```{r}
+library(treeio)
+library(tidyverse)
+library(ggtree)
+```
+
+```{r}
+tree <- read.tree("../output/iqtree/Q9BZ23/Q9BZ23.treefile")
+
+p <- ggtree(tree, layout = "rectangular") +
+     geom_tiplab(size = 3, fontface = "italic") +
+     geom_text2(aes(subset = !isTip, label = label), size = 0.5, vjust = -0.3) +
+     coord_cartesian(clip="off") +
+     theme_tree2()
+
+p
+```
+
+```{bash}
+cd ../output/iqtree/
+
+for d in */; do
+    fasta=$(find "$d" -maxdepth 1 -iregex ".*\.\(fa\|fasta\|fas\)$")
+    if [[ -f $fasta ]]; then
+        nseq=$(grep -c "^>" "$fasta")
+        if [[ $nseq -eq 18 ]]; then
+            echo "$d"
+        fi
+    fi
+done > fasta_with_18_taxa.txt
+
+```

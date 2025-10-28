@@ -33,7 +33,7 @@ echo "Number of Sequences"
 grep -c ">" ../data/SwissProt-GO:0007276.fa 
 ```
 
-## Make Blast DB 
+## Make Blast DB
 
 making database where the species genome is the DB
 
