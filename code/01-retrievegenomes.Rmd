@@ -75,9 +75,9 @@ for (zip_file in zip_files) {
 
 ```
 
-### downloading outgroup files for tree building
+### downloading outgroup file for tree building
 
-only three genomes being downloaded so just enter manually into loop
+one genome (gcf_000327385) being downloaded so just enter manually into loop
 
 ```{bash}
 
@@ -87,8 +87,8 @@ DATASETS_CMD="/home/shared/datasets"
 # Output directory
 OUTPUT_DIR="../data/genomes_refseq"
 
-# only three genomes being downloaded so just enter manually into loop
-accessions="GCF_003073045.1 GCF_000002075.1 GCF_000327385.1"
+# Only using 1 outgroup here, but if you wanted to retrieve multiple, could do so
+accessions="GCF_000327385.1"
 
 # Loop over the list
 for accession in $accessions
@@ -101,10 +101,6 @@ done
 unzip the files
 
 ```{r}
-
-unzip("../data/genomes_refseq/GCF_003073045.1_cds.zip", exdir = "../data/genomes_refseq/")
-
-unzip("../data/genomes_refseq/GCF_000002075.1_cds.zip", exdir = "../data/genomes_refseq/")
 
 unzip("../data/genomes_refseq/GCF_000327385.1_cds.zip", exdir = "../data/genomes_refseq/")
 ```

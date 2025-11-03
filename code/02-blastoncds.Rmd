@@ -40,22 +40,22 @@ making database where the species genome is the DB
 ```{bash}
 
 /home/shared/ncbi-blast-2.15.0+/bin/makeblastdb \
--in ../data/genomes_refseq/ncbi_dataset/data/GCF_031769215.1/cds_from_genomic.fna \
+-in ../data/genomes_refseq/ncbi_dataset/data/GCF_000327385.1/cds_from_genomic.fna \
 -dbtype nucl \
--out ../blastdb/GCF_031769215.1/GCF_031769215.1/
+-out ../blastdb/GCF_000327385.1/GCF_000327385.1/
 ```
 
 preview file and check \# of sequences
 
 ```{bash}
-head ../data/genomes_refseq/ncbi_dataset/data/GCF_031769215.1/cds_from_genomic.fna
+head ../data/genomes_refseq/ncbi_dataset/data/GCF_000327385.1/cds_from_genomic.fna
 echo "Number of Sequences"
-grep ">" -c ../data/genomes_refseq/ncbi_dataset/data/GCF_031769215.1/cds_from_genomic.fna
+grep ">" -c ../data/genomes_refseq/ncbi_dataset/data/GCF_000327385.1/cds_from_genomic.fna
 ```
 
 ```{bash}
 echo "Total length in Gbp"
-grep -v ">" ../data/genomes_refseq/ncbi_dataset/data/GCF_031769215.1/cds_from_genomic.fna | \
+grep -v ">" ../data/genomes_refseq/ncbi_dataset/data/GCF_000327385.1/cds_from_genomic.fna | \
 tr -d '\n' | wc -c | awk '{printf "%.3f\n", $1/1e9}'
 ```
 
@@ -64,13 +64,13 @@ tr -d '\n' | wc -c | awk '{printf "%.3f\n", $1/1e9}'
 here I need to update the variables and convert to a loop. so the fasta file path is essentially `../data/genomes_refseq/$ACCESSION` but want it to be ACCESSION_cds.zip -- will need to check on how to do this. want output to follow similar style where its `../output/ACCESSION-blastout.tab`
 
 ```{bash}
-# fasta= "../data/genomes_refseq/ncbi_dataset/data/GCF_031769215.1/cds_from_genomic.fna"
-# output="../output/blastout/GCF_031769215.1.tab"
+# fasta= "../data/genomes_refseq/ncbi_dataset/data/GCF_000327385.1/cds_from_genomic.fna"
+# output="../output/blastout/GCF_000327385.1.tab"
 
 /home/shared/ncbi-blast-2.15.0+/bin/tblastn \
 -query ../data/SwissProt-GO:0007276.fa \
--db ../blastdb/GCF_031769215.1/GCF_031769215.1 \
--out ../output/blastout/GCF_031769215.1.tab \
+-db ../blastdb/GCF_000327385.1/GCF_000327385.1 \
+-out ../output/blastout/GCF_000327385.1.tab \
 -evalue 1E-10 \
 -num_threads 20 \
 -max_target_seqs 1 \
@@ -81,30 +81,30 @@ here I need to update the variables and convert to a loop. so the fasta file pat
 ### post-blast checks
 
 ```{bash}
-head ../output/blastout/GCF_031769215.1.tab
+head ../output/blastout/GCF_000327385.1.tab
 ```
 
 ```{bash}
-wc -l ../output/blastout/GCF_031769215.1.tab
+wc -l ../output/blastout/GCF_000327385.1.tab
 ```
 
 add headers
 
 ```{bash}
 
-echo -e "qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore" > ../output/blastout/GCF_031769215.1_with_headers.tab
-cat ../output/blastout/GCF_031769215.1.tab >> ../output/blastout/GCF_031769215.1_with_headers.tab
+echo -e "qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore" > ../output/blastout/GCF_000327385.1_with_headers.tab
+cat ../output/blastout/GCF_000327385.1.tab >> ../output/blastout/GCF_000327385.1_with_headers.tab
 
-head -2 ../output/blastout/GCF_031769215.1_with_headers.tab
+head -2 ../output/blastout/GCF_000327385.1_with_headers.tab
 
 ```
 
 ```{bash}
 
-tr '|' '\t' < ../output/blastout/GCF_031769215.1_with_headers.tab \
-> ../output/blastout/GCF_031769215.1_sep.tab
+tr '|' '\t' < ../output/blastout/GCF_000327385.1_with_headers.tab \
+> ../output/blastout/GCF_000327385.1_sep.tab
 
-head -2 ../output/blastout/GCF_031769215.1_sep.tab
+head -2 ../output/blastout/GCF_000327385.1_sep.tab
 ```
 
 following steven's code [here](https://sr320.github.io/tumbling-oysters/posts/sr320-23-repro/)
@@ -113,7 +113,7 @@ following steven's code [here](https://sr320.github.io/tumbling-oysters/posts/sr
 
 ```{r}
 
-blastout <- read.delim("../output/blastout/GCF_031769215.1_with_headers.tab")
+blastout <- read.delim("../output/blastout/GCF_000327385.1_with_headers.tab")
 head(blastout)
 ```
 
@@ -134,28 +134,28 @@ hist(blastout$evalue)
 ```{bash}
 #must do with the no headers version since it creates more columns than there are headers for
 
-tr '|' '\t' < ../output/blastout/GCF_031769215.1.tab \
-> ../output/blastout/GCF_031769215.1_sep.tab
+tr '|' '\t' < ../output/blastout/GCF_000327385.1.tab \
+> ../output/blastout/GCF_000327385.1_sep.tab
 
-head -3 ../output/blastout/GCF_031769215.1_sep.tab
+head -3 ../output/blastout/GCF_000327385.1_sep.tab
 ```
 
 ```{r}
 
-SPID <- read.csv("../output/blastout/GCF_031769215.1_sep.tab", sep = "", header = F)
+SPID <- read.csv("../output/blastout/GCF_000327385.1_sep.tab", sep = "", header = F)
 head(SPID)
 
-write.csv(SPID$V2, "../output/GCF_031769215.1_SPID.txt", row.names = F, col.names = F, quote = F)
+write.csv(SPID$V2, "../output/genelist/GCF_000327385.1_SPID.txt", row.names = F, col.names = F, quote = F)
 ```
 
-### GO terms were gathered from [uniport ID mapping](https://www.uniprot.org/id-mapping), with the text file generated above being used as the input. columns were customized to include biological proccess GO information. output was saved as a .tsv.
+### GO terms were gathered from [uniport ID mapping](https://www.uniprot.org/id-mapping), with the text file generated above being used as the input. Source database: UniProtKB AC/ID. Target database: UniProtKB. columns were customized to include biological proccess GO information, GO ID, and GO (basically everything under the GO tab except cellular component and molecular processes). output was saved as a .tsv.
 
 need to join together the BLAST output with the GO info to complete the annotation
 
 ```{r}
 # going to create a dataframe for us to join the uniprot output to
 
-annot <- read.csv("../output/blastout/GCF_031769215.1_with_headers.tab", sep = "")
+annot <- read.csv("../output/blastout/GCF_000327385.1_with_headers.tab", sep = "")
 head(annot)
 
 # add SPID as column so have a point to join by 
@@ -168,7 +168,7 @@ head(annot)
 ```{r}
 # read in uniprot output
 
-uniprot <- read.delim("../output/GCF_031769215.1_uniprotout")
+uniprot <- read.delim("../output/genelist/GCF_000327385.1_uniprotout")
 head(uniprot)
 
 # create SPID column for joining (same as entry)
@@ -187,9 +187,9 @@ library(dplyr)
 annot_w_GO <- left_join(annot, uniprot, by = "SPID")
 head(annot_w_GO)
 
-write.csv(annot_w_GO, "../output/GCF_031769215.1_annotation.tab", sep = "")
+write.csv(annot_w_GO, "../output/genelist/GCF_000327385.1_annotation.tab", sep = "")
 
-temp <- read.csv("../output/GCF_031769215.1_annotation.tab")
+temp <- read.csv("../output/genelist/GCF_000327385.1_annotation.tab")
 ```
 
 # GENE LIST
@@ -210,7 +210,7 @@ head(gene_list)
 ```
 
 ```{r}
-write.csv(gene_list, "../output/genelist_GCF_031769215.1.csv")
+write.csv(gene_list, "../output/genelist/genelist_GCF_000327385.1.csv")
 ```
 
 if doing filtered by bitscore:
