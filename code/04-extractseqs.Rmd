@@ -21,7 +21,7 @@ we can then
 
 ```{r}
 # get all files with full paths
-files <- list.files("../output/", pattern = "^genelist_.*\\.csv$", full.names = TRUE)
+files <- list.files("../output/genelist/", pattern = "^genelist_.*\\.csv$", full.names = TRUE)
 
 # initialize list to store SPIDs by species
 spid_lists <- list()
@@ -78,7 +78,7 @@ outdir <- "../output/genefastas/"
 dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
 
 # Read all gene lists
-files <- list.files("../output/", pattern = "^genelist_.*\\.csv$", full.names = TRUE)
+files <- list.files("../output/genelist/", pattern = "^genelist_.*\\.csv$", full.names = TRUE)
 
 genelists <- lapply(files, function(f) {
   species <- sub("^genelist_(.*)\\.csv$", "\\1", basename(f))
