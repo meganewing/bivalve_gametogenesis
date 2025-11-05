@@ -5,26 +5,52 @@ date: "2025-10-28"
 output: html_document
 ---
 
-Read i
+### Read in data
+
+Tree Distance Data
 
 ```{r}
 treedist <- read.csv("../output/treedist/treedist_results.csv")
 
 ```
 
+SPID counts (genes with taxa covereage \#)
+
 ```{r}
-library(ggplot2)
+SPIDcounts <- read.csv("../output/extractsequences/uniqueSPIDlistandcounts.csv", row.names = 1)
+head(SPIDcounts)
+```
+
+Create a dataframe that has genes, taxa coverage info, and tree distance data
+
+```{r}
+# library(dplyr)
+
+dist_by_taxacount <- left_join(SPIDcounts, treedist, by = c("SPID" = "gene" ))
+head(dist_by_taxacount)
+```
+
+## Branch Score Difference (ungrouped)
+
+#### scatter plot of branch score difference
+
+```{r}
+# library(ggplot2)
 
 ggplot(treedist, aes(x=gene, y=branch_score_difference)) + 
     geom_point() 
 
 ```
 
+#### histogram of branch score difference
+
 ```{r}
 
 hist(treedist$branch_score_difference)
 
 ```
+
+#### identifying outliers of branch score different
 
 ```{r}
 z <- scale(treedist$branch_score_difference)
@@ -34,17 +60,24 @@ head(outliers_z)
 write.csv(outliers_z, "../output/treedist/outliertrees.csv", row.names = F)
 ```
 
-```{r}
-SPIDcounts <- read.csv("../output/extractsequences/uniqueSPIDlistandcounts.csv", row.names = 1)
-head(SPIDcounts)
-```
+#### scatter plot of BSD for trees with full taxa coverage
 
 ```{r}
-# library(dplyr)
+mosttaxa <- subset(dist_by_taxacount, species_count = 18)
 
-dist_by_taxacount <- left_join(SPIDcounts, treedist, by = c("SPID" = "gene" ))
-head(dist_by_taxacount)
+ggplot(mosttaxa, aes(x = SPID, y = branch_score_difference)) +
+    geom_point()
+
+hist(mosttaxa$branch_score_difference)
+outliers18_z <- mosttaxa[abs(z) > 3, c("SPID", "branch_score_difference")]
+summary(mosttaxa)
+
+
 ```
+
+### Grouped Branch Score Difference
+
+#### scatter plot of branch score difference by taxa coverage (ie., \# of taxa in the tree)
 
 ```{r}
 
@@ -52,11 +85,49 @@ ggplot(dist_by_taxacount, aes(x=species_count, y=branch_score_difference)) +
     geom_point() 
 ```
 
-```{r}
-mosttaxa <- subset(dist_by_taxacount, species_count >= 17)
+#### outlier (via IQR) distances grouped by taxa coverage
 
-ggplot(mosttaxa, aes(x = SPID, y = branch_score_difference)) +
-    geom_point()
+```{r}
+# library(dplyr)
+
+outliers_iqr <- dist_by_taxacount %>%
+  group_by(species_count) %>%
+  mutate(
+    Q1 = quantile(branch_score_difference, 0.25, na.rm = TRUE),
+    Q3 = quantile(branch_score_difference, 0.75, na.rm = TRUE),
+    IQR = Q3 - Q1,
+    lower = Q1 - 1.5 * IQR,
+    upper = Q3 + 1.5 * IQR
+  ) %>%
+  filter(branch_score_difference < lower | branch_score_difference > upper) %>%
+  select(SPID, species_count, branch_score_difference)
+
+head(outliers_iqr)
+
+```
+
+just outliers scatter plot
+
+```{r}
+
+ggplot(outliers_iqr, aes(x=species_count, y=branch_score_difference)) + 
+    geom_point() 
+
+```
+
+#### grouped scatter w/outliers
+
+```{r}
+
+outliers_iqr <- dist_by_taxacount %>%
+  inner_join(iqr_bounds, by = "species_count") %>%
+  filter(branch_score_difference > upper | branch_score_difference < lower)
+
+ggplot(dist_by_taxacount, aes(x = species_count, y = branch_score_difference)) +
+  geom_point(alpha = 0.4) +
+  geom_point(data = outliers_iqr, aes(x = species_count, y = branch_score_difference),
+             color = "red", size = 2)
+
 
 ```
 
@@ -70,13 +141,15 @@ library(ggtree)
 tree <- read.tree("../output/iqtree/Q9BZ23/Q9BZ23.treefile")
 
 p <- ggtree(tree, layout = "rectangular") +
-     geom_tiplab(size = 3, fontface = "italic") +
+     geom_tiplab(size = 1, fontface = "italic") +
      geom_text2(aes(subset = !isTip, label = label), size = 0.5, vjust = -0.3) +
      coord_cartesian(clip="off") +
      theme_tree2()
 
 p
 ```
+
+assessing how many of the trees have 18 taxa (sanity check)
 
 ```{bash}
 cd ../output/iqtree/
@@ -90,5 +163,231 @@ for d in */; do
         fi
     fi
 done > fasta_with_18_taxa.txt
+
+```
+
+# Analyses by Taxonomic Groups
+
+```{r}
+
+coverage_counts <- dist_by_taxacount %>%
+  count(species_count, name = "gene_count") %>%
+  arrange(species_count)
+
+head(coverage_counts)
+
+```
+
+create our groups
+
+```{r}
+
+oysters <- c("GCF_002022765.2", "GCF_025612915.1", "GCF_032062105.1", "GCF_033153115.1", "GCF_947568905.1", "GCF_963853765.1")
+
+scallops <- c("GCF_002113885.1","GCF_031769215.1", "GCF_041381155.1", "GCF_902652985.1")
+
+mussels_sw <- c("GCF_021869535.1", "GCF_036588685.1", "GCF_963676685.1")
+
+clams <- c("GCF_021730395.1", "GCF_026571515.1", "GCF_026914265.1")
+
+mussel_fw <- c("GCF_020536995.1")
+
+```
+
+get gene counts by taxa
+
+```{r}
+library(stringr)
+library(tidyr)
+
+# directory containing subfolders with fasta files
+base <- "../output/iqtree/"
+
+# list all gene directories
+gene_dirs <- list.dirs(base, recursive = FALSE)
+
+# all taxa codes we care about
+all_taxa <- c("GCF_002022765.2","GCF_025612915.1","GCF_032062105.1","GCF_033153115.1","GCF_947568905.1","GCF_963853765.1",
+              "GCF_002113885.1","GCF_031769215.1","GCF_041381155.1","GCF_902652985.1",
+              "GCF_021869535.1","GCF_036588685.1","GCF_963676685.1",
+              "GCF_021730395.1","GCF_026571515.1","GCF_026914265.1",
+              "GCF_020536995.1", "GCF_000327385.1")
+
+# create empty list to store results
+presence_list <- list()
+
+for(d in gene_dirs) {
+  fasta <- list.files(d, pattern="\\.fa|\\.fasta|\\.fas", full.names=TRUE)
+  if(length(fasta)==1) {
+    lines <- readLines(fasta)
+    headers <- grep("^>", lines, value=TRUE)
+
+    # extract just GCF_#########
+    gcf_ids <- str_extract(headers, "GCF_[0-9]+\\.[0-9]+")
+
+    # create presence/absence row for this gene
+    gene_name <- basename(d)
+    presence <- as.integer(all_taxa %in% gcf_ids)
+    names(presence) <- all_taxa
+
+    presence_list[[gene_name]] <- presence
+  }
+}
+
+# combine into dataframe
+presence_df <- do.call(rbind, presence_list)
+presence_df <- as.data.frame(presence_df)
+
+head(presence_df)
+
+```
+
+how many unique genes are there to each group?
+
+```{r}
+exclusive_count <- function(group, presence_mat) {
+  others <- setdiff(colnames(presence_mat), group)
+
+  # must have all 1s in group AND all 0s elsewhere
+  keep <- rowSums(presence_mat[, group, drop=FALSE]) == length(group) &
+          rowSums(presence_mat[, others, drop=FALSE]) == 0
+  sum(keep)
+}
+
+exclusive_genes_df <- data.frame(
+  oysters_only = exclusive_count(oysters, presence_df),
+  scallops_only = exclusive_count(scallops, presence_df),
+  mussels_sw_only = exclusive_count(mussels_sw, presence_df),
+  clams_only = exclusive_count(clams, presence_df),
+  mussel_fw_only = exclusive_count(mussel_fw, presence_df)
+)
+
+exclusive_genes_df
+
+```
+
+### heatmap
+
+```{r}
+library(pheatmap)
+
+# Your taxa groups (same as before)
+oysters <- c("GCF_002022765.2", "GCF_025612915.1", "GCF_032062105.1", "GCF_033153115.1", "GCF_947568905.1", "GCF_963853765.1")
+scallops <- c("GCF_002113885.1","GCF_031769215.1", "GCF_041381155.1", "GCF_902652985.1")
+mussels_sw <- c("GCF_021869535.1", "GCF_036588685.1", "GCF_963676685.1")
+clams <- c("GCF_021730395.1", "GCF_026571515.1", "GCF_026914265.1")
+mussel_fw <- c("GCF_020536995.1")
+
+# Create a vector of taxa groups, matching the columns of presence_df
+taxa_groups <- rep(NA, ncol(presence_df))
+names(taxa_groups) <- colnames(presence_df)
+
+taxa_groups[oysters] <- "Oysters"
+taxa_groups[scallops] <- "Scallops"
+taxa_groups[mussels_sw] <- "Mussels_SW"
+taxa_groups[clams] <- "Clams"
+taxa_groups[mussel_fw] <- "Mussel_FW"
+
+# Convert to data frame for annotation (pheatmap requires a data.frame)
+annotation_col <- data.frame(Group = taxa_groups)
+rownames(annotation_col) <- colnames(presence_df)
+
+# Filter genes with less than 18 taxa present
+presence_df_filtered <- presence_df[rowSums(presence_df) < 18, ]
+
+# Now plot heatmap with filtered data
+pheatmap(
+  presence_df_filtered,
+  cluster_rows = TRUE,
+  cluster_cols = TRUE,
+  annotation_col = annotation_col,
+  show_rownames = FALSE,
+  show_colnames = TRUE,
+  color = c("white", "blue"),
+  legend = TRUE,
+  main = "Presence/Absence Heatmap (excluding genes with >=18 taxa)"
+)
+
+
+```
+
+```{r}
+library(ape)
+library(pheatmap)
+library(stringr)
+
+# --- Load your presence_df here ---
+# presence_df: rows=genes, columns=taxa (GCF_####.#), values=0/1
+# Example: presence_df <- read.csv("gene_taxa_presence.csv", row.names=1)
+
+# For demonstration, assuming presence_df is already loaded
+
+# 1. Transpose so taxa are rows
+presence_df_t <- t(presence_df)
+
+# 2. Filter genes present in fewer than 18 taxa and at least 2
+genes_to_keep <- (rowSums(presence_df) < 18)
+presence_df_t_filtered <- presence_df_t[, genes_to_keep, drop=FALSE]
+
+# 3. Load and fix Newick tree
+newick <- "((((((gcf_002022765:0.1184142501,(gcf_025612915:0.0058171594,gcf_963853765:0.0048247981)100/100:0.0959229628)100/100:0.0374357536,((gcf_032062105:0.0458587640,gcf_033153115:0.0379476411)100/100:0.0712404340,gcf_947568905:0.1083008469)100/100:0.0283211687)100/100:0.2582455052,(gcf_002113885:0.0717470733,(gcf_031769215:0.0890366809,(gcf_041381155:0.1168033901,gcf_902652985:0.0546698892)100/81:0.0273764037)91.9/57:0.0185820936)100/100:0.2744170061)100/100:0.0511437011,(gcf_021869535:0.0234284615,(gcf_036588685:0.0205938515,gcf_963676685:0.0190743627)100/100:0.0148585593)100/100:0.3352218921)100/73:0.0658191094,((gcf_021730395:0.0938865426,gcf_026571515:0.1283101350)100/100:0.1265776642,(gcf_026914265:0.2111065075,gcf_020536995:0.2278322476)100/100:0.0949689120)100/100:0.1974074780,gcf_000327385:0.4633233450));"
+tree <- read.tree(text=newick)
+
+# 4. Normalize taxa names (lowercase + remove trailing .#)
+normalize_taxa <- function(x) {
+  x <- tolower(x)
+  x <- sub("\\.[0-9]+$", "", x)
+  return(x)
+}
+
+taxa_order_norm <- normalize_taxa(tree$tip.label)
+taxa_in_data_norm <- normalize_taxa(rownames(presence_df_t_filtered))
+
+# Map normalized tree taxa to actual rownames in presence_df_t_filtered
+matched_rows <- sapply(taxa_order_norm, function(t) {
+  idx <- which(taxa_in_data_norm == t)
+  if(length(idx) == 1) {
+    return(rownames(presence_df_t_filtered)[idx])
+  } else {
+    return(NA)
+  }
+})
+matched_rows <- matched_rows[!is.na(matched_rows)]
+
+# 5. Reorder taxa (rows) by tree tip order
+presence_df_t_filtered_ordered <- presence_df_t_filtered[matched_rows, , drop=FALSE]
+
+# 6. Define taxa groups for annotation
+oysters <- c("GCF_002022765.2", "GCF_025612915.1", "GCF_032062105.1", "GCF_033153115.1", "GCF_947568905.1", "GCF_963853765.1")
+scallops <- c("GCF_002113885.1","GCF_031769215.1", "GCF_041381155.1", "GCF_902652985.1")
+mussels_sw <- c("GCF_021869535.1", "GCF_036588685.1", "GCF_963676685.1")
+clams <- c("GCF_021730395.1", "GCF_026571515.1", "GCF_026914265.1")
+mussel_fw <- c("GCF_020536995.1")
+
+taxa_groups <- rep(NA, nrow(presence_df_t_filtered_ordered))
+names(taxa_groups) <- rownames(presence_df_t_filtered_ordered)
+
+taxa_groups[oysters] <- "Oysters"
+taxa_groups[scallops] <- "Scallops"
+taxa_groups[mussels_sw] <- "Mussels_SW"
+taxa_groups[clams] <- "Clams"
+taxa_groups[mussel_fw] <- "Mussel_FW"
+
+annotation_row <- data.frame(Group = taxa_groups)
+rownames(annotation_row) <- rownames(presence_df_t_filtered_ordered)
+
+# 7. Plot heatmap
+pheatmap(
+  presence_df_t_filtered_ordered,
+  cluster_rows = FALSE,       # taxa ordered by tree, no clustering
+  cluster_cols = TRUE,        # cluster genes
+  annotation_row = annotation_row,
+  show_rownames = TRUE,
+  show_colnames = FALSE,
+  color = c("white", "blue"),
+  legend = TRUE,
+  main = "Gene presence/absence heatmap (taxa ordered by tree)"
+)
+
 
 ```

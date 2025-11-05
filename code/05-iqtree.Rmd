@@ -260,6 +260,7 @@ run_iqtree() {
     # Extract best-fit model from the .iqtree file
     model=$(grep "Best-fit model:" "$outdir/$gene.iqtree" | awk '{print $3}')
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Best-fit model for $gene: $model" >> "$LOG_FILE"
+    
 
     # Step 2: Generate tree
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Generating tree for $gene ..." >> "$LOG_FILE"
@@ -268,7 +269,7 @@ run_iqtree() {
         -m "$model" \
         -bb 10000 \
         -alrt 10000 \
-        -o gcf_000327385 \
+        -o GCF_000327385.1 \
         -bnni \
         -nt AUTO \
         -redo \
@@ -284,6 +285,72 @@ export IQTREE MAFFT IQTREE_DIR LOG_FILE
 find "$FASTA_DIR" -name "*.fasta" | parallel -j $THREADS run_iqtree {}
 
 
+```
+
+```{bash}
+
+# Paths to binaries
+IQTREE=/home/shared/8TB_HDD_02/mewing0/miniforge3/envs/iqtree-v3.0.1/bin/iqtree3
+MAFFT=/usr/bin/mafft        # adjust if MAFFT is elsewhere
+
+FASTA_DIR="../output/genefastas"
+IQTREE_DIR="../output/iqtree"
+THREADS=4                  # number of genes to run simultaneously
+LOG_FILE="$IQTREE_DIR/genetree.log"
+
+# clear previous log
+> "$LOG_FILE"
+
+run_iqtree() {
+    fasta="$1"
+    gene=$(basename "$fasta" .fasta)
+    outdir="$IQTREE_DIR/$gene"
+    mkdir -p "$outdir"
+
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting $gene" >> "$LOG_FILE"
+
+    # Step 0: Align sequences with MAFFT
+    aligned_fasta="$outdir/${gene}_aligned.fasta"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Aligning $gene with MAFFT ..." >> "$LOG_FILE"
+    $MAFFT --auto "$fasta" > "$aligned_fasta"
+
+    # Step 1: Model Finder Plus
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Running Model Finder Plus for $gene ..." >> "$LOG_FILE"
+    $IQTREE -s "$aligned_fasta" -m MFP -pre "$outdir/$gene"
+
+    # Extract best-fit model from the .iqtree file
+    model=$(grep "Best-fit model:" "$outdir/$gene.iqtree" | awk '{print $3}')
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Best-fit model for $gene: $model" >> "$LOG_FILE"
+
+    ### NEW: detect full outgroup header & build rename map if present
+    for aligned_fasta in /path/to/fastas/*.fasta; do
+      outgroup=$(grep "^>GCF_000327385\.1" "$aligned_fasta" | sed 's/^>//')
+      echo "Outgroup for $aligned_fasta is: $outgroup"
+    # you can then pass $outgroup to iqtree -o "$outgroup"
+    done
+
+
+    # Step 2: Generate tree
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Generating tree for $gene ..." >> "$LOG_FILE"
+    $IQTREE \
+        -s "$aligned_fasta" \
+        -m "$model" \
+        -bb 10000 \
+        -alrt 10000 \
+        -o "$outgroup" \
+        -bnni \
+        -nt AUTO \
+        -redo \
+        -pre "$outdir/$gene"
+
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Finished $gene" >> "$LOG_FILE"
+}
+
+export -f run_iqtree
+export IQTREE MAFFT IQTREE_DIR LOG_FILE
+
+# run in parallel
+find "$FASTA_DIR" -name "*.fasta" | parallel -j $THREADS run_iqtree {}
 ```
 
 ```{bash}
