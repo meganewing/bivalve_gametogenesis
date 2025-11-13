@@ -130,11 +130,3 @@ treeres <- read.csv("../output/treedist/treedist_results.csv")
 hist(treeres$branch_score_difference)
 
 ```
-
-```{r}
-z_scores <- scale(results$branch_score_difference)
-outliers <- which(abs(z_scores) > 3)
-print(results$branch_score_difference[outliers])
-print(outliers)
-
-```

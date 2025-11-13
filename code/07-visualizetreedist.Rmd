@@ -60,7 +60,7 @@ head(outliers_z)
 write.csv(outliers_z, "../output/treedist/outliertrees.csv", row.names = F)
 ```
 
-#### scatter plot of BSD for trees with full taxa coverage
+#### scatter plot of BSD for trees with full taxa coverage (18 taxa hist and scatter)
 
 ```{r}
 mosttaxa <- subset(dist_by_taxacount, species_count = 18)
