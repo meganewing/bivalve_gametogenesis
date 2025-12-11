@@ -11,7 +11,7 @@ Tree Distance Data
 
 ```{r}
 treedist <- read.csv("../output/treedist/treedist_results.csv")
-
+# recall # of tree distance will be around ~30 less than total number of SPIDs due to some SPIDs having less than 2 taxa covered 
 ```
 
 SPID counts (genes with taxa covereage \#)
@@ -24,7 +24,7 @@ head(SPIDcounts)
 Create a dataframe that has genes, taxa coverage info, and tree distance data
 
 ```{r}
-# library(dplyr)
+library(dplyr)
 
 dist_by_taxacount <- left_join(SPIDcounts, treedist, by = c("SPID" = "gene" ))
 head(dist_by_taxacount)
@@ -35,7 +35,7 @@ head(dist_by_taxacount)
 #### scatter plot of branch score difference
 
 ```{r}
-# library(ggplot2)
+library(ggplot2)
 
 ggplot(treedist, aes(x=gene, y=branch_score_difference)) + 
     geom_point() 
@@ -50,10 +50,13 @@ hist(treedist$branch_score_difference)
 
 ```
 
-#### identifying outliers of branch score different
+#### identifying outliers of branch score difference
 
 ```{r}
+#calculates z score for all branch score difs
 z <- scale(treedist$branch_score_difference)
+
+# filters for just outliter z scores (z > 3) 
 outliers_z <- treedist[abs(z) > 3, c("gene", "branch_score_difference")]
 head(outliers_z)
 
@@ -63,13 +66,20 @@ write.csv(outliers_z, "../output/treedist/outliertrees.csv", row.names = F)
 #### scatter plot of BSD for trees with full taxa coverage (18 taxa hist and scatter)
 
 ```{r}
-mosttaxa <- subset(dist_by_taxacount, species_count = 18)
+mosttaxa <- subset(dist_by_taxacount, species_count == 18)
 
 ggplot(mosttaxa, aes(x = SPID, y = branch_score_difference)) +
     geom_point()
 
 hist(mosttaxa$branch_score_difference)
-outliers18_z <- mosttaxa[abs(z) > 3, c("SPID", "branch_score_difference")]
+
+# filter mosttaxa to pull just SPIDs that have z > 3 in the z matirx 
+z_most <- scale(mosttaxa$branch_score_difference)
+outliers18_z <- mosttaxa[abs(z_most) > 3, c("SPID", "branch_score_difference")]
+
+write.csv(mosttaxa$SPID, "../output/treedist/fullcoverageSPID.txt", row.names = F, quote = F)
+write.csv(outliers18_z$SPID, "../output/treedist/fullcoverageoutlierSPID.txt", row.names = F, quote = F)
+
 summary(mosttaxa)
 
 
@@ -149,24 +159,9 @@ p <- ggtree(tree, layout = "rectangular") +
 p
 ```
 
-assessing how many of the trees have 18 taxa (sanity check)
+# Analyses by Groups
 
-```{bash}
-cd ../output/iqtree/
-
-for d in */; do
-    fasta=$(find "$d" -maxdepth 1 -iregex ".*\.\(fa\|fasta\|fas\)$")
-    if [[ -f $fasta ]]; then
-        nseq=$(grep -c "^>" "$fasta")
-        if [[ $nseq -eq 18 ]]; then
-            echo "$d"
-        fi
-    fi
-done > fasta_with_18_taxa.txt
-
-```
-
-# Analyses by Taxonomic Groups
+## Taxonomic Groups
 
 ```{r}
 
@@ -242,7 +237,7 @@ head(presence_df)
 
 ```
 
-how many unique genes are there to each group?
+### [**how many unique genes are there to each group?**]{.underline}
 
 ```{r}
 exclusive_count <- function(group, presence_mat) {
@@ -254,7 +249,7 @@ exclusive_count <- function(group, presence_mat) {
   sum(keep)
 }
 
-exclusive_genes_df <- data.frame(
+exclusive_genes_count <- data.frame(
   oysters_only = exclusive_count(oysters, presence_df),
   scallops_only = exclusive_count(scallops, presence_df),
   mussels_sw_only = exclusive_count(mussels_sw, presence_df),
@@ -262,8 +257,170 @@ exclusive_genes_df <- data.frame(
   mussel_fw_only = exclusive_count(mussel_fw, presence_df)
 )
 
-exclusive_genes_df
+exclusive_genes_count
 
+```
+
+```{r}
+exclusive_genes <- function(group, presence_mat) {
+  others <- setdiff(colnames(presence_mat), group)
+
+  keep <- rowSums(presence_mat[, group, drop = FALSE]) == length(group) &
+          rowSums(presence_mat[, others, drop = FALSE]) == 0
+
+  rownames(presence_mat)[keep]
+}
+
+# Get vectors of genes for each group
+groups_list <- list(
+  oysters_only    = exclusive_genes(oysters, presence_df),
+  scallops_only   = exclusive_genes(scallops, presence_df),
+  mussels_sw_only = exclusive_genes(mussels_sw, presence_df),
+  clams_only      = exclusive_genes(clams, presence_df),
+  mussel_fw_only  = exclusive_genes(mussel_fw, presence_df)
+)
+
+# Determine max number of rows
+max_len <- max(sapply(groups_list, length))
+
+# Pad with NA so all columns have same length
+groups_padded <- lapply(groups_list, function(vec) {
+  length(vec) <- max_len   # extends with NAs automatically
+  vec
+})
+
+# Build final data frame
+exclusive_genes_listed <- as.data.frame(groups_padded, stringsAsFactors = FALSE)
+
+exclusive_genes_listed
+```
+
+## Life History Groups
+
+### [**how many unique genes are there to each life history / sexual system?**]{.underline}
+
+create our groups
+
+```{r}
+
+gonochoristic <- c("GCF_026914265.1", "GCF_020536995.1", "GCF_036588685.1", "GCF_026571515.1" , "GCF_002113885.1" , "GCF_021869535.1" , "GCF_033153115.1" , "GCF_031769215.1")
+
+gonochroistic_moslty <- c("GCF_036588685.1" , "GCF_026571515.1" , "GCF_002113885.1" , "GCF_021869535.1")
+
+gonochoristic_always <- c("GCF_026914265.1" ,"GCF_020536995.1" , "GCF_033153115.1" , "GCF_031769215.1")
+
+hermaphroditic <- c("GCF_002022765.2" , "GCF_963853765.1" , "GCF_041381155.1" ,"GCF_902652985.1" , "GCF_025612915.1" , "GCF_947568905.1" , "GCF_021730395.1" , "GCF_032062105.1")
+
+sim_hermaphroditic <- c("GCF_041381155.1" , "GCF_902652985.1")
+  
+seq_hermaphroditic <- c("GCF_002022765.2", "GCF_963853765.1", "GCF_025612915.1", "GCF_947568905.1", "GCF_021730395.1", "GCF_032062105.1")
+
+
+```
+
+get gene counts by taxa
+
+```{r}
+library(stringr)
+library(tidyr)
+
+# directory containing subfolders with fasta files
+base <- "../output/iqtree/"
+
+# list all gene directories
+gene_dirs <- list.dirs(base, recursive = FALSE)
+
+# all taxa codes we care about
+all_taxa <- c("GCF_002022765.2","GCF_025612915.1","GCF_032062105.1","GCF_033153115.1","GCF_947568905.1","GCF_963853765.1",
+              "GCF_002113885.1","GCF_031769215.1","GCF_041381155.1","GCF_902652985.1",
+              "GCF_021869535.1","GCF_036588685.1","GCF_963676685.1",
+              "GCF_021730395.1","GCF_026571515.1","GCF_026914265.1",
+              "GCF_020536995.1", "GCF_000327385.1")
+
+# create empty list to store results
+presence_list <- list()
+
+for(d in gene_dirs) {
+  fasta <- list.files(d, pattern="\\.fa|\\.fasta|\\.fas", full.names=TRUE)
+  if(length(fasta)==1) {
+    lines <- readLines(fasta)
+    headers <- grep("^>", lines, value=TRUE)
+
+    # extract just GCF_#########
+    gcf_ids <- str_extract(headers, "GCF_[0-9]+\\.[0-9]+")
+
+    # create presence/absence row for this gene
+    gene_name <- basename(d)
+    presence <- as.integer(all_taxa %in% gcf_ids)
+    names(presence) <- all_taxa
+
+    presence_list[[gene_name]] <- presence
+  }
+}
+
+# combine into dataframe
+presence_df <- do.call(rbind, presence_list)
+presence_df <- as.data.frame(presence_df)
+
+head(presence_df)
+
+```
+
+```{r}
+exclusive_count <- function(group, presence_mat) {
+  others <- setdiff(colnames(presence_mat), group)
+
+  # must have all 1s in group AND all 0s elsewhere
+  keep <- rowSums(presence_mat[, group, drop=FALSE]) == length(group) &
+          rowSums(presence_mat[, others, drop=FALSE]) == 0
+  sum(keep)
+}
+
+exclusive_genes_count <- data.frame(
+  gonochoristic_only = exclusive_count(gonochoristic, presence_df),
+  gonochroistic_moslty_only = exclusive_count(gonochroistic_moslty, presence_df),
+  gonochoristic_always_only = exclusive_count(gonochoristic_always, presence_df),
+  hermaphroditic_only = exclusive_count(hermaphroditic, presence_df),
+  sim_hermaphroditic_only = exclusive_count(sim_hermaphroditic, presence_df),
+  seq_hermaphroditic_only = exclusive_count(seq_hermaphroditic, presence_df)
+)
+
+exclusive_genes_count
+
+```
+
+```{r}
+exclusive_genes <- function(group, presence_mat) {
+  others <- setdiff(colnames(presence_mat), group)
+
+  keep <- rowSums(presence_mat[, group, drop = FALSE]) == length(group) &
+          rowSums(presence_mat[, others, drop = FALSE]) == 0
+
+  rownames(presence_mat)[keep]
+}
+
+# Get vectors of genes for each group
+groups_list <- list(
+  oysters_only    = exclusive_genes(oysters, presence_df),
+  scallops_only   = exclusive_genes(scallops, presence_df),
+  mussels_sw_only = exclusive_genes(mussels_sw, presence_df),
+  clams_only      = exclusive_genes(clams, presence_df),
+  mussel_fw_only  = exclusive_genes(mussel_fw, presence_df)
+)
+
+# Determine max number of rows
+max_len <- max(sapply(groups_list, length))
+
+# Pad with NA so all columns have same length
+groups_padded <- lapply(groups_list, function(vec) {
+  length(vec) <- max_len   # extends with NAs automatically
+  vec
+})
+
+# Build final data frame
+exclusive_genes_listed <- as.data.frame(groups_padded, stringsAsFactors = FALSE)
+
+exclusive_genes_listed
 ```
 
 ### heatmap
@@ -271,43 +428,33 @@ exclusive_genes_df
 ```{r}
 library(pheatmap)
 
-# Your taxa groups (same as before)
-oysters <- c("GCF_002022765.2", "GCF_025612915.1", "GCF_032062105.1", "GCF_033153115.1", "GCF_947568905.1", "GCF_963853765.1")
-scallops <- c("GCF_002113885.1","GCF_031769215.1", "GCF_041381155.1", "GCF_902652985.1")
-mussels_sw <- c("GCF_021869535.1", "GCF_036588685.1", "GCF_963676685.1")
-clams <- c("GCF_021730395.1", "GCF_026571515.1", "GCF_026914265.1")
-mussel_fw <- c("GCF_020536995.1")
-
-# Create a vector of taxa groups, matching the columns of presence_df
+# Create vector of taxa groups, matching the original columns of presence_df
 taxa_groups <- rep(NA, ncol(presence_df))
 names(taxa_groups) <- colnames(presence_df)
 
-taxa_groups[oysters] <- "Oysters"
-taxa_groups[scallops] <- "Scallops"
-taxa_groups[mussels_sw] <- "Mussels_SW"
-taxa_groups[clams] <- "Clams"
-taxa_groups[mussel_fw] <- "Mussel_FW"
+taxa_groups[gonochoristic] <- "gonochoristic"
+taxa_groups[sim_hermaphroditic] <- "simultaneous hermaphrodite"
+taxa_groups[seq_hermaphroditic] <- "sequential hermaphrodite"
 
-# Convert to data frame for annotation (pheatmap requires a data.frame)
-annotation_col <- data.frame(Group = taxa_groups)
-rownames(annotation_col) <- colnames(presence_df)
+# Annotation now needs to match the NEW "rows" (after transposition)
+annotation_row <- data.frame(Group = taxa_groups)
+rownames(annotation_row) <- names(taxa_groups)
 
 # Filter genes with less than 18 taxa present
 presence_df_filtered <- presence_df[rowSums(presence_df) < 18, ]
 
-# Now plot heatmap with filtered data
+# Swap rows & columns by transposing
 pheatmap(
-  presence_df_filtered,
+  t(presence_df_filtered),
   cluster_rows = TRUE,
   cluster_cols = TRUE,
-  annotation_col = annotation_col,
-  show_rownames = FALSE,
-  show_colnames = TRUE,
+  annotation_row = annotation_row,
+  show_rownames = TRUE,     # taxa names
+  show_colnames = FALSE,    # gene names (too many to show)
   color = c("white", "blue"),
   legend = TRUE,
-  main = "Presence/Absence Heatmap (excluding genes with >=18 taxa)"
+  main = "Presence/Absence Heatmap "
 )
-
 
 ```
 
@@ -357,26 +504,24 @@ matched_rows <- matched_rows[!is.na(matched_rows)]
 # 5. Reorder taxa (rows) by tree tip order
 presence_df_t_filtered_ordered <- presence_df_t_filtered[matched_rows, , drop=FALSE]
 
-# 6. Define taxa groups for annotation
-oysters <- c("GCF_002022765.2", "GCF_025612915.1", "GCF_032062105.1", "GCF_033153115.1", "GCF_947568905.1", "GCF_963853765.1")
-scallops <- c("GCF_002113885.1","GCF_031769215.1", "GCF_041381155.1", "GCF_902652985.1")
-mussels_sw <- c("GCF_021869535.1", "GCF_036588685.1", "GCF_963676685.1")
-clams <- c("GCF_021730395.1", "GCF_026571515.1", "GCF_026914265.1")
-mussel_fw <- c("GCF_020536995.1")
-
 taxa_groups <- rep(NA, nrow(presence_df_t_filtered_ordered))
 names(taxa_groups) <- rownames(presence_df_t_filtered_ordered)
 
-taxa_groups[oysters] <- "Oysters"
-taxa_groups[scallops] <- "Scallops"
-taxa_groups[mussels_sw] <- "Mussels_SW"
-taxa_groups[clams] <- "Clams"
-taxa_groups[mussel_fw] <- "Mussel_FW"
+taxa_groups[gonochoristic] <- "gonochoristic"
+taxa_groups[sim_hermaphroditic] <- "simultaneous hermaphrodite"
+taxa_groups[seq_hermaphroditic] <- "sequential hermaphrodite"
 
 annotation_row <- data.frame(Group = taxa_groups)
 rownames(annotation_row) <- rownames(presence_df_t_filtered_ordered)
 
+
+
+```
+
+```{r}
 # 7. Plot heatmap
+png("../output/treedist/gene_presence_heatmap.png", width = 800, height = 600)
+
 pheatmap(
   presence_df_t_filtered_ordered,
   cluster_rows = FALSE,       # taxa ordered by tree, no clustering
@@ -386,8 +531,8 @@ pheatmap(
   show_colnames = FALSE,
   color = c("white", "blue"),
   legend = TRUE,
-  main = "Gene presence/absence heatmap (taxa ordered by tree)"
+  main = "Gene presence/absence (taxa ordered by tree)"
 )
 
-
+dev.off()
 ```
